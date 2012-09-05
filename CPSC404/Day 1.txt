@@ -1,0 +1,6 @@
+Text: R. Ramakrishnan and J. Gehrke, Database Management Systems, McGraw=-Hill, 3rd Ed
+Homepage: http://www.cs.ubc.ca/~laks/404.html
+Piazza: email minxie@cs.ubc.ca
+
+Review:
+HDD architecture -> tracks
