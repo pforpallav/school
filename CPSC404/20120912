@@ -1,0 +1,19 @@
+CPSC404 - 20120912
+
+External Sort Example:
+	Recall:
+		Buffer Pool size: 			12,500 pages @ 4k/page
+		Avg Seek Time: 				8ms
+		Avg rotational delay: 		7ms
+		time to read/write a page:	0.5ms
+		
+		#Sorted Sub Lists = 250000
+							------- = 20
+							12500
+		
+		Phase 1 time = time to read + time to write 250,000 pages of data
+		Phase 2 time = ceiling(log2(20)) * ceiling(250000(1+1)*0.5ms+(250000/(4166/2)+250000/(4162/2))*(8+7)ms) = 1268.075s
+		
+		Recall:
+			Double Buffering = while half of buffer sorts, the other half reads
+	Considered 2-Way merge
