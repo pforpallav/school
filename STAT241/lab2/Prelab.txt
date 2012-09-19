@@ -1,0 +1,25 @@
+Stat 241 Lab 2 Prelab:
+
+What is the length of each vector generated?
+	20
+
+Boxplots:
+	boxplot(x)
+		gives a boxplot of x
+	boxplot(x~y)
+		give 4 side by side boxplots
+	What does (~) do in boxplot function?
+		It separates variables in te boxplot function; so in boxplot(x ~ y), so foreach x, it is grouped into is corresponding y for boxplot z
+
+Histograms:
+	hist(x, col="grey")
+		Gives a histogram of x in the color grey
+		col determines column color
+
+Scatterplot
+	xyplot(z~x)
+		Gives a scatter plot with x on the x axis and z on the y
+		No relationship existant
+	xyplot(z~x | as.factor(x))
+		Produces 4 seperate scatterplots
+		These scatterplots are subsections of the scatterplot xyplot(z~x) mapped to separated scatterplots corresponding to the y
