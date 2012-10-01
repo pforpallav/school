@@ -187,36 +187,44 @@ extract_max:
 #
 # Heapsort
 #    %eax: last
-#	 
+#	 %eax, %ebx, %ecx, %edx
 heapsort:
-	rrmovl	%eax, %ebx			# %ebx = last
-	irmovl	$0, %ecx			# %ecx = 0
-	addl	%ecx, %ebx			# %ebx = last + 0
-	jl		L1					# if (%ebx<); jump to L1
-	pushl	%ebx				# push_stack(%ebx)
-	call	heapify_array		# heapify_array
-	popl	%ebx				# %ebx = pop_stock()
+	andl 	%eax, %eax
+	rrmovl	%eax, %ecx
+	jl		L1
+	
+	pushl	%ecx
+	pushl	%edx
+	pushl	%ebx
+	call	heapify_array
+	popl 	%ebx
+	popl	%edx
+	popl	%ecx
 
 L3:
-	irmovl	$0, %ecx 			# %ecx = 0
-	rrmovl	%ebx, %edx			# %edx = %ebx = last or i
-	addl	%edx, %ecx			# %ecx = 0+i
-	jl		L1					# if (%ecx<0); jump to L1
-	pushl	%ebx				# push_stack(%ebx)
-	rrmovl	%ebx, %eax			# %eax = %ebx = i
-	call	extract_max			# extract_max
-	popl	%ebx				# %ebx = pop_stack()
-	rrmovl	%ebx, %ecx			# %ecx = %ebx = i
-	irmovl	$4, %edx			# %edx = 4
-	mull	%edx, %ecx			# %ecx = 4*i
-	rmmovl	%eax, heap(%ecx)	# heap[i] = extract_max(i)
-	irmovl	$1, %ecx			# %ecx = 1
-	subl	%ecx, %ebx			# %ebx =  i - 1
-	jge		L3					# if(i-1>=0); jump to L3
+	rrmovl	%ecx, %edx
 	
-	
+	pushl	%ecx
+	pushl	%edx
+	pushl	%ebx
+	call	extract_max
+	popl 	%ebx
+	popl	%edx
+	popl	%ecx
+
+	irmovl	$1,	%ebx
+	subl	%ebx, %ecx
+	pushl	%ebp
+	rrmovl	%ecx, %ebp
+	addl	%ebx, %ebp
+	popl	%ebp
+	pushl	%ebx
+	irmovl	$4, %ebx
+	popl	%ebx
+	rmmovl	%eax, heap(%ecx)
+	je		L3
 L1:
-	ret							#return
+	ret
 	
 
 

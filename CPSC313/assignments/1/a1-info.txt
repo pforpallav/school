@@ -1,0 +1,13 @@
+Name: Evan Louie
+Student #: 72210099
+CSID: m6d7
+
+How long it took me:
+20 mins: Commenting the x86 code
+4 hours: trying to convert the x86 code to y86
+30 mins: Writing the y86 code from the C code instead of x86
+
+Additional Comments:
+I found trying to convert the x86 code to y86 INREDIBLY diffictult to do without adding
+many lines of code and running out of registers. Once i gave up on trying to convert it
+and simply writing the function from the C code, it came together almost instantly.
