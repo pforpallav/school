@@ -1,0 +1,134 @@
+CPSC313 - Assignment 3
+=======================
+Student:	Evan Louie
+Student#:	72210099
+CSID:		m6d7
+
+---------------
+Problem 1
+---------------
+
+Error 1:
+--------
+Bug #1 found in test at Memory 300 (sBHazard)
+What should be expected at the end of the test:
+	%eax = 17
+	%ecx = 18
+	%edx = 19
+	%ebx = 16
+
+What showed up before the bug fix:
+	%eax = 16
+	%ecx = 16
+	%edx = 16
+	%ebx = 16
+	
+Erroneous:
+	When coming across a data hazard, pipelineHazardControl doesn't check for data hazard in second register.
+
+Solution:
+	Add an additional coditional in on the checking of data hazard when checking the first register:
+	Line 41: 
+		if (isDataHazardOnReg (d.srcA.getValueProduced()))
+		
+	After Fix: 
+		if (isDataHazardOnReg (d.srcA.getValueProduced()) || isDataHazardOnReg(d.srcB.getValueProduced()))
+
+
+Error 2:
+---------
+Bug #2 found in test at Memory 400 (aLoadUse)
+What should be expected at the end of the test:
+	%eax = 10
+	%ecx = 10
+	%edx = 10
+	%ebx = 30
+	%edi = 0x1000 or 4096
+
+What showed up before the bug fix:
+	%eax = 10
+	%ecx = 10
+	%edx = 10
+	%ebx = 0
+	%edi = 0x1000 or 4096
+	
+Erroneous:
+	isDataHazardOnReg(int reg), it is not checking for the data hazard on register output port for dstM.
+
+Solution:
+	extend the return statement to also check dstM for the output registers on Execute, Memory, and Write-back stages.
+	Line 32:
+		return reg != R_NONE && (E.dstE.get() == reg || M.dstE.get() == reg || W.dstE.get() == reg);
+
+	After Fix: 
+		return reg != R_NONE && (E.dstE.get() == reg || M.dstE.get() == reg || W.dstE.get() == reg ||  E.dstM.get() == reg || M.dstM.get() == reg|| W.dstM.get() == reg);
+		
+		
+		
+Error 3
+--------
+Bug #3 found in test at Memory 700 (notTKJmp)
+What should be expected at the end of the test:
+	%eax = 0
+	%ecx = 1
+	%edx = 1
+	%ebx = 0
+	%esp = 0
+
+What showed up before the bug fix:
+	%eax = 0
+	%ecx = 1
+	%edx = 1
+	%ebx = 1
+	%esp = 0
+	
+Erroneous:
+	pipelineHazardControl does not do a hazard check when executing a conditional jump in Execute Stage
+	
+Solution:
+	Add an additional conditional in conditional jump hazard check to also do hazard control in execute stage
+	Line 49: 
+		else if ((D.iCd.get()==I_JXX && D.iFn.get()!=C_NC))	
+	After Fix: 
+		else if ((D.iCd.get()==I_JXX && D.iFn.get()!=C_NC) || (E.iCd.get()==I_JXX && E.iFn.get()!=C_NC))
+		
+
+		
+		
+---------------
+Problem 2
+---------------
+
+CPI for sum.s
+---------------
+Cycles per Instruction (CPI)	=	total cycles / instructionRetired Cycles 	
+								=	cCnt / iCnt
+								=	117 / 45
+								=	2.6 CPI
+The CPI for sum.s is approximately 2.6 cycles per instruction.
+
+
+CPI for max.s
+--------------
+Cycles per Instruction (CPI)	=	total cycles / instructionRetired Cycles 	
+								=	cCnt / iCnt
+								=	236 / 98
+								=	2.4081… CPI
+The CPI for max.s is approximately 2.4 cycles per instruction.
+
+
+CPI for heapsort-student.s
+---------------------------
+Cycles per Instruction (CPI)	=	total cycles / instructionRetired Cycles 	
+								=	cCnt / iCnt
+								=	7796 / 3001
+								=	2.5978… CPI
+The CPI for heapsort-student.s is approximately 2.6 cycles per instruction.
+
+
+
+--------------------------
+Time Spent On Assignment
+--------------------------
+
+Approximately 4.5-5 hours

@@ -7,7 +7,7 @@ Evan is a CS344 student who wants to have hold a group chat meeting on Connect. 
 
 Discussion: This use case contains general IRC functionality with automated user information made available from Connect. Potential email/sms notifications are going to be essential for users to get the most up to date alerts that something has been posted. Potentially their should be an 'alert' function in the chat to send out and alert to users.
 
-Analysis: As of right now, no livechat style functionality exists within Connect; with the closest thing possbile being making public forum threads which cannot be hidden from others.  The existing UI for 'Sending Emails' to users would be quite adiquate for choosing users to include in the chat.  Although this functionality should be made visable from the course page and not just the Connect homepage.  Their does currently already exist functionality to alert users via email that a forum thread has been updated if that user is subscribed to said thread; we can migrate this funtionality over to livechats.
+Analysis: As of right now, no livechat style functionality exists within Connect; with the closest thing possbile being making public forum threads which cannot be hidden from others.  The existing UI for selecting users to send emails to would be quite adiquate for choosing users to include in the chat.  Although this functionality should be made visable from the course page and not just the Connect homepage.  Their does currently already exist functionality to alert users via email that a forum thread has been updated if that user is subscribed to said thread; we can migrate this funtionality over to livechats.  
 
 Task 2: Emailing
 -----------------
