@@ -1,0 +1,215 @@
+ParkID,Name,Official,StreetNumber,StreetName,EWStreet,NSStreet,GoogleMapDest,Hectare,NeighbourhoodName,NeighbourhoodURL,Advisories,Facilities,SpecialFeatures,Washrooms
+1,Arbutus Village Park,1,4202,Valley Drive,King Edward Avenue,Valley Drive,"49.249783,-123.155250",1.41,Arbutus Ridge,http://vancouver.ca/community_profiles/arbutus_ridge/index.htm,N,Y,N,N
+2,Carnarvon Park,1,2995,W 19th Avenue,W 19th Avenue,Mackenzie Street,"49.256555,-123.171406",3.79,Arbutus Ridge,http://vancouver.ca/community_profiles/arbutus_ridge/index.htm,N,Y,N,Y
+3,Prince of Wales Park,1,4780,Haggart Street,W 32nd Avenue,Haggart Street,"49.244397,-123.156429",2.89,Arbutus Ridge,http://vancouver.ca/community_profiles/arbutus_ridge/index.htm,N,Y,N,N
+4,Park Site on Puget Drive,0,4309,Puget Drive,Puget Drive,MacDonald Street,"49.247723,-123.168194",0.09,Arbutus Ridge,http://vancouver.ca/community_profiles/arbutus_ridge/index.htm,N,N,N,N
+5,Park Site on Quesnel Drive,0,4301,Quesnel Drive,Quesnel Drive,MacKenzie Street,"49.247623,-123.169948",0.03,Arbutus Ridge,http://vancouver.ca/community_profiles/arbutus_ridge/index.htm,N,N,N,N
+6,Quilchena Park,1,4590,Magnolia Street,W 33rd Avenue,Magnolia Street,"49.243690,-123.148865",7.67,Arbutus Ridge,http://vancouver.ca/community_profiles/arbutus_ridge/index.htm,N,Y,Y,Y
+7,Ravine Park,1,2159,W 36th Avenue,W 36th Avenue,Arbutus Street,"49.240902,-123.155935",0.72,Arbutus Ridge,http://vancouver.ca/community_profiles/arbutus_ridge/index.htm,N,N,N,N
+8,Trafalgar Park,1,2610,W 23rd Avenue,W 23rd Avenue,Valley Drive,"49.25046,-123.161879",4.85,Arbutus Ridge,http://vancouver.ca/community_profiles/arbutus_ridge/index.htm,N,Y,N,Y
+9,Park Site on Trafalgar Street,0,4600,Trafalgar Street,W 31st Avenue,Trafalgar Street,"49.244396,-123.165105",0.14,Arbutus Ridge,http://vancouver.ca/community_profiles/arbutus_ridge/index.htm,N,N,N,N
+10,Andy Livingstone Park,1,89,Expo Boulevard,Expo Boulevard,Carrall Street,"49.278923,-123.105500",4.21,Downtown,http://vancouver.ca/community_profiles/downtown/index.htm,N,Y,N,Y
+11,Cardero Park,1,1601,Bayshore Drive,Bayshore Drive,Cardero Street,"49.292211,-123.128206",0.33,West End,http://vancouver.ca/community_profiles/west_end/index.htm,N,N,Y,N
+12,Cathedral Square,1,566,Richards Street,Dunsmuir Street,Richards Street,"49.282084,-123.113877",0.27,Downtown,http://vancouver.ca/community_profiles/downtown/index.htm,N,N,N,N
+13,Coal Harbour Park,1,480,Broughton Street,W Hastings Street,Broughton Street,"49.289981,-123.125015",0.95,Downtown,http://vancouver.ca/community_profiles/downtown/index.htm,N,Y,N,N
+14,Coopers' Park,1,1020,Marinaside Crescent,Nelson Street,Marinaside Crescent,"49.273253,-123.113900",1.71,Downtown,http://vancouver.ca/community_profiles/downtown/index.htm,N,Y,Y,N
+15,Creekside Park,1,1455,Quebec Street,Terminal Avenue,Quebec Street,"49.274415,-123.102924",2.53,Downtown,http://vancouver.ca/community_profiles/downtown/index.htm,N,Y,Y,N
+16,David Lam Park,1,1300,Pacific Boulevard,Drake Street,Pacific Boulevard,"49.272569,-123.124145",4.34,Downtown,http://vancouver.ca/community_profiles/downtown/index.htm,N,Y,Y,Y
+18,Devonian Harbour Park,1,1929,W Georgia Street,W Georgia Street,Denman Street,"49.294353,-123.134654",4.42,Downtown,http://vancouver.ca/community_profiles/downtown/index.htm,N,Y,Y,N
+19,Discovery Square,1,625,Burrard Street,Melville Street,Burrard Street,"49.285911,-123.120948",0.1,Downtown,http://vancouver.ca/community_profiles/downtown/index.htm,N,N,N,N
+20,Emery Barnes Park,1,,Davie Street & Richards Street,Davie Street,Richards Street,"49.276458,-123.123995",0.85,Downtown,http://vancouver.ca/community_profiles/downtown/index.htm,N,Y,N,N
+21,Harbour Green Park,1,1199,W Cordova Street,W Cordova Street,Bute Street,"49.290263,-123.121924",3.1,Downtown,http://vancouver.ca/community_profiles/downtown/index.htm,N,Y,Y,Y
+23,Helmcken Park,1,1103,Pacific Boulevard,Helmcken Street,Pacific Boulevard,"49.274814,-123.119555",0.17,Downtown,http://vancouver.ca/community_profiles/downtown/index.htm,N,N,N,N
+24,Marina Square,1,1675,Bayshore Drive,Bayshore Drive,Denman Street,"49.292334,-123.131296",0.63,Downtown,http://vancouver.ca/community_profiles/downtown/index.htm,N,N,Y,N
+25,May & Lorne Brown Park,1,801,Beach Avenue,Beach Avenue,Hornby Street,"49.275188,-123.132046",0.25,Downtown,http://vancouver.ca/community_profiles/downtown/index.htm,N,N,N,N
+26,Pioneer Place (Pigeon Park),1,399,Carrall Street,W Hastings Street,Carrall Street,"49.281699,-123.104588",0.03,Downtown,http://vancouver.ca/community_profiles/downtown/index.htm,N,N,N,N
+27,Portal Park,1,1099,W Hastings Street,W Hastings Street,Thurlow Street,"49.288042,-123.119169",0.1,Downtown,http://vancouver.ca/community_profiles/downtown/index.htm,N,N,N,N
+28,CRAB Park at Portside,1,101,E Waterfront Road,E Waterfront Road,Main Street,"49.284942,-123.102377",3.31,Downtown,http://vancouver.ca/community_profiles/downtown/index.htm,N,Y,N,Y
+29,Roundhouse Turntable Plaza,1,181,Roundhouse Mews,Roundhouse Mews,Pacific Boulevard,"49.273379,-123.121603",0.91,Downtown,http://vancouver.ca/community_profiles/downtown/index.htm,N,Y,N,N
+30,Sun Yat-Sen Gardens,1,578,Carrall Street,Keefer Street,Carrall Street,"49.279691,-123.104233",0.83,Downtown,http://vancouver.ca/community_profiles/downtown/index.htm,N,N,N,N
+31,Victory Square,1,200,W Hastings Street,W Hastings Street,Cambie Street,"49.282218,-123.110133",0.39,Downtown,http://vancouver.ca/community_profiles/downtown/index.htm,N,N,N,N
+32,Wendy Poole Park,1,199,Alexander Street,Alexander Street,Main Street,"49.284296,-123.099666",0.04,Downtown,http://vancouver.ca/community_profiles/downtown/index.htm,N,N,N,N
+34,Balaclava Park,1,4594,Balaclava Street,W 29th Avenue,Balaclava Street,"49.244951,-123.175247",5,Dunbar-Southlands,http://vancouver.ca/community_profiles/dunbar-southlands/index.htm,N,Y,N,Y
+35,Park Site on Blenheim,1,3500,Quadra Street,W 19th Avenue,Quadra Street,"49.255575,-123.178934",0.07,Arbutus Ridge,http://vancouver.ca/community_profiles/arbutus_ridge/index.htm,N,N,N,N
+37,Chaldecott Park,1,4175,Wallace Street,King Edward Avenue,Wallace Street,"49.249092,-123.192177",3.45,Dunbar-Southlands,http://vancouver.ca/community_profiles/dunbar-southlands/index.htm,N,Y,N,Y
+38,Deering Island Park,1,3530,Deering Island Pl.,Deering Island Place,Carrington Street,"49.218288,-123.184356",0.74,Dunbar-Southlands,http://vancouver.ca/community_profiles/dunbar-southlands/index.htm,N,N,N,N
+39,Memorial West Park,1,4701,Dunbar Street,W 31st Avenue,Dunbar Street,"49.243326,-123.188166",7.49,Dunbar-Southlands,http://vancouver.ca/community_profiles/dunbar-southlands/index.htm,N,Y,N,Y
+40,Musqueam Park,1,4000,SW Marine Drive,SW Marine Drive,Crown Street,"49.229331,-123.189980",22.05,Dunbar-Southlands,http://vancouver.ca/community_profiles/dunbar-southlands/index.htm,N,Y,N,N
+41,Quadra West Park,1,3250,Quadra Street,W 17th Avenue,Quadra Street,"49.257112,-123.180696",0.17,Dunbar-Southlands,http://vancouver.ca/community_profiles/dunbar-southlands/index.htm,N,N,N,N
+42,Valdez Park,1,3210,W 22nd Avenue,W 22nd Avenue,Balaclava Street,"49.252391,-123.176400",0.77,Dunbar-Southlands,http://vancouver.ca/community_profiles/dunbar-southlands/index.htm,N,Y,N,N
+43,Charleson Park,1,999,Charleson Street,Charleson Street,Laurel Street,"49.266995,-123.124200",7.14,Fairview,http://vancouver.ca/community_profiles/fairview/index.htm,N,Y,Y,N
+44,Granville Park,1,3001,Fir Street,W 14th Avenue,Fir Street,"49.258105,-123.142395",1.96,Fairview,http://vancouver.ca/community_profiles/fairview/index.htm,N,Y,N,Y
+45,Granville Loop Park,0,1435,W 5th Avenue,W 5th Avenue,Granville Street,"49.267284,-123.137540",1.05,Fairview,http://vancouver.ca/community_profiles/fairview/index.htm,N,Y,N,N
+47,Sutcliffe Park,1,1318,Cartwright Street,Island Park Walk,Old Bridge Walk,"49.268871,-123.134832",2.88,Fairview,http://vancouver.ca/community_profiles/fairview/index.htm,N,Y,Y,N
+48,Willow Park,1,802,W 7th Avenue,W 7th Avenue,Willow Street,"49.264868,-123.122031",0.07,Fairview,http://vancouver.ca/community_profiles/fairview/index.htm,N,N,N,N
+49,Alice Townley Park,1,1775,Woodland Drive,E 2nd Avenue,Woodland Drive,"49.268974,-123.073923",0.22,Grandview-Woodland,http://vancouver.ca/community_profiles/grandview_woodland/index.htm,N,N,N,N
+50,Cambridge Park,1,2099,Wall Street,Cambridge Street,Wall Street,"49.286753,-123.062784",0.19,Grandview-Woodland,http://vancouver.ca/community_profiles/grandview_woodland/index.htm,N,N,N,N
+51,Garden Park,1,1851,Garden Drive,E 3rd Avenue,Garden Drive,"49.268159,-123.058994",0.97,Grandview-Woodland,http://vancouver.ca/community_profiles/grandview_woodland/index.htm,N,Y,N,Y
+52,Grandview Park,1,1657,Charles Street,Charles Street,Commercial Drive,"49.273511,-123.070469",0.89,Grandview-Woodland,http://vancouver.ca/community_profiles/grandview_woodland/index.htm,N,Y,N,Y
+53,McGill Park,1,2305,McGill Street,McGill Street,Garden Drive,"49.288668,-123.057154",0.19,Grandview-Woodland,http://vancouver.ca/community_profiles/grandview_woodland/index.htm,N,N,N,N
+54,McSpadden Park,1,2125,Victoria Drive,E 5th Avenue,Victoria Drive,"49.265936,-123.066601",1.62,Grandview-Woodland,http://vancouver.ca/community_profiles/grandview_woodland/index.htm,N,Y,N,N
+55,Mosaic Creek Park,1,1475,Charles Street,Charles Street,McLean Drive,"49.273323,-123.074121",0.11,Grandview-Woodland,http://vancouver.ca/community_profiles/grandview_woodland/index.htm,N,N,N,N
+56,Oxford Park,1,2050,Wall Street,Oxford Street,Wall Street,"49.286172,-123.062223",0.22,Grandview-Woodland,http://vancouver.ca/community_profiles/grandview_woodland/index.htm,N,Y,N,N
+57,Pandora Park,1,2325,Franklin Street,Franklin Street,Garden Drive,"49.282533,-123.058045",1.66,Grandview-Woodland,http://vancouver.ca/community_profiles/grandview_woodland/index.htm,N,Y,N,Y
+58,Salsbury Park,1,1806,Adanac Street,Adanac Street,Salsbury Drive,"49.277291,-123.067926",0.17,Grandview-Woodland,http://vancouver.ca/community_profiles/grandview_woodland/index.htm,N,N,N,N
+60,Templeton Park,1,700,Templeton Drive,Adanac Street,Templeton Drive,"49.278279,-123.058646",1.93,Grandview-Woodland,http://vancouver.ca/community_profiles/grandview_woodland/index.htm,N,Y,N,N
+61,Park Site on Trinity Street,1,2303,Wall Street,Trinity Street,Wall Street,"49.289561,-123.059459",0.1,Hastings-Sunrise,http://vancouver.ca/community_profiles/hastings-sunrise/index.htm,N,N,N,N
+62,Victoria Park,1,1425,Victoria Drive,Kitchener Street,Victoria Drive,"49.271694,-123.066730",0.89,Grandview-Woodland,http://vancouver.ca/community_profiles/grandview_woodland/index.htm,N,Y,N,Y
+63,W.C. Shelley Park,1,1500,E 8th Avenue,E 8th Avenue,Woodland Drive,"49.263034,-123.072931",0.3,Grandview-Woodland,http://vancouver.ca/community_profiles/grandview_woodland/index.htm,N,Y,N,N
+64,Woodland Park,1,705,Woodland Drive,Adanac Street,Woodland Drive,"49.278526,-123.073387",1.58,Grandview-Woodland,http://vancouver.ca/community_profiles/grandview_woodland/index.htm,N,Y,N,Y
+65,Adanac Park,1,1025,Boundary Road,Adanac Street,Boundary Road,"49.276381,-123.025811",4.17,Hastings-Sunrise,http://vancouver.ca/community_profiles/hastings-sunrise/index.htm,N,Y,N,Y
+66,Bates Park,1,669,Fellowes Street,Fellowes Street,High Road,"49.292443,-123.024336",0.3,Hastings-Sunrise,http://vancouver.ca/community_profiles/hastings-sunrise/index.htm,N,N,N,N
+67,Burrard View Park,1,650,North Penticton Street,Wall Street,N Penticton Street,"49.291253,-123.050513",2.76,Hastings-Sunrise,http://vancouver.ca/community_profiles/hastings-sunrise/index.htm,N,Y,N,Y
+68,Callister Park,1,2875,Oxford Street,Oxford Street,Renfrew Street,"49.286214,-123.045363",1.45,Hastings-Sunrise,http://vancouver.ca/community_profiles/hastings-sunrise/index.htm,N,Y,N,N
+69,Charles Park,1,3400,Charles Street,Charles Street,Kootenay Street,"49.273407,-123.027661",1.55,Hastings-Sunrise,http://vancouver.ca/community_profiles/hastings-sunrise/index.htm,N,N,N,N
+70,Clinton Park,1,2690,Grant Street,Grant Street,Slocan Street,"49.270355,-123.050900",3.04,Hastings-Sunrise,http://vancouver.ca/community_profiles/hastings-sunrise/index.htm,N,Y,N,Y
+71,Dusty Greenwell Park,1,2799,Wall Street,Wall Street,North Kaslo Street,"49.292113,-123.047643",0.44,Hastings-Sunrise,http://vancouver.ca/community_profiles/hastings-sunrise/index.htm,N,Y,N,N
+72,Hastings Park,1,2901,E Hastings,E Hastings Street,Renfrew Street,"49.282256,-123.039776",15.5,Hastings-Sunrise,http://vancouver.ca/community_profiles/hastings-sunrise/index.htm,N,Y,N,N
+73,Hastings Community Park,1,3000,E Pender Street,E Pender Street,E Hastings Street,"49.280637,-123.038884",4.19,Hastings-Sunrise,http://vancouver.ca/community_profiles/hastings-sunrise/index.htm,N,Y,N,Y
+74,Kaslo Park,1,2851,E 7th Avenue,E 7th Avenue,Kaslo Street,"49.264099,-123.046012",0.45,Hastings-Sunrise,http://vancouver.ca/community_profiles/hastings-sunrise/index.htm,N,Y,N,N
+75,New Brighton Park,1,3201,New Brighton Road,New Brighton Road,N Windermere Street,"49.290122,-123.037888",10,Hastings-Sunrise,http://vancouver.ca/community_profiles/hastings-sunrise/index.htm,N,Y,N,Y
+76,Rupert Park,1,1600,Rupert Street,E 1st Avenue,Rupert Street,"49.271629,-123.031384",11.43,Hastings-Sunrise,http://vancouver.ca/community_profiles/hastings-sunrise/index.htm,N,Y,N,Y
+77,Sunrise Park,1,1950,Windermere Street,E 5th Avenue,Windermere Street,"49.266612,-123.035037",3.18,Hastings-Sunrise,http://vancouver.ca/community_profiles/hastings-sunrise/index.htm,N,Y,N,Y
+78,Thunderbird Park,1,3485,E 2nd Avenue,E 2nd Avenue,Skeena Street,"49.268829,-123.028552",0.89,Hastings-Sunrise,http://vancouver.ca/community_profiles/hastings-sunrise/index.htm,N,Y,N,N
+79,Brewers Park,1,4175,Victoria Drive,E 26th Avenue,Victoria Drive,"49.247695,-123.066461",1.38,Kensington-Cedar Cottage,http://vancouver.ca/community_profiles/kensington-cedar/index.htm,N,Y,N,Y
+80,Cedar Cottage Park,1,2650,Clark Drive,E 11th Avenue,Clark Drive,"49.260807,-123.076605",0.47,Kensington-Cedar Cottage,http://vancouver.ca/community_profiles/kensington-cedar/index.htm,N,Y,N,N
+81,Clark Park,1,1500,E 14th Avenue,E 14th Avenue,Commercial Drive,"49.257142,-123.072405",4.28,Kensington-Cedar Cottage,http://vancouver.ca/community_profiles/kensington-cedar/index.htm,N,Y,N,N
+82,General Brock Park,1,2301,Brock Street,Brock Street,Baldwin Street,"49.244757,-123.058517",2.11,Kensington-Cedar Cottage,http://vancouver.ca/community_profiles/kensington-cedar/index.htm,N,Y,N,N
+83,Glen Park,1,3999,Glen Drive,E 24th Avenue,Glen Drive,"49.249576,-123.082823",1.09,Kensington-Cedar Cottage,http://vancouver.ca/community_profiles/kensington-cedar/index.htm,N,Y,N,N
+84,Grays Park,1,4850,St. Catherines Street,E 33rd Avenue,St. Catherines Street,"49.241136,-123.084974",1.61,Kensington-Cedar Cottage,http://vancouver.ca/community_profiles/kensington-cedar/index.htm,N,Y,N,Y
+85,John Hendry (Trout Lake) Park,1,3300,Victoria Drive,E 15th Avenue,Victoria Drive,"49.255808,-123.062242",27.31,Kensington-Cedar Cottage,http://vancouver.ca/community_profiles/kensington-cedar/index.htm,N,Y,N,Y
+86,Jones Park,1,5350,Commercial Street,E 38th Avenue,Commercial Street,"49.235945,-123.067051",1.42,Kensington-Cedar Cottage,http://vancouver.ca/community_profiles/kensington-cedar/index.htm,N,Y,N,Y
+87,Kensington Park,1,5175,Dumfries Street,E 37th Avenue,Dumfries Street,"49.238478,-123.075308",5.84,Kensington-Cedar Cottage,http://vancouver.ca/community_profiles/kensington-cedar/index.htm,N,Y,N,N
+88,Kingcrest Park,1,4150,Knight Street,E 26th Avenue,Knight Street,"49.247499,-123.074674",2.41,Kensington-Cedar Cottage,http://vancouver.ca/community_profiles/kensington-cedar/index.htm,N,Y,N,N
+89,Sunnyside Park,1,1100,E 17th Avenue,E 17th Avenue,Inverness Street,"49.254924,-123.080752",0.97,Kensington-Cedar Cottage,http://vancouver.ca/community_profiles/kensington-cedar/index.htm,N,Y,N,N
+90,Arbutus Park,1,7601,Arbutus Street,SW Marine Drive,Arbutus Street,"49.216590,-123.155130",0.74,Kerrisdale,http://vancouver.ca/community_profiles/kerrisdale/index.htm,N,Y,N,N
+91,Elm Park,1,5800,Elm Street,W 41st Avenue,Elm Street,"49.233847,-123.163488",1.49,Kerrisdale,http://vancouver.ca/community_profiles/kerrisdale/index.htm,N,Y,N,Y
+92,Fraser River Park,1,8705,Angus Drive,W 75th Avenue,Angus Drive,"49.207915,-123.150862",9.1,Kerrisdale,http://vancouver.ca/community_profiles/kerrisdale/index.htm,N,Y,N,Y
+93,Kerrisdale Centennial Park,1,5898,Yew Street,W 42nd Avenue,Yew Street,"49.233094,-123.158043",1.53,Kerrisdale,http://vancouver.ca/community_profiles/kerrisdale/index.htm,N,Y,N,N
+95,Malkin Park,1,6001,Balaclava Street,W 44th Avenue,Balaclava Street,"49.231959,-123.176845",2.42,Kerrisdale,http://vancouver.ca/community_profiles/kerrisdale/index.htm,N,N,N,N
+96,Maple Grove Park,1,6875,Yew Street,W 51st Avenue,Yew Street,"49.223703,-123.160130",4.2,Kerrisdale,http://vancouver.ca/community_profiles/kerrisdale/index.htm,N,Y,N,Y
+97,McCleery Park,1,6501,Marine Crescent,W 49th Avenue,Marine Crescent,"49.226973,-123.164155",0.25,Kerrisdale,http://vancouver.ca/community_profiles/kerrisdale/index.htm,N,N,N,N
+98,McCleery Golf Course,1,7188,Macdonald Street,W 55th Avenue,MacDonald Street,"49.220813,-123.170066",48.57,Kerrisdale,http://vancouver.ca/community_profiles/kerrisdale/index.htm,N,Y,N,N
+99,Captain Cook Park,1,3398,E 54th Avenue,E 54th Avenue,Champlain Crescent,"49.219120,-123.033713",5.49,Killarney,http://vancouver.ca/community_profiles/killarney/index.htm,N,Y,N,N
+100,Champlain Heights Park,1,3351,Maquinna Drive,Maquinna Drive,Champlain Crescent,"49.215527,-123.032545",7.84,Killarney,http://vancouver.ca/community_profiles/killarney/index.htm,N,Y,N,N
+101,Everett Crowley Park,1,8200,Kerr Street,SE Marine Drive,Kerr Street,"49.210985,-123.036321",38.08,Killarney,http://vancouver.ca/community_profiles/killarney/index.htm,N,Y,N,Y
+102,Fraserview Golf Course,1,7800,Vivian Drive,E 54th Avenue,Vivian Drive,"49.212251,-123.047869",84.34,Killarney,http://vancouver.ca/community_profiles/killarney/index.htm,N,Y,N,Y
+103,Killarney Park,1,6205,Kerr Street,Waverley Street,Kerr Street,"49.227998,-123.044130",13.36,Killarney,http://vancouver.ca/community_profiles/killarney/index.htm,N,Y,N,N
+104,Kinross Ravine Park,1,3350,SE Marine Drive,3350 SE Marine Drive,Kinross Street,"49.207509,-123.036128",1.2,Killarney,http://vancouver.ca/community_profiles/killarney/index.htm,N,N,N,N
+105,Sparwood Park,1,6998,Arlington Street,Whithorn Court,Arlington Street,"49.220024,-123.028777",3.6,Killarney,http://vancouver.ca/community_profiles/killarney/index.htm,N,Y,N,N
+106,Almond Park,1,3600,W 12th Avenue,W 12th Avenue,Dunbar Street,"49.261014,-123.184543",1.61,Kitsilano,http://vancouver.ca/community_profiles/kitsilano/index.htm,N,Y,N,N
+108,Connaught Park,1,2390,W 10th Avenue,W 10th Avenue,Vine Street,"49.262026,-123.160025",5.98,Kitsilano,http://vancouver.ca/community_profiles/kitsilano/index.htm,N,Y,N,N
+109,Delamont Park,1,2091,W 7th Avenue,W 7th Avenue,Arbutus Street,"49.265808,-123.152426",0.22,Kitsilano,http://vancouver.ca/community_profiles/kitsilano/index.htm,N,Y,N,N
+110,Hadden Park,1,1905,Ogden Avenue,Ogden Avenue,Cypress Street,"49.275353,-123.152513",2.92,Kitsilano,http://vancouver.ca/community_profiles/kitsilano/index.htm,N,Y,Y,Y
+111,Jean Beaty Park,1,3393,Point Grey Road,Point Grey Road,Waterloo Street,"49.271913,-123.179433",0.04,West Point Grey,http://vancouver.ca/community_profiles/west_point_grey/index.htm,N,N,N,N
+112,Kitsilano Beach Park,1,1499,Arbutus Street,Cornwall Avenue,Arbutus Street,"49.273431,-123.153901",13.47,Kitsilano,http://vancouver.ca/community_profiles/kitsilano/index.htm,N,Y,Y,Y
+113,Margaret Pigott Park,1,2743,Point Grey Road,Point Grey Road,Macdonald Street,"49.272089,-123.167454",0.38,Kitsilano,http://vancouver.ca/community_profiles/kitsilano/index.htm,N,N,N,N
+114,McBride Park,1,3350,W 4th Avenue,W 4th Avenue,Waterloo Street,"49.268073,-123.179732",1.71,Kitsilano,http://vancouver.ca/community_profiles/kitsilano/index.htm,N,Y,N,Y
+115,Point Grey Park Site at Trutch Street,1,3215,Point Grey Road,Point Grey Road,Trutch Street,"49.271658,-123.176170",0.22,Kitsilano,http://vancouver.ca/community_profiles/kitsilano/index.htm,N,N,N,N
+116,Point Grey Park Site at Stephens Street,0,2699,Point Grey Road,Point Grey Road,Stephens Street,"49.272583,-123.166128",0.23,Kitsilano,http://vancouver.ca/community_profiles/kitsilano/index.htm,N,N,N,N
+117,Point Grey Park Site at Trafalgar Street,0,2601,Point Grey Road,Point Grey Road,Trafalgar Street,"49.273329,-123.164637",0.22,Kitsilano,http://vancouver.ca/community_profiles/kitsilano/index.htm,N,N,N,N
+118,Seaforth Peace Park,1,1620,Chestnut Street,Cornwall Avenue,Chestnut Street,"49.271554,-123.145967",0.74,Kitsilano,http://vancouver.ca/community_profiles/kitsilano/index.htm,N,N,N,N
+119,Tatlow Park,1,2845,W 3rd Avenue,Point Grey Road,Point Grey Road,"49.270068,-123.169609",1.4,Kitsilano,http://vancouver.ca/community_profiles/kitsilano/index.htm,N,Y,N,Y
+120,Vanier Park,1,1000,Chestnut Street,Whyte Avenue,Chestnut Street,"49.277049,-123.143159",16.95,Kitsilano,http://vancouver.ca/community_profiles/kitsilano/index.htm,N,N,Y,Y
+121,Volunteer Park,1,2855,Point Grey Road,Point Grey Road,Macdonald Street,"49.271635,-123.169243",0.72,Kitsilano,http://vancouver.ca/community_profiles/kitsilano/index.htm,N,N,N,N
+122,Ash Park,1,8288,Ash Street,W 68th Avenue,Ash Street,"49.210597,-123.119435",0.51,Marpole,http://vancouver.ca/community_profiles/marpole/index.htm,N,Y,N,N
+123,Eburne Park,1,950,W 71st Avenue,W 71st Avenue,Oak Street,"49.206517,-123.129241",0.9,Marpole,http://vancouver.ca/community_profiles/marpole/index.htm,N,Y,N,N
+124,Marpole Park,1,1410,W 72nd Avenue,W 72nd Avenue,Cartier Street,"49.205507,-123.138307",0.27,Marpole,http://vancouver.ca/community_profiles/marpole/index.htm,N,Y,N,N
+126,Oak Park,1,900,W 59th Avenue,W 59th Avenue,Oak Street,"49.215497,-123.128319",5.25,Marpole,http://vancouver.ca/community_profiles/marpole/index.htm,N,Y,N,Y
+127,Riverview Park,1,1751,W 66th Avenue,W 66th Avenue,Angus Drive,"49.212238,-123.147342",2.38,Marpole,http://vancouver.ca/community_profiles/marpole/index.htm,N,Y,N,N
+128,Shannon Park,1,1575,W 62nd Avenue,W 62nd Avenue,Adera Street,"49.215457,-123.142529",0.94,Marpole,http://vancouver.ca/community_profiles/marpole/index.htm,N,Y,N,N
+130,William Mackie Park,1,1592,W 71st Avenue,W 71st Avenue,SW Marine Drive,"49.206787,-123.142733",0.37,Marpole,http://vancouver.ca/community_profiles/marpole/index.htm,N,Y,N,N
+131,Winona Park,1,7575,Columbia Street,W 59th Avenue,Columbia Street,"49.215431,-123.114024",5.31,Marpole,http://vancouver.ca/community_profiles/marpole/index.htm,N,Y,N,Y
+133,China Creek North Park,1,1001,E 7th Avenue,E 7th Avenue,Glen Drive,"49.264901,-123.083355",3.16,Mount Pleasant,http://vancouver.ca/community_profiles/mount_pleasant/index.htm,N,Y,N,N
+134,China Creek South Park,1,1255,E 10th Avenue,E 10th Avenue,Clark Drive,"49.261581,-123.079352",1.47,Mount Pleasant,http://vancouver.ca/community_profiles/mount_pleasant/index.htm,N,Y,N,N
+136,Guelph Park,1,2390,Brunswick Street,E 7th Avenue,Brunswick Street,"49.263965,-123.095837",1.04,Mount Pleasant,http://vancouver.ca/community_profiles/mount_pleasant/index.htm,N,Y,N,N
+137,Jonathan Rogers Park,1,110,W 7th Avenue,W 7th Avenue,Manitoba Street,"49.264334,-123.108174",1.4,Mount Pleasant,http://vancouver.ca/community_profiles/mount_pleasant/index.htm,N,Y,N,Y
+138,Major Matthews Park,1,2627,Manitoba Street,W 11th Avenue,Manitoba Street,"49.261580,-123.107238",0.06,Mount Pleasant,http://vancouver.ca/community_profiles/mount_pleasant/index.htm,N,Y,N,N
+139,Mount Pleasant Park,1,3161,Ontario Street,W 16th Avenue,Ontario Street,"49.256960,-123.106743",1.12,Mount Pleasant,http://vancouver.ca/community_profiles/mount_pleasant/index.htm,N,Y,N,N
+140,Robson Park,1,599,Kingsway,Kingsway,St. George Street,"49.258229,-123.091798",1.56,Mount Pleasant,http://vancouver.ca/community_profiles/mount_pleasant/index.htm,N,Y,N,Y
+141,Tea Swamp Park,1,266,E 15th Avenue,E 15th Avenue,Sophia Street,"49.257091,-123.098595",0.09,Mount Pleasant,http://vancouver.ca/community_profiles/mount_pleasant/index.htm,N,Y,N,N
+142,Cambie Park,1,500,W 54th Avenue,W 54th Avenue,Cambie Street,"49.221411,-123.117988",0.93,Oakridge,http://vancouver.ca/community_profiles/oakridge/index.htm,N,N,N,N
+143,Columbia Park,1,5908,Alberta Street,W 42nd Avenue,Alberta Street,"49.231521,-123.111978",2.78,Oakridge,http://vancouver.ca/community_profiles/oakridge/index.htm,N,Y,N,Y
+145,Langara Golf Course,1,6706,Alberta Street,W 49th Avenue,Alberta Street,"49.221371,-123.112110",48.57,South Cambie,http://vancouver.ca/community_profiles/south_cambie/index.htm,N,Y,N,N
+146,Montgomery Park,1,1040,W 43rd Avenue,W 43rd Avenue,Montgomery Street,"49.231291,-123.130776",4.02,Oakridge,http://vancouver.ca/community_profiles/oakridge/index.htm,N,Y,N,Y
+147,Tisdall Park,1,6210,Tisdall Street,W 49th Avenue,Tisdall Street,"49.227725,-123.119693",5.02,Oakridge,http://vancouver.ca/community_profiles/oakridge/index.htm,N,Y,Y,N
+148,Beaconsfield Park,1,3215,Slocan Street,E 15th Avenue,Slocan Street,"49.255546,-123.051302",4.43,Renfrew-Collingwood,http://vancouver.ca/community_profiles/renfrew-collingwood/index.htm,N,Y,N,Y
+149,Cariboo Park,1,3450,E 29th Avenue,E 29th Avenue,Cariboo Street,"49.244232,-123.028792",0.77,Renfrew-Collingwood,http://vancouver.ca/community_profiles/renfrew-collingwood/index.htm,N,Y,N,N
+150,Carleton Park,1,3450,Price Street,Price Street,Joyce Street,"49.242002,-123.030451",0.68,Renfrew-Collingwood,http://vancouver.ca/community_profiles/renfrew-collingwood/index.htm,Y,Y,N,N
+151,Collingwood Park,1,5275,McKinnon Street,Euclid Street,McKinnon Street,"49.237066,-123.036887",1.27,Renfrew-Collingwood,http://vancouver.ca/community_profiles/renfrew-collingwood/index.htm,N,Y,N,Y
+152,Earles Park,1,2801,E 41st Avenue,E 41st Avenue,Earles Street,"49.233476,-123.047702",1.59,Renfrew-Collingwood,http://vancouver.ca/community_profiles/renfrew-collingwood/index.htm,N,Y,N,N
+153,Falaise Park,1,3434,Falaise Avenue,Worthington Drive,Falaise Avenue,"49.256485,-123.031631",7.57,Renfrew-Collingwood,http://vancouver.ca/community_profiles/renfrew-collingwood/index.htm,N,Y,N,Y
+154,Foster Park,1,5501,Aberdeen Street,Foster Avenue,Aberdeen Street,"49.234046,-123.028741",0.29,Renfrew-Collingwood,http://vancouver.ca/community_profiles/renfrew-collingwood/index.htm,N,Y,N,N
+155,Gaston Park,1,3470,Crowley Drive,Crowley Drive,Tyne Street,"49.236117,-123.031094",1.5,Renfrew-Collingwood,http://vancouver.ca/community_profiles/renfrew-collingwood/index.htm,N,Y,N,N
+156,Melbourne Park,1,3530,Vanness Avenue,Vanness Avenue,Melbourne Street,"49.236236,-123.029179",0.49,Renfrew-Collingwood,http://vancouver.ca/community_profiles/renfrew-collingwood/index.htm,N,Y,N,N
+157,Norquay Park,1,5050,Wales Street,Kingsway,Wales Street,"49.237098,-123.051061",2.26,Renfrew-Collingwood,http://vancouver.ca/community_profiles/renfrew-collingwood/index.htm,N,Y,N,Y
+158,Price Park,1,3650,Price Street,Price Street,Boundary Road,"49.251572,-123.097564",0.35,Renfrew-Collingwood,http://vancouver.ca/community_profiles/renfrew-collingwood/index.htm,N,Y,N,N
+159,Renfrew Community Park,1,2929,E 22nd Avenue,E 22nd Avenue,Renfrew Street,"49.252129,-123.042896",5,Renfrew-Collingwood,http://vancouver.ca/community_profiles/renfrew-collingwood/index.htm,N,Y,N,N
+160,Renfrew Ravine Park,1,3900,Renfrew Street,E 24th Avenue,Renfrew Street,"49.247166,-123.044111",5.89,Renfrew-Collingwood,http://vancouver.ca/community_profiles/renfrew-collingwood/index.htm,N,N,N,N
+161,Slocan Park,1,2750,E 29th Avenue,E 29th Avenue,Slocan Street,"49.243921,-123.047574",4.14,Renfrew-Collingwood,http://vancouver.ca/community_profiles/renfrew-collingwood/index.htm,N,Y,N,Y
+162,Cartier Park,1,390,E 36th Avenue,E 36th Avenue,Prince Edward Street,"49.237598,-123.097473",0.37,Riley-Little Mountain,http://vancouver.ca/community_profiles/riley_park/index.htm,N,Y,N,N
+163,Grimmett Park,1,169,E 19th Avenue,E 19th Avenue,Quebec Street,"49.253954,-123.102003",0.24,Riley-Little Mountain,http://vancouver.ca/community_profiles/riley_park/index.htm,N,N,N,N
+164,Hillcrest Park,1,4501,Clancy Loranger Way,Midlothian Avenue,Clancy Loranger Way,"49.244734,-123.108417",7.51,Riley-Little Mountain,http://vancouver.ca/community_profiles/riley_park/index.htm,N,Y,N,N
+165,Nat Bailey Stadium,1,4601,Ontario Street,W 30th Avenue,Ontario Street,"49.242653,-123.106679",6.21,Riley-Little Mountain,http://vancouver.ca/community_profiles/riley_park/index.htm,N,Y,N,N
+166,Prince Edward Park,1,3773,Prince Edward Street,E 21st Avenue,Prince Edward Street,"49.244397,-123.156429",1.21,Riley-Little Mountain,http://vancouver.ca/community_profiles/riley_park/index.htm,N,Y,N,Y
+167,Queen Elizabeth Park,1,4600,Cambie Street,W 29th Avenue,Cambie Street,"49.240978,-123.112028",52.98,Riley-Little Mountain,http://vancouver.ca/community_profiles/riley_park/index.htm,N,Y,N,Y
+168,Riley Park,1,50,E 30th Avenue,E 30th Avenue,Ontario Street,"49.241987,-123.104361",2.7,Riley-Little Mountain,http://vancouver.ca/community_profiles/riley_park/index.htm,N,Y,N,N
+169,Angus Park,1,3600,Angus Drive,Alexandra Street,Angus Drive,"49.253932,-123.143816",1,Shaughnessy,http://vancouver.ca/community_profiles/shaughnessy/index.htm,N,N,N,N
+170,Devonshire Park,1,1250,Devonshire Crescent,Devonshire Crescent,Selkirk Street,"49.245020,-123.133640",1.53,Shaughnessy,http://vancouver.ca/community_profiles/shaughnessy/index.htm,N,N,N,N
+171,Kerrisdale Park,1,5670,E Boulevard,W 39th Avenue,East Boulevard,"49.235725,-123.152674",2.99,Shaughnessy,http://vancouver.ca/community_profiles/shaughnessy/index.htm,N,Y,N,N
+172,Shaughnessy Park,1,1300,The Crescent,The Crescent,Hudson Street,"49.255715,-123.135068",1.45,Shaughnessy,http://vancouver.ca/community_profiles/shaughnessy/index.htm,N,N,N,N
+173,VanDusen Botanical Gardens,1,5251,Oak Street,W 37th Avenue,Oak Street,"49.239181,-123.131293",22.29,Shaughnessy,http://vancouver.ca/community_profiles/shaughnessy/index.htm,N,Y,N,Y
+174,Braemar Park,1,895,W 27th Avenue,W 27th Avenue,Willow Street,"49.247615,-123.123630",1.26,South Cambie,http://vancouver.ca/community_profiles/south_cambie/index.htm,N,Y,N,Y
+175,Douglas Park,1,801,W 22nd Avenue,W 22nd Avenue,Heather Street,"49.252493,-123.122225",5.32,South Cambie,http://vancouver.ca/community_profiles/south_cambie/index.htm,N,Y,N,N
+177,Heather Park,1,702,W 18th Avenue,W 18th Avenue,Heather Street,"49.254765,-123.121103",0.98,South Cambie,http://vancouver.ca/community_profiles/south_cambie/index.htm,N,Y,N,N
+179,MacLean Park,1,710,Keefer Street,Keefer Street,Heatley Avenue,"49.278838,-123.088396",1.21,Strathcona,http://vancouver.ca/community_profiles/strathcona/index.htm,N,Y,N,Y
+180,Oppenheimer Park,1,400,Powell Street,Powell Street,Jackson Street,"49.282645,-123.094313",1,Strathcona,http://vancouver.ca/community_profiles/strathcona/index.htm,N,Y,Y,Y
+181,Strathcona Park,1,857,Malkin Avenue,Malkin Avenue,Hawks Avenue,"49.275276,-123.084674",10.07,Strathcona,http://vancouver.ca/community_profiles/strathcona/index.htm,N,Y,N,Y
+182,Strathcona Linear Park,1,787,Prior Street,Prior Street,Hawks Avenue,"49.276983,-123.087485",0.3,Strathcona,http://vancouver.ca/community_profiles/strathcona/index.htm,N,Y,N,N
+183,Thornton Park,1,1166,Main Street,Terminal Avenue,Main Street,"49.273946,-123.099212",1.49,Strathcona,http://vancouver.ca/community_profiles/strathcona/index.htm,N,N,N,N
+184,George Park,1,500,E 63rd Avenue,E 63rd Avenue,St. George Street,"49.212608,-123.094228",1.43,Sunset,http://vancouver.ca/community_profiles/sunset/index.htm,N,Y,N,N
+185,MacDonald Park,1,300,E 44th Avenue,E 44th Avenue,Prince Edward Street,"49.229748,-123.098396",1.05,Sunset,http://vancouver.ca/community_profiles/sunset/index.htm,N,Y,N,N
+186,Memorial South Park,1,5955,Ross Street,E 41st Avenue,Ross Street,"49.230901,-123.085138",13.59,Sunset,http://vancouver.ca/community_profiles/sunset/index.htm,N,Y,N,Y
+187,Moberly Park,1,7646,Prince Albert Street,E 59th Avenue,Prince Albert Street,"49.215602,-123.086219",3.6,Sunset,http://vancouver.ca/community_profiles/sunset/index.htm,N,Y,N,Y
+188,Ross Park,1,7402,Ross Street,E 59th Avenue,Ross Street,"49.217276,-123.082351",1.51,Sunset,http://vancouver.ca/community_profiles/sunset/index.htm,N,Y,N,Y
+189,Sunset Park,1,404,E 51st Avenue,E 51st Avenue,Prince Edward Street,"49.222561,-123.096916",3.42,Sunset,http://vancouver.ca/community_profiles/sunset/index.htm,N,Y,N,N
+191,Bobolink Park,1,2510,Hoylake Avenue,Hoylake Avenue,Muirfield Drive,"49.215075,-123.057615",3.82,Victoria-Fraserview,http://vancouver.ca/community_profiles/victoria-fraserview/index.htm,N,Y,N,Y
+192,Fraserview Park,1,7595,Victoria Drive,E 61st Avenue,Victoria Drive,"49.215398,-123.067572",1.27,Victoria-Fraserview,http://vancouver.ca/community_profiles/victoria-fraserview/index.htm,N,Y,Y,N
+193,Gladstone-Riverside Park,1,2500,E Kent Street S,E Kent Street S,Nanaimo Street,"49.205532,-123.056883",1.07,Victoria-Fraserview,http://vancouver.ca/community_profiles/victoria-fraserview/index.htm,N,N,N,N
+194,Gordon Park,1,6675,Commercial Street,E 49th Avenue,Commercial Street,"49.223380,-123.070491",6.51,Victoria-Fraserview,http://vancouver.ca/community_profiles/victoria-fraserview/index.htm,N,Y,N,Y
+195,Humm Park,1,7250,Humm Street,Upland Drive,Humm Street,"49.218698,-123.063266",0.47,Victoria-Fraserview,http://vancouver.ca/community_profiles/victoria-fraserview/index.htm,N,Y,N,N
+196,Nanaimo Park,1,2390,E 46th Avenue,E 46th Avenue,Nanaimo Street,"49.227724,-123.057508",2.91,Victoria-Fraserview,http://vancouver.ca/community_profiles/victoria-fraserview/index.htm,N,Y,N,Y
+197,Riverfront Park,1,2750,E Kent Street S,E Kent Street S,Elliott Street,"49.205951,-123.045750",4.01,Killarney,http://vancouver.ca/community_profiles/killarney/index.htm,N,Y,N,Y
+198,Tecumseh Park,1,1751,E 45th Avenue,E 45th Avenue,Bruce Street,"49.229752,-123.069846",2.09,Victoria-Fraserview,http://vancouver.ca/community_profiles/victoria-fraserview/index.htm,N,Y,N,N
+199,Alexandra Park,1,1755,Beach Avenue,Beach Avenue,Bidwell Street,"49.285460,-123.142230",0.55,West End,http://vancouver.ca/community_profiles/west_end/index.htm,N,N,N,N
+200,Barclay Heritage Square,1,1433,Barclay Street,Barclay Street,Nicola Street,"49.287180,-123.132167",0.56,West End,http://vancouver.ca/community_profiles/west_end/index.htm,N,N,N,Y
+201,English Bay Beach Park,1,1700,Beach Avenue,Beach Avenue,Bidwell Street,"49.287118,-123.143317",9.83,West End,http://vancouver.ca/community_profiles/west_end/index.htm,N,Y,Y,Y
+202,Morton Park,1,1800,Morton Avenue,Morton Avenue,Denman Street,"49.287680,-123.141955",0.22,West End,http://vancouver.ca/community_profiles/west_end/index.htm,N,N,N,N
+203,Nelson Park,1,1030,Bute Street,Nelson Street,Bute Street,"49.282855,-123.129558",1.16,West End,http://vancouver.ca/community_profiles/west_end/index.htm,N,Y,N,N
+204,Rosemont Park,0,3101,Rosemont Drive,Rosemont Drive,Kerr Street,"49.215746,-123.040816",1.36,Killarney,http://vancouver.ca/community_profiles/killarney/index.htm,N,N,N,N
+206,Stanley Park,1,2000,W Georgia Street,W Georgia Street,Chilco Street,"49.302701,-123.144307",400,West End,http://vancouver.ca/community_profiles/west_end/index.htm,N,Y,Y,Y
+207,Sunset Beach Park,1,1204,Beach Avenue,Beach Avenue,Bute Street,"49.281211,-123.139681",3.61,West End,http://vancouver.ca/community_profiles/west_end/index.htm,N,Y,Y,Y
+208,Rosemary Brown Park,0,,W 11th Avenue & Vine Street (2299 Redbud Lane),W 11th Avenue,Vine Street,"49.261821,-123.157388",0.12,Kitsilano,http://vancouver.ca/community_profiles/kitsilano/index.htm,N,N,N,N
+209,Langara Park,0,,W 49th Avenue & Columbia Street,W 49th Avenue,Columbia Street,"49.225093,-123.111506",1.21,Oakridge,http://vancouver.ca/community_profiles/oakridge/index.htm,N,N,N,N
+212,Sahalli Park,0,,E 7th Avenue & Fraser Street,E 7th Avenue,Fraser Street,"49.263885,-123.089121",0.06,Mount Pleasant,http://vancouver.ca/community_profiles/mount_pleasant/index.htm,N,N,N,N
+213,Park Site on Shaughnessy Street,0,,Shaughnessy Street & Fraser River,Shaughnessy Street, ,"49.202224,-123.125036",0.56,Marpole,http://vancouver.ca/community_profiles/marpole/index.htm,N,N,N,N
+217,Hastings Mill Park,1,1575,Alma Street,Point Grey Road,Alma Street,"49.272790,-123.186689",1.23,West Point Grey,http://vancouver.ca/community_profiles/west_point_grey/index.htm,N,Y,N,N
+218,Jericho Beach Park,1,3941,Point Grey Road,Point Grey Road,Wallace Street,"49.271513,-123.197415",46.71,West Point Grey,http://vancouver.ca/community_profiles/west_point_grey/index.htm,N,Y,N,Y
+219,Locarno Park,1,4445,NW Marine Drive,NW Marine Drive,Trimble Street,"49.273015,-123.207284",19,West Point Grey,http://vancouver.ca/community_profiles/west_point_grey/index.htm,N,Y,N,Y
+220,Spanish Banks Beach Park,1,4801,NW Marine Drive,NW Marine Drive,Blanca Street,"49.277063,-123.216909",6.53,West Point Grey,http://vancouver.ca/community_profiles/west_point_grey/index.htm,N,Y,Y,Y
+221,West Point Grey Park,1,2250,Trimble Street,W 8th Avenue,Trimble Street,"49.266301,-123.204312",3.4,West Point Grey,http://vancouver.ca/community_profiles/west_point_grey/index.htm,N,Y,N,Y
+222,Westmount Park,1,4651,W 2nd Avenue,W 2nd Avenue,Blanca Street,"49.271852,-123.214423",0.4,West Point Grey,http://vancouver.ca/community_profiles/west_point_grey/index.htm,N,Y,N,N
+224,Choklit Park,1,,W 7th Avenue & Spruce Street,W 7th Avenue,Spruce Street,"49.265482,-123.128905",0.07,Fairview,http://vancouver.ca/community_profiles/fairview/index.htm,N,Y,N,N
+225,George Wainborn Park,1,450,Beach Crescent,Beach Crescent, ,"49.272541,-123.129311",2.49,Downtown,http://vancouver.ca/community_profiles/downtown/index.htm,N,N,Y,N
+228,Oak Meadows Park,0,899,W 37th Avenue,W 37th Avenue,Oak Street,"49.238445,-123.125795",5,South Cambie,http://vancouver.ca/community_profiles/south_cambie/index.htm,N,Y,Y,N
+231,Camosun,0,4102,W 16th Avenue,W 16th Avenue,Discovery Street,"49.257423,-123.201329",0,Dunbar-Southlands,http://vancouver.ca/community_profiles/dunbar-southlands/index.htm,N,N,N,N
+233,Arbutus Greenway Park,1,,W11th Avenue between Vine St. and Arbutus St.,W 11th Avenue,Arbutus Street,"49.262283,-123.154927",1.08,Kitsilano,http://vancouver.ca/community_profiles/kitsilano/index.htm,N,N,N,N
+234,Aberdeen Park,1,3525,Foster Avenue,Foster Avenue,Aberdeen Street,"49.234765,-123.027446",1,Renfrew-Collingwood,http://vancouver.ca/community_profiles/renfrew-collingwood/index.htm,N,Y,N,N
+235,Granville Island Water Park,0,,"False Creek Community Centre, Granville Island",,,"49.269550,-123.135064",0,Fairview,http://vancouver.ca/community_profiles/fairview/index.htm,N,Y,N,N
+236,Ebisu Park,0,8810,Olser Street,W 72nd Avenue,Olser Street,"49.205468,-123.132836",0.4,Marpole,http://vancouver.ca/community_profiles/marpole/index.htm,N,Y,N,N
+237,Yaletown Park,1,901,Mainland Street,Mainland Street,Nelson Street,"49.277042,-123.118921",0.17,Downtown,http://vancouver.ca/community_profiles/downtown/index.htm,N,N,N,N
+238,Carolina Park,1,2100,Carolina Street,E 5th Avenue,Carolina Street,"49.266401,-123.090778",0.08,Mount Pleasant,http://vancouver.ca/community_profiles/mount_pleasant/index.htm,N,N,N,N
+240,Park Site at Southe East False Creek,0,215,W 1st Avenue,W 1st Avenue,Columbia Street,"49.270869,-123.110533",0.95,Mount Pleasant,http://vancouver.ca/community_profiles/mount_pleasant/index.htm,N,Y,N,N
+241,Habitat Island,0,,South East False Creek,,,"49.272210,-123.110791",0.6,Mount Pleasant,http://vancouver.ca/community_profiles/mount_pleasant/index.htm,N,N,N,N
+244,Fraser River Trail,1,,Hudson Street on the Fraser River,SW Marine Drive,Hudson Street,"49.200357,-123.135862",0.35,Marpole,http://vancouver.ca/community_profiles/marpole/index.htm,N,N,N,N
+245,Trillium Park Site,0,,National Avenue & Thornton Street,National Avenue,Thornton Street,"49.275015,-123.093116",3.05,Strathcona,http://vancouver.ca/community_profiles/strathcona/index.htm,N,Y,N,Y
