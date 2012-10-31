@@ -1,0 +1,59 @@
+CPSC313 - Assignment 3
+=======================
+Student:	Evan Louie
+Student#:	72210099
+CSID:		m6d7
+
+
+
+===============
+Problem 1
+===============
+
+	Section A
+	----------
+		| 14 | 13 | 12 | 11 | 10 |  9 |  8 |  7 |  6 |  5 |  4 |  3 |  2 |  1 |  0 |
+		----------------------------------------------------------------------------
+		| CT | CT | CT | CT | CT | CT | CT | CT | CT | CI | CI | CI | CO | CO | CO |
+
+
+	Section B
+	---------
+		-------------------------------------------------------------------------------------
+		|	Operation	|	Address	|	Cache Set 	|	Tag	|	Hit?			|	Value	|
+		-------------------------------------------------------------------------------------
+		|	Read		|	0x0362	|		4		|	D	|	Miss-Conflict	|	Unkown	|
+		|	Read		|	0x7BFE	|		7 		|	1EF	|	Miss-Cold		|	Unkown	|
+		|	Read		|	0x3FC9	|		1 		|	FF	|	Miss-Cold		|	Unkown	|
+		|	Read		|	0x0361	|		4		|	D	|	Miss-Conflict	|	Unkown	|	
+		-------------------------------------------------------------------------------------
+
+		- Reading 0x0362 will result in a Miss-Conflict due to the current value in cache not being valid. Thus it will have to be fetched from memory
+		- Reading 0x7BFE will result in a Miss-Cold due to their not currently being a 1EF tag in set 7
+		- Reading 0x3FC9 will result in a Miss-Cold due to their not currently being a FF tag in set 1
+		- Reading 0x0361 will result in a hit because after the first Miss-Conflict in the first read, tag D would have been loaded into set 4
+
+		-----------------------------------------------------------------------------
+		|			|	Binary				|	Tag			|	Index	|	Offset	|
+		-----------------------------------------------------------------------------
+		|	0x0364	|	0000 0011 0110 0100	|	000001101	|	100		|	010		|
+		|	0x7BFE	|	0111 1011 1111 1110	|	111101111	|	111		|	110		|
+		|	0x3FC9	|	0011 1111 1100 1001	|	011111111	|	001 	| 	001 	|
+		|	0x0361	|	0000 0011 0110 0001	|	000001101 	|	100 	| 	001 	|
+		-----------------------------------------------------------------------------
+
+===============
+Problem 2
+===============
+	
+	Refer to code
+
+
+===============
+Problem 3
+===============
+	
+	Section A
+	----------
+		Miss-Rate = ~25%
+		First cache entry will always miss,
