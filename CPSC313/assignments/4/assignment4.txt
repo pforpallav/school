@@ -1,4 +1,4 @@
-CPSC313 - Assignment 3
+CPSC313 - Assignment 4
 =======================
 Student:	Evan Louie
 Student#:	72210099
@@ -53,7 +53,40 @@ Problem 2
 Problem 3
 ===============
 	
+	NOTE: Assuming cache is layed out contiguously in linear memory.
+
 	Section A
 	----------
-		Miss-Rate = ~25%
-		First cache entry will always miss,
+		Miss-Rate = 25%
+		Initial read attempt will cold-miss and fetch information along the next 3 ints in the array (due to the 16-byte block size). Because the array is stored in row-major order, this will result in correct ordering.
+
+	Section B
+	----------
+		Miss-Rate = 100%
+		Every read attempt will result in a miss because the array is being accesed in a column major order, which is against the way the way the cache will store the array (which is row-major).
+
+	Section C
+	----------
+		Miss-Rate = 50%
+		The function reads sections of the array in a 2x2 square, thus it will always always require to fetch new information everytime it goes to the next line. Hence it will always miss, hit and repeat.
+
+	Section D
+	----------
+		Miss-Rate = 100%
+		Just as in section B, the array is being accessed in the the incorrect order; increasing the array size will only lead to additional conflicts and required rewrites on top of the problems in section b when the cache is full.
+
+	Section E
+	----------
+		Miss-Rate = 100%
+		Same as section D, increasing/decreasing the array size will not change the fact that the array will be read in the cache in the incorrect order. Hence it will stay 100%.
+
+	Section F
+	----------
+		Miss-Rate = 100%
+		Using a 2-way set associative cache will not help as the array is still being read in the incorrect order.  The only way any n-way set associative cache would help in this situation was if the it was greater than or equal to a 48-way set associative cache because without n being that size; an array of 48x48 being read in always result in conflicts in the sets and require rewrites, never managing to take advantage of the fact that it stores the next numbers in the column before rewriting.
+
+
+==============
+Hours Spent
+==============
+	6.5 Hours
