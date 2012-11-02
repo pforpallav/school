@@ -46,7 +46,7 @@ Problem 1
 Problem 2
 ===============
 	
-	Refer to code
+	Refer to cache.c
 
 
 ===============

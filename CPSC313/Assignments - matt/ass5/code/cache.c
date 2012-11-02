@@ -96,9 +96,6 @@ cache_t *cache_new(size_t num_blocks, size_t block_size, unsigned int associativ
 static int cache_line_check_validity_and_tag(cache_line_t *cache_line, intptr_t tag)
 {
     /* TO BE COMPLETED BY THE STUDENT */
-    if(cache_line->tag == tag)
-        return cache_line->is_valid;
-    return 0;
 }
 
 /*
@@ -107,8 +104,6 @@ static int cache_line_check_validity_and_tag(cache_line_t *cache_line, intptr_t 
 static int cache_line_retrieve_data(cache_line_t *cache_line, size_t offset)
 {
     /* TO BE COMPLETED BY THE STUDENT */
-    return *((int*)(cache_line->data+offset));
-
 }
 
 /*
@@ -142,14 +137,6 @@ static cache_line_t *cache_set_find_matching_line(cache_t *cache, cache_set_t *c
     /*
      * Don't forget to call cache_line_make_mru(cache_set, i) if you find a matching cache line.
      */
-    int i;
-    cache_line_t line;
-    for(i=0;i<cache->associativity;i++){
-        if (cache_set->cache_lines[i]->tag==tag)
-            return cache_line_make_mru(cache_set, i);
-    } 
-
-    return NULL;
 }
 
 /*
@@ -163,8 +150,6 @@ static cache_line_t *find_available_cache_line(cache_t *cache, cache_set_t *cach
      * Don't forget to call cache_line_make_mru(cache_set, i) once you have selected the
      * cache line to use.
      */
-    return cache_line_make_mru(cache_set, cache->associativity-1);
-
 
 }
 
@@ -197,29 +182,6 @@ static cache_line_t *cache_set_add(cache_t *cache, cache_set_t *cache_set, intpt
 int cache_read(cache_t *cache, int *address)
 {
     /* TO BE COMPLETED BY THE STUDENT */
-
-    int offset = (int) address & cache->block_offset_mask;
-    int index = ((int)address >> cache->cache_index_shift) & cache ->cache_index_mask;
-    int tag = (int)address >> cache->tag_shift;
-    cache_set_t* set = &cache->sets[index];
-
-    cache->access_count++;
-
-    cache_line_t* line = cache_set_find_matching_line(cache, set, tag);
-    if(!line)
-    {
-        cache->miss_count++;
-        line = cache_set_add(cache, set, address, tag);
-    }
-
-
-    if(!cache_line_check_validity_and_tag(line, tag))
-    {
-        cache->miss_count++;
-        line = cache_set_add(cache, set, address, tag);
-    }
-
-    return cache_line_retrieve_data(line, offset);
 }
 
 /*
