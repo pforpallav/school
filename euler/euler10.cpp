@@ -1,14 +1,14 @@
 #include <iostream>
 using namespace std;
 
-int isPrime(unsigned long long a) {
-	for (unsigned long long i=a-1; i>1; i--) 
-	{
-		if(a%i==0) {
-			return 0;
-		}
-	}
-	return 1;
+bool isPrime(unsigned long long n) {
+	if( n <= 1 )
+		return false;
+	unsigned long long half = n / 2;
+	for( unsigned long long i = 2; i <= half; i++ )
+		if( n % i == 0 )
+			return false;
+	return true;
 }
 
 int main() {
@@ -17,6 +17,7 @@ int main() {
 	{
 		if(isPrime(i)) {
 			sum += i;
+			cout<<sum<<endl;
 		}
 	}
 	cout << sum << endl;
