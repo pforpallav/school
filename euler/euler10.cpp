@@ -17,7 +17,6 @@ int main() {
 	{
 		if(isPrime(i)) {
 			sum += i;
-			cout << i << ":" << sum << endl;
 		}
 	}
 	cout << sum << endl;
