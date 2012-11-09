@@ -1,0 +1,18 @@
+LAB
+
+1.
+	mean(s1.variance) = 3.547727
+	mean(s2.variance) = 3.952791
+	mean(s2.variance) = 4.699844
+
+	mean(s2.variance) is closest to s^2 (which is 4)
+
+2.
+	Histogram of s2 show a MUCH more normal distribution than the rest which shows that s2 is the correct method of getting variance
+	Boxplot supports this as median is shown as more centered between q1 and q2 than in s1 or s3
+	Min. 		1st Qu.  	Median    	Mean 	3rd Qu.    	Max. 
+ 	0.5089  	2.7150  	3.7870  	3.9530  4.9470 		10.4100 
+
+3.
+	While a point estimate is meant to capture a random sample of the population, if they sample size is not large enough or not enough samples are used, the data collected can be innacurate. Although the sampling is meant to be unbiased, if such sampling was not large enough in scale, it could possibly miss out on major subsections of the population which could heavily effect the sampling.
+	It is also impossible to truly get all information about an entire population based off a random sampling.
