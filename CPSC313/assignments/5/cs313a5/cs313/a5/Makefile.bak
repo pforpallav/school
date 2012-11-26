@@ -1,0 +1,101 @@
+CC = gcc
+CFLAGS = -g -O2
+
+SRC = fatinfo.c direntry.c directory.c blockio.c wordio.c fatfs.c fat12.c 
+OBJ = $(SRC:.c=.o)
+
+fat12info: $(OBJ)
+	gcc -o fat12info $(OBJ)
+depend: $(SRC)
+	makedepend $(SRC)
+
+clean:
+	/bin/rm -f $(OBJ) fatinfo *~
+
+# DO NOT DELETE
+
+fatinfo.o: /usr/include/stdio.h /usr/include/features.h
+fatinfo.o: /usr/include/sys/cdefs.h /usr/include/bits/wordsize.h
+fatinfo.o: /usr/include/gnu/stubs.h /usr/include/gnu/stubs-64.h
+fatinfo.o: /usr/include/bits/types.h /usr/include/bits/typesizes.h
+fatinfo.o: /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h
+fatinfo.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
+fatinfo.o: fatfs.h /usr/include/stdlib.h /usr/include/bits/waitflags.h
+fatinfo.o: /usr/include/bits/waitstatus.h /usr/include/endian.h
+fatinfo.o: /usr/include/bits/endian.h /usr/include/bits/byteswap.h
+fatinfo.o: /usr/include/sys/types.h /usr/include/time.h
+fatinfo.o: /usr/include/sys/select.h /usr/include/bits/select.h
+fatinfo.o: /usr/include/bits/sigset.h /usr/include/bits/time.h
+fatinfo.o: /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h
+fatinfo.o: /usr/include/alloca.h fat12.h stringbuffer.h wordio.h blockio.h
+fatinfo.o: directory.h direntry.h
+direntry.o: /usr/include/stdio.h /usr/include/features.h
+direntry.o: /usr/include/sys/cdefs.h /usr/include/bits/wordsize.h
+direntry.o: /usr/include/gnu/stubs.h /usr/include/gnu/stubs-64.h
+direntry.o: /usr/include/bits/types.h /usr/include/bits/typesizes.h
+direntry.o: /usr/include/libio.h /usr/include/_G_config.h
+direntry.o: /usr/include/wchar.h /usr/include/bits/stdio_lim.h
+direntry.o: /usr/include/bits/sys_errlist.h /usr/include/stdlib.h
+direntry.o: /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h
+direntry.o: /usr/include/endian.h /usr/include/bits/endian.h
+direntry.o: /usr/include/bits/byteswap.h /usr/include/sys/types.h
+direntry.o: /usr/include/time.h /usr/include/sys/select.h
+direntry.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
+direntry.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
+direntry.o: /usr/include/bits/pthreadtypes.h /usr/include/alloca.h
+direntry.o: /usr/include/string.h /usr/include/xlocale.h fatfs.h fat12.h
+direntry.o: stringbuffer.h wordio.h direntry.h blockio.h directory.h
+directory.o: /usr/include/stdio.h /usr/include/features.h
+directory.o: /usr/include/sys/cdefs.h /usr/include/bits/wordsize.h
+directory.o: /usr/include/gnu/stubs.h /usr/include/gnu/stubs-64.h
+directory.o: /usr/include/bits/types.h /usr/include/bits/typesizes.h
+directory.o: /usr/include/libio.h /usr/include/_G_config.h
+directory.o: /usr/include/wchar.h /usr/include/bits/stdio_lim.h
+directory.o: /usr/include/bits/sys_errlist.h /usr/include/stdlib.h
+directory.o: /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h
+directory.o: /usr/include/endian.h /usr/include/bits/endian.h
+directory.o: /usr/include/bits/byteswap.h /usr/include/sys/types.h
+directory.o: /usr/include/time.h /usr/include/sys/select.h
+directory.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
+directory.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
+directory.o: /usr/include/bits/pthreadtypes.h /usr/include/alloca.h
+directory.o: /usr/include/string.h /usr/include/xlocale.h fat12.h
+directory.o: stringbuffer.h fatfs.h wordio.h directory.h direntry.h blockio.h
+blockio.o: /usr/include/sys/types.h /usr/include/features.h
+blockio.o: /usr/include/sys/cdefs.h /usr/include/bits/wordsize.h
+blockio.o: /usr/include/gnu/stubs.h /usr/include/gnu/stubs-64.h
+blockio.o: /usr/include/bits/types.h /usr/include/bits/typesizes.h
+blockio.o: /usr/include/time.h /usr/include/endian.h
+blockio.o: /usr/include/bits/endian.h /usr/include/bits/byteswap.h
+blockio.o: /usr/include/sys/select.h /usr/include/bits/select.h
+blockio.o: /usr/include/bits/sigset.h /usr/include/bits/time.h
+blockio.o: /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h
+blockio.o: /usr/include/unistd.h /usr/include/bits/posix_opt.h
+blockio.o: /usr/include/bits/environments.h /usr/include/bits/confname.h
+blockio.o: /usr/include/getopt.h blockio.h /usr/include/stdlib.h
+blockio.o: /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h
+blockio.o: /usr/include/alloca.h fatfs.h fat12.h stringbuffer.h
+wordio.o: wordio.h
+fatfs.o: fat12.h stringbuffer.h fatfs.h /usr/include/stdlib.h
+fatfs.o: /usr/include/features.h /usr/include/sys/cdefs.h
+fatfs.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h
+fatfs.o: /usr/include/gnu/stubs-64.h /usr/include/bits/waitflags.h
+fatfs.o: /usr/include/bits/waitstatus.h /usr/include/endian.h
+fatfs.o: /usr/include/bits/endian.h /usr/include/bits/byteswap.h
+fatfs.o: /usr/include/sys/types.h /usr/include/bits/types.h
+fatfs.o: /usr/include/bits/typesizes.h /usr/include/time.h
+fatfs.o: /usr/include/sys/select.h /usr/include/bits/select.h
+fatfs.o: /usr/include/bits/sigset.h /usr/include/bits/time.h
+fatfs.o: /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h
+fatfs.o: /usr/include/alloca.h blockio.h /usr/include/fcntl.h
+fatfs.o: /usr/include/bits/fcntl.h /usr/include/bits/stat.h
+fatfs.o: /usr/include/stdio.h /usr/include/libio.h /usr/include/_G_config.h
+fatfs.o: /usr/include/wchar.h /usr/include/bits/stdio_lim.h
+fatfs.o: /usr/include/bits/sys_errlist.h /usr/include/sys/stat.h
+fat12.o: /usr/include/stdio.h /usr/include/features.h
+fat12.o: /usr/include/sys/cdefs.h /usr/include/bits/wordsize.h
+fat12.o: /usr/include/gnu/stubs.h /usr/include/gnu/stubs-64.h
+fat12.o: /usr/include/bits/types.h /usr/include/bits/typesizes.h
+fat12.o: /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h
+fat12.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
+fat12.o: fat12.h stringbuffer.h wordio.h

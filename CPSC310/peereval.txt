@@ -13,5 +13,5 @@ Maggie Phan: $3,333.33
 Hyun Jung Lee: $3,333.33
 
 
-@Maggie -> Hard worker, no complaints
-@HyunJung -> Hard worker, needs to speak up more
+@Maggie -> Very good at keeping on top of issues, no complaints.
+@HyunJung -> Easy to work with, no complaints.

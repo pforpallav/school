@@ -1,0 +1,856 @@
+File handle 3
+******Î<êmkdosfs******¯ˇˇˇˇˇˇˇˇè******ˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇ******************¯ˇˇˇˇˇˇˇˇè******ˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇ******************ASS1       ************************************************************************************************************************************************************************************************************************.          ************************.          ************************.          ************************int *a;
+int x, y, t;
+
+void order()
+{
+    if (a[x] > a[y])
+    {
+	t = a[x];
+	a[x] = a[y];
+	a[y] = t;
+    }
+}
+
+************************Total before late penalty: [ /25]
+Total after late penalty:  [ /25]
+
+Commented order.s file  [ /10]
+----------------------
+
+The code  can be divided  roughly into five  sections. Each of these  will be
+worth 2 marks. In order to get full marks for a section, the comments written
+by the student should indicate  that he/she understands what the instructions
+do and how they relate to the C code. The sections are:
+
+    1. Loading x, y and a into registers (first 3 instructions)
+
+
+    2. Computing the addresses ******of a[x] and a[y] (next 2 instructions)
+
+
+    3. Comparing the values of a[x] and a[y] and branching (next 2 instructions)
+
+
+    4. Storing values of t and a[x] (next 3 instructions)
+
+
+    5. Storing the new value of a[y] (last 3 instructions)
+
+    
+
+Y86 version of the order function [ /15]
+---------------------------------
+
+Hopefully most students based their  code on the x86-64 version. There should
+not be any deductions if they did  not (although it makes it less likely that
+their code will run). The mark******s breakdown is as follows:
+
+    1. Instructions that correspond to the sections from above (2 marks each).
+
+
+
+    2. The code runs  and allows bubble-sort to sort the array  -- if it does
+       not  even though the  translation appears  correct, this  may indicate
+       they made unwarranted assumptions (2 marks).
+
+
+
+    3. Their code is well-commented (3 marks).
+
+
+
+Please run their solution to the simulator (unless you spotted a problem that
+you are certain will prevent us from being assembled or execute******d).
+
+
+Challenge Problem [ /4]
+-----------------
+
+Give 2.5  marks for  the Partition()  step, and 1.5  marks for  the recursive
+portion of the algorithm. They must provide a test case along with their code
+so you can run it and verify that their solution work.
+
+
+
+
+Time they took to do the assignment [ /1]
+-----------------------------------
+
+I asked them in class to specify  how long it took them to do the assignment.
+Give 1 bonus mark to student who did  (if not, they will get a chance to give
+us the inform******ation with assignment  #2). I will look through this information
+myself.
+
+
+
+
+************************Total before late penalty: [ /25]
+Total after late penalty:  [ /25]
+
+The Iaddl, Isubl, Ixorl and Iandl instructions [  /12]
+----------------------------------------------
+
+    Documentation of each stage's role in implementing the instruction [ /5]
+    
+        Fetch      [ /1]
+
+        Decode     [ /1]
+
+        Execute    [ /1]
+
+        Write-back [ /1]
+
+        PC-update  [ /1]
+
+    Modifications to the CPU.java file [ /5]
+
+    Test program, and the associated explanations [ /2]
+
+
+The indirect Call instru******ction [  /12]
+-----------------------------
+
+    Documentation of each stage's role in implementing the instruction [ /6]
+    
+        Fetch      [ /1]
+
+        Decode     [ /1]
+
+        Execute    [ /1]
+
+        Memory     [ /1]
+
+        Write-back [ /1]
+
+        PC-update  [ /1]
+
+    Modifications to the CPU.java file [ /4]
+
+    Test program, and the associated explanation [ /2]
+
+
+The double-indirect jump instruction [  /11]
+------------------------------------
+
+    Documentation of each stage's role in i******mplementing the instruction [ /5]
+    
+        Fetch      [ /1]
+
+        Decode     [ /1]
+
+        Execute    [ /1]
+
+        Memory     [ /1]
+
+        PC-update  [ /1]
+
+    Modifications to the CPU.java file [ /4]
+
+    Test program, and the associated explanation [ /2]
+
+
+Challenge Problem [ /6]
+-----------------
+
+Give 2 marks for the changes to  the grammar, 2 mark for the documentation of
+each  stage's role  in  implementing the  instruction,  and 2  marks for  the
+changes to the code.
+
+
+Time they took to ******do the assignment [ /1]
+-----------------------------------
+
+Give 1 bonus mark to student who specified this information.
+
+
+
+
+
+******Total before late penalty: [ /30]
+Total after late penalty:  [ /30]
+
+
+Bug #1: srcBHzd problem [ /9]
+-----------------------
+
+    Description of the symptoms [ /2]
+
+
+
+    Explanation of what was wrong with the code [ /3]
+
+
+
+    One line sentence describing the solution [ /2]
+
+
+
+    Changes to file CPU.java [ /2]
+
+
+
+
+Bug #2: aLoadUse problem [ /9]
+------------------------
+
+    Description of the symptoms [ /2]
+
+
+
+    Explanation of what was wrong with the code [ /3]
+
+
+
+    One line sentence describing the sol******ution [ /2]
+
+
+
+    Changes to file CPU.java [ /2]
+
+
+
+
+Bug #2: notTkJmp problem [ /9]
+------------------------
+
+    Description of the symptoms [ /2]
+
+
+
+    Explanation of what was wrong with the code [ /3]
+
+
+
+    One line sentence describing the solution [ /2]
+
+
+
+    Changes to file CPU.java [ /2]
+
+
+
+CPI Results [ /3]
+-----------
+
+    Give 1 mark for each of the three test results.
+
+
+Time they took to do the assignment [Bonus]
+-----------------------------------
+
+    I will deal with this part.
+
+
+
+
+
+
+
+******************Total before late penalty: [ /30]
+Total after late penalty:  [ /30]
+
+Implementation of pipelineHazardControl [ /9]
+---------------------------------------
+
+    The changes need to introduce an appropriate sequence of STALL/BUBBLE
+    for:
+	
+	mis-predicted conditional jumps [ /3]
+
+
+
+
+        RET instructions [ /3]
+        
+
+
+
+        Load/Use hazards  [ /3]
+
+
+
+
+Changes to fetch_SelectPC [ /6]
+-------------------------
+
+    There were two cases that needed to be dealt with specially:
+
+    	  mis-predicted con******ditional jumps [ /3]
+
+
+
+          RET instructions [ /3]
+
+
+
+Changes to fetch_PredictPC [ /2]
+--------------------------
+
+    Conditional jumps should be assumed as being always taken (by using
+    d.valC.readInput())
+
+
+
+Implementation of decode_ReadRegisterWithForwarding [ /8]
+---------------------------------------------------
+
+    All of the  following cases need to be dealt  with appropriately. In each
+    case,  give  0.5 marks  for  detecting the  condition,  and  the rest  of
+    handling it correctly******.
+
+        regNum is R_NONE [ /1]
+
+
+
+
+	The instruction currently in Execute has computed a new value for the
+        register. [ /1.5]
+
+
+
+
+	The instruction currently in Memory has read a new value for the register.
+        [ /1.5]
+
+
+
+
+	The instruction currently in Memory will write a new value for the register
+        (computed in Execute). [/1.5]
+
+
+
+
+        The instruction currently in Write-back has written a new value to the
+	register, but it wasn't necessarily available when Decode started. [/1.5]
+
+
+
+
+******	No data hazard exists. [/1]
+
+
+
+Documented test results [ /2]
+-----------------------
+
+    All they need to write is whether or not each of the tests in pipe-test.s
+    succeeded, and if not explain what happens.
+
+
+
+
+CPI Results [ /3]
+-----------
+
+    Give 1 mark for each of the three test results.
+
+
+
+
+Time they took to do the assignment [Bonus]
+-----------------------------------
+
+    I will deal with this part.
+
+
+
+
+
+
+
+******Total before late penalty: [ /30]
+Total after late penalty:  [ /30]
+
+Section 1: Possible improvements to the CPU, raw scores
+-------------------------------------------------------
+
+    Use dynamic jump prediction [ /12]
+
+        - They need a table mapping addresses of jump instructions to whether
+          or not the jump was taken [  /2]
+
+
+
+
+        - This  table should  have small,  finite capacity  (no more  than 16
+          addresses) [  /1]
+
+
+
+
+        - Information about the jump should be small (n******o more than 8 bits, or
+          at most 16). [  /1]
+
+
+
+
+        - They should  use the table  to predict whether  or not the  jump is
+          taken in fetch_PredictPC [  /2]
+
+
+
+
+        - Mispredicted jumps should be handled correctly in fetch_SelectPC.
+          [  /3]
+
+
+
+
+        - PipelineHazardControl() should shoot down mispredicted instructions
+          [  /3]
+
+
+
+
+
+    Predict that forward jumps will not be taken, but backward jumps will [ /8]
+
+        - Jump predictions should have been modified ******correctly in fetch_PredictPC[ /2]
+
+
+
+
+        - Mispredicted jumps should be handled correctly in fetch_SelectPC. [  /3]
+
+
+
+
+        - PipelineHazardControl() should shoot down mispredicted instructions [  /3]
+
+
+
+
+    Use a hardware stack to predict targets for "ret" instructions [ /8]
+
+        - The stack should have small, finite size (at most 16 entries) [ /1]
+
+
+
+        - When  the stack  fills up,  they  should discard  the older  return
+          addresses, not ignore the new one [  /1]
+
+            ******* Take two marks off if they don't do this, instead of 1, since it
+              makes the hardware stack useless for real programs.
+
+
+
+
+
+        - They should use the stack in fetch_PredictPC to predict the address
+          of the next instructino to execute. [ /3]
+
+
+
+
+        - pipelineHazardControl() should shoot down mispredicted instructions
+          [ /3]
+
+
+
+    Avoid load/use hazards when possible (for register rA only!) [ /8]
+
+        - Modifications to pipelineHazardControl()  to only avoid stalli******ng in
+          this specific case. [  /4]
+
+
+
+        - Data forwarding from w.valM.readInput() to execute() [   /4]
+
+
+
+    Add iaddl, isubl, iandl, ixorl back in from assignment #2 [ /4]
+
+
+
+
+
+Section 2: Possible code improvements to ncopy.s, raw scores
+------------------------------------------------------------
+
+    Use iaddl, isubl appropriate to save 2 instructions/iteration [ /4]
+
+
+
+
+    Use conditional move instead of conditional jump for increment [ /6]
+
+
+
+
+    Remove  the   need  for  "andl   %edx,%******edx"  by  decrementing  "len" last
+    (immediately before the conditional jump) [ /4]
+
+
+
+Section 3: combining raw scores from section 1, 2 [  /23]
+-------------------------------------------------
+
+   Take the sum of the following values:
+       - 5/6 of the sum of their top 3 marks from section 1.
+
+       - 1/2 the sum of their remaining marks from section 1.
+
+       - 5/6 their top mark from section 2.
+
+       - 1/2 the sum of their remaining marks from section 2.
+
+   You may get a sum that is higher tha******n 23 (that's ok).
+
+
+Section 4: Explanations [ /7]
+-----------------------
+
+    Explanations of the changes made to file CPU.java [  /3]
+
+
+
+    Explanations of the changes made to file ncopy.s  [  /3]
+
+
+
+    CPI results [ /1]
+
+
+
+
+Time they took to do the assignment [Bonus]
+-----------------------------------
+
+    I will deal with this part.
+
+
+
+
+
+
+
+************.pos 0x100
+
+sort:   irmovl bottom, %esp     # initialize stack
+	xorl  %eax, %eax        # %eax = 0
+	mrmovl n(%eax), %ebx    # %ebx = n
+	rmmovl %eax, i(%eax)    # i = 0
+oloop:
+	rrmovl %ebx, %ecx       # %ecx = n
+	mrmovl i(%eax), %edx    # %edx = i
+	subl   %edx, %ecx       # is i < n?
+	jle    oloope
+	rmmovl %eax, j(%eax)    # j = 0
+
+iloop:
+	rrmovl %ebx, %ecx       # %ecx = n
+	irmovl 1, %edx
+	subl   %edx, %ecx       # %ecx = n-1
+	mrmovl j(%eax), %edx    # %edx = j
+	subl   %edx, %ecx       # is j < n - 1?
+	jle ******   iloope
+
+	mrmovl j(%eax), %ecx    # x = j
+	rmmovl %ecx, x(%eax)
+	irmovl 1, %edx
+	addl   %edx, %ecx
+	rmmovl %ecx, y(%eax)    # y = j+1
+	
+	pushl  %eax
+	pushl  %ebx
+	call   order
+	popl   %ebx
+	popl   %eax
+
+	mrmovl j(%eax), %ecx    # %ecx = j
+	irmovl 1, %edx
+	addl   %edx, %ecx       # %ecx = j+1
+	rmmovl %ecx, j(%eax)    # j++
+        jmp    iloop
+
+iloope:	mrmovl i(%eax), %ecx    # %ecx = i
+	irmovl 1, %edx
+	addl   %edx, %ecx       # %ecx = i+1
+	rmmovl %ecx, i(%eax)    # i++
+	jmp oloop
+
+oloope:	halt
+
+order:	
+
+#******
+# Array to sort
+#
+.pos 0x1000
+n:      .data 5
+i:	.data 0
+j:	.data 0
+
+x:	.data 0
+y:	.data 0
+t:	.data 0
+	
+a:	.data 15
+        .data 9
+        .data 11
+        .data 3
+        .data 6
+	
+#
+# Stack (16 thirty-two bit words is more than enough here).
+#
+.pos 0x3000
+top:	            .data 0x00000000,0x10     # top of stack.
+bottom:             .long 0x00000000          # bottom of stack.
+************\documentclass[11pt,fleqn]{article}
+
+\usepackage{fancyvrb}
+\usepackage{assignment}
+%\usepackage[solutions]{assignment}
+
+\leftmargini 25pt
+
+%
+% Title information.
+%
+
+\anumber{3}
+\duedate{October $12^{\rm th}$, $19^{\rm th}$, $26^{\rm th}$, 2010 at 17:00}
+\course{CPSC 313: Computer Hardware and Operating Systems}
+
+%
+% The document.
+%
+
+\begin{document}
+
+\section*{Introduction and Objectives}
+
+This assignment is  all about the \texttt{Y86} pipeline. You will  work with two different
+implementations  of  the  pi******peline:   \texttt{Y86-PipeMinus},  which  handles  hazards  by
+stalling,  and \texttt{Y86-Pipe},  which handles  hazards using  data forwarding  and jump
+prediction. There are three  parts to the assignment:
+\begin{itemize}
+\item In  the first part you  will find and  fix three bugs in  the \texttt{Y86-PipeMinus}
+  implementation of the CPU provided with the assignment. The goal of this part is to help
+  you read and understand the pipeline control logic for stalling.
+
+\item In the second part you will  imp******lement data forwarding and branch prediction for the
+  \texttt{Y86-Pipe} implementation  of the  CPU. 
+
+\item In the third part you will examine the execution of a sample \texttt{Y86} program in
+  the \texttt{Y86-Pipe} implementation with the goal of improving its pipeline performance
+  by changing the program and/or changing the CPU implementation. The goal of this part of
+  the assignment is  to spend some time trying  to get better performance. You  get a good
+  mark  for  showing  some  improvement.  It******  is not  necessary  to  find  every  possible
+  improvement, though A+ type marks will be reserved for those who get close.
+\end{itemize}
+
+This  is   a  challenging  assignment   and  the  third   part  can  be  quite   fun.  The
+\texttt{PipeMinus} implementation is in the class \texttt{Arch.Y86.PipeMinus.Student.CPU},
+and the  \texttt{Pipe} implementation is in  the class \texttt{Arch.Y86.Pipe.Student.CPU}.
+Main  methods   have  been  provided   for  both:  these   are  in  the   classes  \texttt
+{SimpleM******achine\$Y86PipeMinus} and \texttt {SimpleMachine\$Y86Pipe} respectively.
+
+The assignment is to be submitted in three parts. This was decided for two reasons: first,
+it will help  you not start working on  the assignment at the last minute.  And second, it
+will spread the TAs' workload more evenly, and allow them to finish grading each part in a
+timely manner.
+
+\section*{Problems}
+
+\subsection*{Part 1}
+
+\textbf{This part of the assignment is due Tuesday, October 12th at 17:00}.
+
+\begin{enumerate}
+\item The  ******\texttt{Arch.Y86.PipeMinus.Student.CPU} class has  four bug. One of  these bugs
+  was \textbf{not} intentional and  you should fix it before you start  trying to find the
+  other ones. In the \texttt {execute()} method, on line 370, the line
+\begin{Verbatim}
+    if (e.iCd.readInput () == I_JXX || e.iCd.readInput () == I_CMOV) {
+\end{Verbatim}
+  should be
+\begin{Verbatim}
+    if (e.iCd.read () == I_JXX || e.iCd.read () == I_CMOV) {
+\end{Verbatim}
+  You also need to make the same change in class \texttt{Arch.******Y86.Pipe.Student.CPU}.
+
+  The remaining three  (intentional) bugs were introduced by simply  deleting a section of
+  code. No other changes were made. The bugs are in method \texttt {pipelineHazardControl}
+  or       its      helpers       \texttt       {isDataHazardOnReg}      and       \texttt
+  {isRegWrittenByInstructionInStage}.  Use the  provided  program \texttt{pipe-test.s}  or
+  your own test programs to identify the symptoms of the bugs.
+
+  To find a bug, first write down the  values that the regis******ters should have at the end of
+  one of the tests. Run the simulator  on that test, and then compare the values actually
+  stored in the registers. If they differ from the values you expected, you may have found
+  a bug. To run  a test, double-click on the address of the  first instruction of the test
+  (this should set the value of the  \texttt {pc} register in the \texttt {Fetch} stage to
+  this address), and then click on \texttt {Run} or \texttt {Step} as usual.
+
+  Carefully  describe  the  erroneous  e******xecution  and  explain your  theory  for  what  is
+  happening. When you find a bug, describe  it carefully, fix it in the code, and describe
+  your solution. Then re-run the test to demonstrate that you correctly fixed the bug. The
+  descriptions you  provide of the symptom, theory,  bug and solution are  as important as
+  fixing the bugs.
+
+\item Use the \texttt{cCnt} and \texttt{iCnt} processor registers to document the pipeline
+  efficiency for executing the programs \texttt{sum.s}, \texttt{max.s} and \t******exttt{sort.s} 
+  included  with the assignment.  The \texttt{cCnt}  field is  incremented once  per clock
+  cycle and  the \texttt{iCnt} field is  incremented whenever an instruction  other than a
+  bubble  is  retired.  Present  pipeline  efficiency  as average  number  of  cycles  per
+  instruction (CPI)  for each program.
+  \begin{Solutions}
+    \begin{solution}
+      In \texttt{sum.s}, we need 116 cycles to  retire 44 instructions, and so CPI = 2.64.
+      In \texttt{max.s}, we need 235 cycles to  retir******e 97 instructions, and so CPI = 2.42.
+      In \texttt{sort.s},  we need 1567  cycles to retire  672 instructions, and so  CPI =
+      2.33.
+    \end{solution}
+  \end{Solutions}
+\end{enumerate}
+
+\subsubsection*{Deliverables}
+
+You should  use the \texttt{handin} program to  submit the first part  of this assignment.
+The assignment name is \texttt {ass3a}, and the files to submit for this part are:
+\begin{enumerate}
+\item The completed \texttt{CPU.java} file (with comments).
+
+\item A file in either text or PD******F format that contains the following information:
+  \begin{itemize}
+  \item Your name and student number.
+
+  \item For each of the three bugs you  were asked to find, a description of the symptoms,
+    an explanation of what was wrong with the code in the \texttt {CPU.java} file, and one
+    sentence describing your solution.
+
+  \item Your CPI results from question~2.
+
+  \item How long  it took you to complete  this part of the assignment  (not including any
+    time you may have spent revising before start******ing to work on it).
+  \end{itemize}
+\end{enumerate}
+
+\subsection*{Part 2}
+
+\textbf{This part of the assignment is due Tuesday, October 19th at 17:00.}
+
+\begin{enumerate}
+\item Implement  \texttt{Pipe} with  data forwarding and  jump prediction as  described in
+  class and in the textbook: register--register data hazards should result in zero stalls,
+  load-use hazards should result in one stall, \texttt {ret} instructions should result in
+  three stalls, and you should predict that jumps are taken.
+
+  Imple******ment  your solution  by modifying  class \texttt  {Arch.Y86.Pipe.Student.CPU}. Your
+  coding can be confined to the following helper methods (although you are allowed to make
+  changes   to   any   method   you  want):   \texttt   {pipelineHazardControl},   \texttt
+  {fetch\_SelectPC},         \texttt        {fetch\_PredictPC},         and        \texttt
+  {decode\_ReadRegisterWithForwarding}. Clearly  indicate the  code you added  or changed,
+  using comments in the code.
+
+\item Use \texttt{pipe-test.s}  t******o test your solution. For your solution  to be correct it
+  must execute programs correctly and with  the appropriate number of stalls. Document the
+  results of each test by indicating whether or not your code passed the test.
+
+\item  Answer  question~2  from the  previous  section,  but  now for  your  \texttt{Pipe}
+  implementation. Compare these results with those from question~2 on \texttt {PipeMinus}.
+\end{enumerate}
+
+\subsubsection*{Deliverables}
+
+You should use  the \texttt{handin} program to submit****** the second  part of this assignment.
+The assignment name is \texttt {ass3b}, and the files to submit for this part are:
+\begin{enumerate}
+\item The completed \texttt{CPU.java} file (with comments).
+
+\item A file in either text or PDF format that contains the following information:
+  \begin{itemize}
+  \item Your name and student number.
+
+  \item  A description  of  the results  for  the 8  tests  in file  \texttt{pipe-test.s},
+    including the number of stalls you observed,  and whether or not the test pro******duced the
+    result you expected.
+
+  \item Your CPI results from question~3.
+
+  \item How long  it took you to complete  this part of the assignment  (not including any
+    time you may have spent revising before starting to work on it).
+  \end{itemize}
+\end{enumerate}
+
+\subsection*{Part 3}
+
+\textbf{This part of the assignment is due Tuesday, October 26th, 2010 at 17:00.}
+
+\begin{enumerate}
+\item  Your task is  now to  improve the  performance of  the program  \texttt{ncopy.s} by
+  modifying \texttt{ncopy.******s}  and your pipe implementation. Measure  performance using the
+  \texttt{cCnt} cycle  counter register and by  computing CPI using  the \texttt{cCnt} and
+  \texttt{iCnt}  registers. That  is,  record both  the  total number  of  cycles and  the
+  pipeline efficiency.
+
+  Coding  Rules: You are  free to  make any  modifications you  wish within  the following
+  constraints:
+  \begin{itemize}
+  \item Your  final version of \texttt{ncopy.s}  must work for arbitrary  size arrays. You
+    might be tempted  to h******ardwire your solution for 64-element arrays  by simply coding 64
+    copy instructions, but this  would be a bad idea because your  solution will be graded
+    based on its performance on arbitrary arrays.
+
+  \item Your  \texttt {ncopy.s} function  must run correctly.  That is, it  must correctly
+    copy  the  \texttt{src} block  and  return in  \texttt{\%eax}  the  correct number  of
+    positive integers.
+
+  \item You may  not change the semantics of  any instruction in the standard  Y86 ISA, or
+    crea******te any new instructions other than those you added in assignment~1.
+  \end{itemize}
+
+  You are  provided with  files \texttt{ncopy.c} and  \texttt{ncopy.s} and  two additional
+  files: \texttt{ldriver.s}  and \texttt{sdriver.s}. These last two  are complete programs
+  that include \texttt{ncopy}  as a procedure; they setup the  stack for procedure calling
+  etc.  When debugging, you  should copy  \texttt{ncopy.s} into  \texttt{sdriver.s}, which
+  copies a  small array. When testing  performance, you should ****** copy \texttt{ncopy.s} into
+  \texttt{ldriver.s},  which  copies a  large  array.  Consider  only the  performance  of
+  \texttt{ncopy.s}  when  evaluating  your  performance  improvements;  i.e.,  ignore  the
+  performance of the other parts of the driver.
+\end{enumerate}
+
+\subsubsection*{Deliverables}
+
+You should use  the \texttt{handin} program to submit the second  part of this assignment.
+The assignment name is \texttt {ass3c}, and the files to submit for this part are:
+\begin{enumerate}
+\item Your mod******ified \texttt{CPU.java} file (with comments).
+
+\item  The files  \texttt {sdriver.s}  and  \texttt {ldriver.s}  containing your  modified
+  assembly language code from file \texttt {ncopy.s}.
+
+\item A file in either text or PDF format that contains the following information:
+  \begin{itemize}
+  \item Your name and student number.
+
+  \item A  detailed explanations of the changes  you made to file  \texttt {CPU.java}. You
+    must explain what changes you made, as well as why you made them.
+
+  \item  A detail******ed  explanations of  the changes  you made  to the  code in  file \texttt
+    {ncopy.s}. You must explain what changes you made, as well as why you made them.
+
+  \item Your  performance results  for both the  total number  of cycles and  the pipeline
+    efficiency
+
+  \item How long  it took you to complete  this part of the assignment  (not including any
+    time you may have spent revising before starting to work on it).
+  \end{itemize}
+\end{enumerate}
+
+\end{document}
+
+%%% Local Variables: 
+%%% mode: late******x
+%%% TeX-master: t
+%%% End: 
+******%PDF-1.4
+%«Ïè¢
+6 0 obj
+<</Length 7 0 R/Filter /FlateDecode>>
+stream
+xúÌXmhù’œÀΩ∑…”¥Iö8ªVªìVÙy:Ô…yAgµiJ“©TõµåV”Zï$m«˙AJ(2m∂(ˆÉ∞ë¡Ê`æ|PpETÙãÇo ˙•àÆË`å)*8∂›ˇúÛº›$6µh1Å{œ˝?ˇ˜Ûˇ˝ˇÁ<ìà`äà˚OøG«£˛õ:8MF‹2Üµ@äL
