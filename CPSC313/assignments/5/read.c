@@ -1,14 +1,42 @@
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <unistd.h>
+
+#include <stdlib.h>
 #include <stdio.h>
 int main()
 {
-  FILE *f;
-  char buffer[11000];
-  if (f = fopen("fat_volume.dat", "rt"))
-  {
-    fread(buffer, 1, 10000, f);
-    buffer[100] = 0;
-    fclose(f);
-    printf("first 10 characters of the file:\n%x\n", buffer);
+  FILE *fp;
+  long lSize;
+  char *buffer;
+
+  fp = fopen ( "fat_volume.dat" , "rb" );
+  if( !fp ) perror("blah.txt"),exit(1);
+
+  fseek( fp , 0L , SEEK_END);
+  lSize = ftell( fp );
+  rewind( fp );
+
+  /* allocate memory for entire content */
+  buffer = calloc( 1, lSize+1 );
+  if( !buffer ) fclose(fp),fputs("memory alloc fails",stderr),exit(1);
+
+  /* copy the file into the buffer */
+  if( 1!=fread( buffer , lSize, 1 , fp) )
+    fclose(fp),free(buffer),fputs("entire read fails",stderr),exit(1);
+
+  /* do your work here, buffer is a string contains the whole text */
+
+  int n = sizeof(buffer) / sizeof(buffer[0]);
+  int i = 0;
+  while (i <=0) {
+    printf("%i", n);
+    printf("%c", buffer[i]);
+    i++;
   }
-  return 0;
+  // printf("%s", buffer);
+
+  fclose(fp);
+  free(buffer);
 }
