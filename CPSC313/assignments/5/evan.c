@@ -57,7 +57,11 @@ int hiddenSectors(char one, char two) {
 	return b;
 }
 
-int main() {
+int sectorNumber(char one, char two) {
+
+}
+
+int main(int argsc, char* argv[]) {
 
 	int fh;
 	// char* buffer = (char*) malloc(5242422*sizeof(char));
@@ -65,7 +69,7 @@ int main() {
 	int gotten;
 
 
-	fh = open("fat_volume.dat",O_RDONLY);
+	fh = open(argv[1],O_RDONLY);
 	// printf ("File handle %d\n\n",fh);
 	// printf("woeijfwo;ejf");
 
