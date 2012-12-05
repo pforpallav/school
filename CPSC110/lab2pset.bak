@@ -1,0 +1,43 @@
+;; The first three lines of this file were inserted by DrRacket. They record metadata
+;; about the language level of this file in a form that our tools can easily process.
+#reader(lib "htdp-beginner-reader.ss" "lang")((modname lab2pset) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #f #t none #f ())))
+;;
+;; CPSC 110, 2010-2011 T1, Problem Set 2
+;;
+;; NAME: ______________________
+;;
+;;
+
+;;
+;; Problem 1
+;;
+
+;; DELETE THIS LINE AND PUT THE DATA DEFINITION FOR Direction HERE
+
+
+
+;; DELETE THIS LINE AND PUT THE DESIGN OF THE left FUNCTION HERE
+  
+
+
+;;
+;; Problem 2
+;;
+
+
+;; NumericGrade is one of:
+;;  - [90, 100]
+;;  - [80, 90)
+;;  - [50, 80)
+;;  - [0, 50)
+;; interp. numerical grades
+
+
+;; DELETE THIS LINE AND COMPLETE THE DESIGN of the NumericGrade DATA DEFINITION HERE
+
+;; DELETE THIS LINE AND PUT AN EXPLANATION FOR YOUR NUMBER OF NumericGrade EXAMPLES/TESTS HERE
+
+
+
+
+;; DELETE THIS LINE AND PUT THE DESIGN OF THE numeric->letter FUNCTION HERE

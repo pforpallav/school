@@ -1,0 +1,72 @@
+;; The first three lines of this file were inserted by DrRacket. They record metadata
+;; about the language level of this file in a form that our tools can easily process.
+#reader(lib "htdp-beginner-abbr-reader.ss" "lang")((modname |prelab7 - 2|) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #f #t none #f ())))
+
+;; Simple file systems, model 2:
+
+;; File is String
+;; interp. the string represents the file's name
+
+(define-struct dir (n c))
+;; Directory (Dir) is (make-dir String ListOfFileOrDir)
+;; interp. n is the name of the directory, c is its contents
+
+;; ListOfFileOrDir is one of:
+;;  - empty
+;;  - (cons File ListOfFileOrDir)
+;;  - (cons Dir ListOfFileOrDir)
+;; interp. a list of potentially intermixed files and directories
+
+
+;; PRE-LAB EXERCISES:
+;;
+;; (1) Define at least 4 examples of Dir here. As usual, start with a
+;;     base case, make sure to have examples at least 2 deep and 2 wide.
+(define dir1 (make-dir "name1" empty))
+(define dir2 (make-dir "name1" (cons "file1" empty)))
+(define dir3 (make-dir "name1" (cons (make-dir "name2" empty) empty)))
+(define dir4 (make-dir "name1" (cons (make-dir "name2"
+                                               (cons (make-dir "name3" empty) empty)) empty)))
+
+
+
+;; (2) Assume you are in the process of defining a 1 argument function
+;;     operating on a Dir. Write the template for that function here.
+;;     Be sure to include templates for all types involved in mutual
+;;     reference cycles.
+;;
+(define (fn-for-dir dir)
+  (... (fn-for-dirname (dir-n))
+       (fn-for-lofod (dir-c))))
+
+(define (fn-for-dirname n)
+  (... n))
+
+(define (fn-for-lofod c)
+  (cond [(empty? c) (...)]
+        [(string? (first c)) (fn-for-file (first c))]
+        [(dir? (first c)) (fn-for-dir (first c))]
+        [(cons? (rest c)) (fn-for-lofod (rest c))]))
+
+(define (fn-for-file file)
+  (... file))
+;
+;; (3) Print out this file, and draw reference/call arrows on the types
+;;     comments and function templates. Label each arrow with one of:
+;;      (R) reference to another non-primitive type
+;;      (SR) self-reference to the same non-primitive type
+;;      (MR) reference to another non-primitive type that forms
+;;           part of a mutual reference cycle
+;;
+;;    If you cannot print the file, hand write the above type comments
+;;    on a piece of paper and label them.
+
+
+
+;;
+;; IN LAB EXERCISES:
+;;
+;; Using the data definitions in this file (model 2), design the
+;; function how-many-dir, that consumes a Dir and produces the number
+;; of files in the dir tree.
+;;

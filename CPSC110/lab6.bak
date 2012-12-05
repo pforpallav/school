@@ -1,0 +1,79 @@
+;; The first three lines of this file were inserted by DrRacket. They record metadata
+;; about the language level of this file in a form that our tools can easily process.
+#reader(lib "htdp-beginner-reader.ss" "lang")((modname lab6) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #f #t none #f ())))
+;; Lab 6 - Specific XML structures and query requests
+
+(require (planet "web-services.rkt" ("ubccs110" "web-services.plt" 1 0)))
+
+
+;; Constants:
+
+(define CAD/USD 1.0365)
+
+
+;; Data definitions:
+
+
+;(define-struct ebay-item (title price pcode location))
+;; EbayItem is (make-ebay-item String String String String)
+;; interp. the title, price, postal code, and state and country
+;; information of an item listed on eBay
+
+
+;; ListOfEbayItem is one of:
+;; - empty
+;; - (cons EbayItem ListOfEbayItem)
+;; interp. a list of items returned from eBay
+
+
+;; NameValuePair is (cons String (cons String empty))
+;; interp. a single URL query argument
+
+
+;; ListOfNameValuePair is one of:
+;; - empty
+;; - (cons NameValuePair ListOfNameValuePair)
+;; interp. multiple URL query arguments
+
+
+;; URL is String
+;; interp. Uniform Resource Locator specifying the address of a web page
+
+(define URL "http://maps.google.com/maps/api/staticmap?size=256x256&sensor=false&markers=V4B3T6&markers=V6G2A1&markers=V7S2W6")
+
+#;
+(define (fn-for-url url)
+  (... url))
+
+
+;; Host is String
+;; interp. a main web site address
+
+(define GOOGLE-HOST "maps.google.com")
+(define EBAY-HOST   "svcs.ebay.com")
+
+#;
+(define (fn-for-host host)
+  (... host))
+
+
+;; Path is String
+;; interp. the path to a resource or program on a web site
+
+(define GOOGLE-PATH "maps/api/staticmap")
+(define EBAY-PATH   "services/search/FindingService/v1")
+
+#;
+(define (fn-for-path path)
+  (... path))
+
+
+
+;; Functions:
+
+
+;; ListOfEbayItem -> ListOfEbayItem
+;; consumes a loei with prices in USD and converts to loei with prices in CAD
+(define (usd->cad-loei loei)
+  empty)
+
