@@ -1,0 +1,20 @@
+z:\Documents\Visual Studio 2010\Projects\TestCreation\TestCreation\bin\TestCreation.dll
+z:\Documents\Visual Studio 2010\Projects\TestCreation\TestCreation\bin\TestCreation.pdb
+z:\Documents\Visual Studio 2010\Projects\TestCreation\TestCreation\bin\TestCreation.xml
+z:\Documents\Visual Studio 2010\Projects\TestCreation\TestCreation\obj\Debug\ResolveAssemblyReference.cache
+z:\Documents\Visual Studio 2010\Projects\TestCreation\TestCreation\obj\Debug\TestCreation.Resources.resources
+z:\Documents\Visual Studio 2010\Projects\TestCreation\TestCreation\obj\Debug\GenerateResource.read.1.tlog
+z:\Documents\Visual Studio 2010\Projects\TestCreation\TestCreation\obj\Debug\GenerateResource.write.1.tlog
+z:\Documents\Visual Studio 2010\Projects\TestCreation\TestCreation\obj\Debug\TestCreation.dll
+z:\Documents\Visual Studio 2010\Projects\TestCreation\TestCreation\obj\Debug\TestCreation.xml
+z:\Documents\Visual Studio 2010\Projects\TestCreation\TestCreation\obj\Debug\TestCreation.pdb
+Z:\cs344\TestCreation\TestCreation\bin\TestCreation.dll
+Z:\cs344\TestCreation\TestCreation\bin\TestCreation.pdb
+Z:\cs344\TestCreation\TestCreation\bin\TestCreation.xml
+Z:\cs344\TestCreation\TestCreation\obj\Debug\ResolveAssemblyReference.cache
+Z:\cs344\TestCreation\TestCreation\obj\Debug\TestCreation.Resources.resources
+Z:\cs344\TestCreation\TestCreation\obj\Debug\GenerateResource.read.1.tlog
+Z:\cs344\TestCreation\TestCreation\obj\Debug\GenerateResource.write.1.tlog
+Z:\cs344\TestCreation\TestCreation\obj\Debug\TestCreation.dll
+Z:\cs344\TestCreation\TestCreation\obj\Debug\TestCreation.xml
+Z:\cs344\TestCreation\TestCreation\obj\Debug\TestCreation.pdb
