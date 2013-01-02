@@ -1,0 +1,14 @@
+section { 
+border-radius: 3px;
+border:1px solid grey;
+background-color:#EFEDE3;
+padding:10px;
+overflow:hidden; 
+margin-left:15px;
+margin-top:20px;
+	}
+	
+.indent-2 { padding-left:0px; padding-right:0px; margin-left:0px; margin-right:0px; margin-top:0px; background-color: #EFEDE3; border-color:#EFEDE3;}
+
+section > section { float:left; }
+

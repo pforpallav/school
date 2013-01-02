@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<iframe src="https://connect.ubc.ca/webapps/portal/execute/topframe?tab_tab_group_id=_2_1&frameSize=LARGE"
+width = 1350 height = 120>
+  <p>Your browser does not support iframes.</p>
+</iframe>
+<head>
+<script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+<script type="text/javascript" src="js/jquery-jvert-tabs-1.1.4.js"></script>
+<script type="text/javascript" src="js/tabledeleterow.js"></script>
+<link rel="stylesheet" type="text/css" href="css/jquery-jvert-tabs-1.1.4.css"/>
+<link rel="stylesheet" type="text/css" href="css/historycss.css"/>
+<link rel="stylesheet" type="text/css" href="css/sidebarss.css"/>
+	<title>Connect</title>
+	<meta charset="UTF-8" />
+	
+	<style type="text/css">
+		* { font-family: "Lucida Grande",Arial,sans-serif; }
+		body { background-color: #EFEDE3; cursor: default;
+			background-image: url("connect_bg.png");}
+		h1 { font-size: 15pt; }
+		p { font-size: 10pt; }
+	</style>
+</head>
+<body bgcolor="white">
+<div id="mainsidebar">
+<table align="left" width= 150 height = 520>
+<tr> <td bgcolor="#DEDEDE" align="center" border="3"> 
+<font size="4" color="#bcbc78">
+<hr>
+<a href="homepage.html" STYLE="TEXT-DECORATION: NONE">
+<b>Home</b>
+</a>
+<hr>
+<hr>
+<a href="344homepage.html" STYLE="TEXT-DECORATION: NONE">
+<b>CPSC 344</b>
+</b>
+</b>
+</a>
+<hr>
+<a href="344history.html" STYLE="TEXT-DECORATION: NONE">
+<b>History</b>
+</a>
+<hr>
+<a href="http://Link Address" STYLE="TEXT-DECORATION: NONE">
+<b>Group</b>
+</a>
+<hr>
+<a href="http://Link Address" STYLE="TEXT-DECORATION: NONE">
+<b>Test</b>
+</a>
+<hr>
+<br>
+</font>
+</td>
+</tr>
+</table>
+</div><body>
+<a href="homepage.html" STYLE="TEXT-DECORATION: NONE">
+<b>Home > </b>
+</a>
+<a href="344homepage.html" STYLE="TEXT-DECORATION: NONE">
+<b>CPSC 344 > </b>
+</a>
+<a href="344history.html" STYLE="TEXT-DECORATION: NONE">
+<b>History</b>
+</a>
+</br>
+    <script type="text/javascript">
+$(document).ready(function(){
+    // default behavior.
+	$("#vtabs1").jVertTabs();
+});
+</script>
+<div id="vtabs1">
+	<div>
+		<ul>
+			<li><a href="#vtabs-content-a">Course</a></li>
+<p class="consolidated">
+
+</p>
+			<li><a href="#vtabs-content-b">Ownership</a></li>
+		</ul>
+	</div>
+	<div>
+		<div id="#vtabs-content-a">
+		</br>
+		<p><b>INDIVIDUAL</b></p>
+		<p class="individual">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<button type="button" onclick="location.href='344course.html'">2012 W1 </br></br> &nbsp;Dr. Brenda Brown &nbsp;</button>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<button type="button" onclick="location.href='344course.html'">2011 W1 </br></br>&nbsp;Dr. Brenda Brown &nbsp;</button>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<button type="button" onclick="location.href='344course.html'">2010 W1 </br></br>&nbsp;Dr. Brenda Brown &nbsp;</button>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<button type="button" onclick="location.href='344course.html'">2009 W1 </br></br> Dr. Karon MacLean </button>
+		</br></br></br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<button type="button" onclick="location.href='344course.html'">2008 W1 </br></br> Dr. Karon MacLean </button>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<button type="button" onclick="location.href='344course.html'">2007 W1 </br></br> Dr. Karon MacLean </button>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<button type="button" onclick="location.href='344course.html'">2006 W1 </br></br> Dr. Karon MacLean </button>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<button type="button" onclick="location.href='344course.html'">2005 W1 </br></br> Dr. Karon MacLean </button>
+		</p>
+		</br></br></br>
+		<p><b>CONSOLIDATED VIEW</b></p>
+		<p class="cons">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<button type="button" onclick="location.href='344exam.html'"></br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Exams&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</br></br></button>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<button type="button" onclick="location.href='344stats.html'"></br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Statistics&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</br></br></button>
+		</p>
+		</br>
+		</div>
+		<div id="#vtabs-content-b">
+			<p><b>OWNERSHIP</b></p>
+			<p>Add Ownership to CPSC 344</p>
+			<form>
+			User ID: <input type="text" name="userId">
+			Name: <input type="text" name="name">
+			Ownership Type: <select name="ownership">
+			<option value="prof">Professor</option>
+			<option value="admin">Administrator</option>
+			<option value="ta">TA</option>
+			</select>
+			<button type="button" value="Add Ownership" onclick="addOwner()">Add Ownership</br></button>
+			</form>		
+			</br>
+			<p class="permissiontype">
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Professor has read and write permission, can add ownership</br></br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;administrator has read and write permission, can add ownership</br></br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TA has read permission only</br>
+			</p>
+			</br>
+			<p class="currentpermission">
+			<p><b>Current User Permission</b></p></br>
+			 <img alt="" src="css/images/cp-1beforeDelete.jpg" id="imgClick" onclick="changeImage()"  />
+			</form>
+			</p>
+		</div>
+	</div>
+</div>
+<script language="javascript">
+    function changeImage() {
+
+        if (document.getElementById("imgClick").src == "css/images/cp-1beforeDelete.jpg") 
+        {
+            document.getElementById("imgClick").src = "css/images/cp-2afterDelete.jpg";
+        }
+        else 
+        {
+            document.getElementById("imgClick").src = "css/images/cp-2afterDelete.jpg";
+        }
+    }
+	function addOwner() {
+		imgClick.src = "css/images/cp-3afterAdd.jpg";
+	}
+</script>
+</body>
+</html>
