@@ -1,0 +1,41 @@
+2012.01.3
+
+The Stable Matching Problem
+---------------------------
+	Problem:	Given M men and W women. Each man ranks all women and all women rank all men.
+				We want to order th men and women into pairs so that:
+					(a) all men and women appears in exactly one pair
+					(b) there is no pair of pairs (m,w) and (m1,w1) such that m prefers w1 and w1 prefers m
+
+
+	Definition:	M = {m1,m2,m3,...mn}
+				W = {w1,w2,w3,...wn}
+
+				WxM = {(w,m), w E w, m E M} set of all ordered pairs of men and women from M and W
+				A matching J is a sub-set of WxM, ie J <= WxM, such that every man mEM and every women wEW
+				appear in at most one pair (same may be unpaired).
+
+				A perfect matching J1 is a sub-set of WxM such that every man mEM and every women wEW appears in exactly one pair
+
+				A pair(W1,m) E WxM is called an instability with respect to a matchign J if
+				(w1,m) !E J, but (w,m) and (w1,m1)EJ and m and w1 prefers the other partners to their assigned parties in J
+
+					ie: m ranks w1 higher than w1 ranks m higher than m1
+
+				A matching J is stable if:
+					(a) perfect
+					(b) there is no instability/unhappiness
+
+
+	Goal:	Given sets W and M, find a stable matching
+
+
+
+Defining Features of an Algorithm:
+-----------------------------------
+	- is a finite list of instructions
+	- each instruction can be descibed precisley
+	- starting from an initial state and initial input, the instructions describe a computation of a finite number of successive states, events, eventually producing and output
+	- Each state only depends on the input and results of previous states
+	- Final state is reached after a finite number of steps (no infinite steps)
+
