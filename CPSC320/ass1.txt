@@ -1,0 +1,87 @@
+CPSC320 Assignment 1
+
+-----------------------------------
+|Name:	Evan Louie |  Theo Ng     |
+|CSID:	m6d7       |  y4s7        |
+|SID:	  72210099   |  70857099    |         
+-----------------------------------
+=======
+1.
+=======
+  Yes the Gale-Shapley algorithm guarantees that their will be no strong instabilities.
+  The algorithm is as:
+
+  	Initialize all m ∈ M and w ∈ W to free
+  	while ∃ free man m who still has a woman w to propose to {
+         	w = m's highest ranked such woman to whom he has not yet proposed
+         	if exists 2 or more women with identical rankings
+         		w = arbitrary w from identical highest ranked women
+  		if w is free
+          	(m, w) become engaged
+         	else some pair (m', w) already exists
+           	if w prefers m to m'
+             	(m, w) become engaged
+             	m' becomes free
+          else
+  			(m', w) remain engaged
+      }
+    }
+
+  Proof: <By Contradiction>
+  --------------------------
+    Suppose the algorithm returns an instability such that a pair of pairs (m,w) and (m',w') behaive such that m prefers w' and w' prefers m.
+    The algorithm states that the last proposal m' did was to w', or else the pairing would not exist.
+    If m prefers w', does m propose to w'?
+      If No:  
+        As m ranks w' higher than w and men propose to women in decending order of preference, m must have proposed to w' before w. This leads to a contradiction.
+      If Yes:  
+        If m did propose to w', then at some point, the algorithm states that she must have been left for another w'' where w''=w or w'' is another better match who will be eventually left for another w'''. This will repeat until m propses to w. This leads to a contradiciton that m prefers w'
+    It has been shown that a pair of pairs (m,w) and (m',w') cannot exists such that m prefers w' and w' prefers m without a logical contradiction existing.
+    The returned matchings from the algorith are stable.
+
+    QED
+
+========
+2.
+========
+
+  There does not always exist a perfect matching with no weak instabilities:
+  Proof: <By Example>
+  -------------------
+  Suppose entities m, m', w, w'
+  Suppose all women ranked all men equally
+  Suppose all men preffered w over w'
+
+  Their are two possible pairing of pairs:
+  ((m,w),(m',w')) and ((m,w'),(m',w))
+
+  These are the only possible outcomes for this set of people and no matter what, their is always a weak instability as one of the men wont be with his first choice.
+  QED
+
+=========
+3.
+=========
+
+  This can be solved directly by the Gale-Shapley match making algorithm if we treat the ships and ports as 'liking' one another.
+  Let:
+    - Si's preference/visit stack for ports be in decending order; that is, the most 'liked' port is first on its preference/visited list.
+    - Pj's preferences/visit stack for ships be in ascending order; that is, the most 'liked' ship is most recently added on its preference/visited list.
+
+  We can prove that this will lead to no strong instabilities.
+
+  Proof: <By Contradiction>
+  --------------------------
+    Suppose such a conflict occured in that 2 ships were to be paired with the same port.
+    Now suppose ship s stops at port p and while there ship s' wishes to also port at port p before stopping at port p'
+    This would mean that:
+      - s' stops at p before p', therefore p is more liked than p' in the preference/visited list of s'
+      - s stops at p before s', therefore s' is more liked than s in the preference/visited list of p
+
+    Given this, the current condition is that (s,p) is a current pairing and s' visits p after s:
+      This means p would prefer s' over s because it is more recent
+        So if s' is paired with p, the (s,p) matching is impossible; a contradiction.
+    Their is only one condition that s' would be paired with p'. That is if port a port p' preferred s' and s' preferred p'; And if p' preferred s' that means s' was its most recent visitor and s' would prefer p' over p as it is visited before p; a contradiction.
+
+    This is impossible as if s' truncates at p', it will never visit p.
+
+    QED

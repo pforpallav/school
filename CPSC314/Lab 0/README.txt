@@ -43,3 +43,6 @@ p1 Debugging:
 			Animal deconstructor is being called instead of the Cow deconstructor.
 		Fix:
 			add the virtual keyword to the deconstructor
+
+
+"I have read and understood the cheating policies at http://www.ugrad.cs.ubc.ca/~cs314/Vjan2013/cheat.html".
