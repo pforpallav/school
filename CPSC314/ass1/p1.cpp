@@ -10,6 +10,7 @@ int dumpPPM(int frameNum);
 void drawAxis();
 void drawFloor();
 void drawCube();
+void myScale(float x, float y, float z);
 
 unsigned char camera = 'r';
 
@@ -60,7 +61,11 @@ void reshapeCallback(int w, int h)
    Height = h;
    glViewport(0, 0, w, h);
 }
-
+void myScale(GLfloat x, GLfloat y, GLfloat z) {
+	glPushMatrix();
+	glScalef(x,y,z);
+	glPopMatrix();
+}
 void displayCallback()
 {
   // clear the color buffer
@@ -99,11 +104,159 @@ void displayCallback()
   // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
   // Draw your rabbit here
   // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-	drawCube();
-  glTranslatef(3,3,3);
-  glScalef(3,3,3);
-  glRotatef(50,1,1,1);
-    drawCube();
+
+
+glPushMatrix();
+glColor3f(1,1,1);
+  ///////////////////////
+  // Body
+  ///////////////////////
+	glPushMatrix();
+		////STARTING POINT -> LOWER BODY
+		glTranslatef(-0.8,0.8,0);
+		glPushMatrix();
+			glPushMatrix();
+				glRotatef(20,0,0,1);
+				glScalef(0.8,0.9,1.35);
+				drawCube();
+			glPopMatrix();
+			glTranslatef(0.8,0.4,0);
+			glPushMatrix();
+				glRotatef(30,0,0,1);
+				glScalef(2,1,1.2);
+				drawCube();
+			glPopMatrix();
+			glTranslatef(0.8,0.5,0);
+			glPushMatrix();
+				glPushMatrix();
+					glTranslatef(-0.4,-0.4,0);
+					glRotatef(40,0,0,1);
+					glScalef(1.2,1,1);
+					drawCube();
+				glPopMatrix();
+				// Left Arm
+				glPushMatrix();
+					glTranslatef(0,-1,0.5);
+					glRotatef(-85,0,0,1);
+					glScalef(0.8,0.2,0.2);
+					drawCube();
+				glPopMatrix();
+				// Right Arm
+				glPushMatrix();
+					glTranslatef(0,-1,-0.5);
+					glRotatef(-85,0,0,1);
+					glScalef(0.8,0.2,0.2);
+					drawCube();					
+				glPopMatrix();
+			glPopMatrix();
+		
+			/////NECK
+			glTranslatef(0,0.2,0);
+			glPushMatrix();
+				glRotatef(-20,0,0,1);
+				glScalef(0.75,0.2,1);
+				drawCube();
+			glPopMatrix();
+
+			/////HEAD
+			glTranslatef(0.3,0.3,0);
+			glPushMatrix();
+				glScalef(0.9,0.9,1);
+				drawCube();
+			glPopMatrix();
+
+			///Ears
+			//Left
+			glPushMatrix();
+				glTranslatef(-0.3,0.6,0.3);
+				glPushMatrix();
+					glScalef(0.2,0.8,0.2);
+					drawCube();
+				glPopMatrix();
+			glPopMatrix();
+			//Right
+			glPushMatrix();
+				glTranslatef(-0.3,0.6,-0.3);
+				glPushMatrix();
+					glScalef(0.2,0.8,0.2);
+					drawCube();
+				glPopMatrix();
+			glPopMatrix();
+		
+			//Eyes
+			//Left
+			glPushMatrix();
+				glTranslatef(0.5,0.2,0.3);
+				glPushMatrix();
+					glScalef(0.1,0.1,0.1);
+					glColor4f(0,0.3,0.6,0.9);
+					drawCube();
+				glPopMatrix();
+			glPopMatrix();
+			// Right
+			glPushMatrix();
+				glTranslatef(0.5,0.2,-0.3);
+				glPushMatrix();
+					glScalef(0.1,0.1,0.1);
+					glColor4f(0,0.3,0.6,0.9);
+					drawCube();
+				glPopMatrix();
+			glPopMatrix();
+			///////////////////////////////////////COLOR RESET//////////////////////
+			glColor3f(1,1,1);
+		glPopMatrix();
+		// RETURN TO LOWER BODY
+		// BackLegs
+		//	Left leg
+		glPushMatrix();
+			glTranslatef(0.3,-0.3,0.4);
+			glPushMatrix();
+				glRotatef(15,0,0,1);
+				glScalef(0.8,0.5,0.6);
+				drawCube();
+			glPopMatrix();
+			glTranslatef(0.1,-0.2,0);
+			glPushMatrix();
+				glRotatef(60,0,0,1);
+				glScalef(0.65,0.2,0.2);
+				drawCube();
+			glPopMatrix();
+			glTranslatef(0,-0.25,0);
+			glScalef(0.3,0.2,0.2);
+			drawCube();
+		glPopMatrix();
+		glPushMatrix();
+			glTranslatef(0.3,-0.3,-0.4);
+			glPushMatrix();
+				glRotatef(15,0,0,1);
+				glScalef(0.8,0.5,0.6);
+				drawCube();
+			glPopMatrix();
+			glTranslatef(0.1,-0.2,0);
+			glPushMatrix();
+				glRotatef(60,0,0,1);
+				glScalef(0.65,0.2,0.2);
+				drawCube();
+			glPopMatrix();
+			glTranslatef(0,-0.25,0);
+			glScalef(0.3,0.2,0.2);
+			drawCube();
+		glPopMatrix();
+		//tail
+		glPushMatrix();
+			glTranslatef(-0.5,0,0);
+			glScalef(0.3,0.3,0.3);
+			drawCube();
+		glPopMatrix();
+
+
+	glPopMatrix();
+  //Middle
+glPopMatrix();
+
+ 
+
+
 
   // draw after the opaque objects, since it is translucent
   drawFloor();
@@ -144,10 +297,11 @@ void drawAxis() {
 }
 
 void drawCube() {
-	glBegin(GL_LINE_STRIP);
-	glColor3f(1,1,1);
+	//glBegin(GL_LINE_STRIP);
+	//glColor3f(1,1,1);
 	glutSolidCube(1);
-	glEnd();
+	//glutWirecube(1);
+	//glEnd();
 }
 
 void drawFloor() {

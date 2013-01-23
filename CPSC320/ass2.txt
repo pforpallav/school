@@ -1,0 +1,57 @@
+CPSC320 Assignment 2
+
+--------------------
+|Name:	Evan Louie |
+|CSID:	m6d7       |
+|SID:	  72210099   |         
+--------------------
+=======
+1.
+=======
+
+  The population of the coins follow a binomial distirubtion; meaning each coin has two possiblilities in state:
+    i)  Real
+    ii) Fake
+  This means that for n coins their exists 2n possible answers in which a single coin is a fake and 2n+1 possibe answers in which the possiblity that all are real exist.
+
+  The most efficient alogrithm to solve for the existance of a fake coin requires the division of all the coins into 3 groups; Because at most 1 coin can be fake, 2 of the 3 groups, when weighed, will be evaluated as equal and this process can be recurrsively done on the non equal group, which is subsequently subdivided into 3 groups, until finding the fake is a trivial action.
+    Note: If no fake coin exists, all 3 groups wil be weighed equally and thus only 2 weighings will be required.
+  The very nature of subdividing groups by 3 until finding the fake is a logorithimic algorithm of base 3.
+
+  Thus, the worst possiblity would be the Logorithm base 3 of the highest possible amount of answers or:
+    log(3, 2n+1)
+    Read: Logorithm base 3 of 2n+1
+
+
+
+=======
+2.
+=======
+  -----
+  (a)
+  -----
+    Definition Of Lower Bound Ω:
+    ----------------------------
+      Let T(n), T : N → R+, be a function that describes the worst-case running time
+      of a given algorithm in terms of steps to be completed per size of input n.
+      We say that T(n) is Ω(f(n)) i.e. we say that (T(n) is asymptotically lower bounded
+      by f(n), f : N → R+, i.e. if there is a constant c ∈ R+ and n0 ∈ N such that
+      T(n) ≥ c · f(n) for ∀n ∈ N, n ≥ n0. If T(n) is Ω(f(n)) we also write T(n) = Ω(f(n))
+
+    Using This definition, then it logically follows that if f ∈ Ω(g) is equivelant to f(n) ∈ c·g(n) for some c and n≥n0.
+    We can now show that (f(n))^2 ≥ (c·g(n))^2 ≥ (c^2)(g(n))
+
+    This satifies the definition of Ω.
+
+  -----
+  (b)
+  -----
+    Definition of Upper Bound O:
+    -----------------------------
+      Let T(n), T : N → R+, be the function that describes the worst-case running
+      time of a given algorithm in terms of steps to be completed per sitesize of input n. We
+      say that T(n) is O(f(n)) (read ”T(n) is of order f(n)”) if T is asymptotically upper
+      bounded by f(n), f : N → R+, i.e. if there is a constant c ∈ R+ and n0 ∈ N such that
+      T(n) ≤ c · f(n) for ∀n ∈ N, n ≥ n0. If T(n) is O(f(n)), we also write T(n) = I(f(n)).
+
+    Using the definition of Upper Bound O, f ∈ O(g) is equivlant to f(n) ≤ c·g(n) for some c and n≥n0.
