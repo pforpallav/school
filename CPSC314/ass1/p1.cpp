@@ -168,17 +168,17 @@ glColor3f(1,1,1);
 			///Ears
 			//Left
 			glPushMatrix();
-				glTranslatef(-0.3,0.6,0.3);
+				glTranslatef(-0.3,0.7,0.3);
 				glPushMatrix();
-					glScalef(0.2,0.8,0.2);
+					glScalef(0.2,1,0.2);
 					drawCube();
 				glPopMatrix();
 			glPopMatrix();
 			//Right
 			glPushMatrix();
-				glTranslatef(-0.3,0.6,-0.3);
+				glTranslatef(-0.3,0.7,-0.3);
 				glPushMatrix();
-					glScalef(0.2,0.8,0.2);
+					glScalef(0.2,1,0.2);
 					drawCube();
 				glPopMatrix();
 			glPopMatrix();
