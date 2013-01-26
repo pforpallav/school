@@ -43,6 +43,21 @@ void keyboardCallback(unsigned char c, int x, int y) {
   case 'm':
 	  r.toggleRightArm();
 	  break;
+  case 'n':
+	  r.toggleLeftLeg();
+	  break;
+  case 'o':
+	  r.toggleRightLeg();
+	  break;
+  case 't':
+	  r.toggleRear();
+	  break;
+  case 'c' :
+	  r.toggleBodyCurl();
+	  break;
+  case 'j':
+	  r.toggleJump();
+	  break;
   case 'x':
 	  r.toggleWire();
 	  break;

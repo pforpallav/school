@@ -17,6 +17,14 @@ rabbit::~rabbit(void)
 GLfloat headAngle;
 GLfloat leftArmAngle;
 GLfloat rightArmAngle;
+GLfloat leftLegAngle;
+GLfloat rightLegAngle;
+GLfloat rearAngle;
+GLfloat lowerCurlAngle;
+GLfloat upperCurlAngle;
+GLfloat altitude;
+GLfloat upperBody;
+GLfloat lowerBody;
 
 void rabbit::drawCube() {
 	((rabbit::frame) ? glutSolidCube(1) : glutWireCube(1));
@@ -36,6 +44,12 @@ void rabbit::toggleLeftArm() {
 void rabbit::toggleRightArm() {
 	rabbit::rightArm = ((rabbit::rightArm) ? false : true);
 }
+void rabbit::toggleLeftLeg() {
+	rabbit::leftLeg = ((rabbit::leftLeg) ? false : true);
+}
+void rabbit::toggleRightLeg() {
+	rabbit::rightLeg = ((rabbit::rightLeg) ? false : true);
+}
 void rabbit::toggleLeftEar() {
 	rabbit::leftEar = ((rabbit::leftEar) ? false : true);
 }
@@ -46,7 +60,7 @@ void rabbit::toggleRear() {
 	rabbit::rear = ((rabbit::rear) ? false : true);
 }
 void rabbit::toggleBodyCurl() {
-	rabbit::rear = ((rabbit::bodyCurl) ? false : true);
+	rabbit::bodyCurl = ((rabbit::bodyCurl) ? false : true);
 }
 void rabbit::toggleJump() {
 	rabbit::jump = ((rabbit::jump) ? false : true);
@@ -71,8 +85,9 @@ void rabbit::drawUpperBody() {
 void rabbit::drawArm(rabbit::side side) {
 	GLfloat z;
 	((side==left) ? z=0.5 : z=-0.5);
+
 	glTranslatef(0,-0.8,z);
-	glRotatef(-85,0,0,1);
+	glRotatef(-90,0,0,1);
 	glPushMatrix();
 	glScalef(0.5,0.2,0.2);
 	drawCube();
@@ -150,117 +165,209 @@ void rabbit::moveHead() {
 void rabbit::moveArm(rabbit::side side) {
 	GLfloat f;
 	switch(side){
-		case left:
-			if(leftArmAngle>=30) rabbit::dirLeftArm=down;
-			if(leftArmAngle<=0) rabbit::dirLeftArm=up;
-			((rabbit::smoothAnimation) ?
-				((rabbit::dirLeftArm==up) ? f=1 : f=-1):
-				((rabbit::dirLeftArm==up) ? f=30 : f=-30));
-			leftArmAngle += f;
+	case left:
+		if(leftArmAngle>=30) rabbit::dirLeftArm=down;
+		if(leftArmAngle<=0) rabbit::dirLeftArm=up;
+		((rabbit::smoothAnimation) ?
+			((rabbit::dirLeftArm==up) ? f=1 : f=-1):
+			((rabbit::dirLeftArm==up) ? f=30 : f=-30));
+		leftArmAngle += f;
 
-			glRotatef(leftArmAngle, 0, 0, 1);
-			if (leftArmAngle>=30||leftArmAngle<=0) rabbit::leftArm=false;
-			break;
-		case right:
-			if(rightArmAngle>=30) rabbit::dirRightArm=down;
-			if(rightArmAngle<=0) rabbit::dirRightArm=up;
-			((rabbit::smoothAnimation) ?
-				((rabbit::dirRightArm==up) ? f=1 : f=-1):
-				((rabbit::dirRightArm==up) ? f=30 : f=-30));
-			rightArmAngle += f;
-			glRotatef(rightArmAngle, 0, 0, 1);
-			if (rightArmAngle>=30||rightArmAngle<=0) rabbit::rightArm=false;
-			break;
+		glRotatef(leftArmAngle, 0, 0, 1);
+		if (leftArmAngle>=30||leftArmAngle<=0) rabbit::leftArm=false;
+		break;
+	case right:
+		if(rightArmAngle>=30) rabbit::dirRightArm=down;
+		if(rightArmAngle<=0) rabbit::dirRightArm=up;
+		((rabbit::smoothAnimation) ?
+			((rabbit::dirRightArm==up) ? f=1 : f=-1):
+			((rabbit::dirRightArm==up) ? f=30 : f=-30));
+		rightArmAngle += f;
+		glRotatef(rightArmAngle, 0, 0, 1);
+		if (rightArmAngle>=30||rightArmAngle<=0) rabbit::rightArm=false;
+		break;
 	}
 }
-
+void rabbit::moveLeg(rabbit::side side) {
+	GLfloat f;
+	switch(side) {
+	case left:
+		if(leftLegAngle>=30) rabbit::dirLeftLeg=down;
+		if(leftLegAngle<=0) rabbit::dirLeftLeg=up;
+		((rabbit::smoothAnimation) ?
+			((rabbit::dirLeftLeg==up) ? f=1: f=-1):
+			((rabbit::dirLeftLeg==up) ? f=30 : f=-30));
+		leftLegAngle += f;
+		glRotatef(leftLegAngle, 0, 0, 1);
+		if (leftLegAngle>=30||leftLegAngle<=0) rabbit::leftLeg=false;
+		break;
+	case right:
+		if(rightLegAngle>=30) rabbit::dirRightLeg=down;
+		if(rightLegAngle<=0) rabbit::dirRightLeg=up;
+		((rabbit::smoothAnimation) ?
+			((rabbit::dirRightLeg==up) ? f=1: f=-1):
+			((rabbit::dirRightLeg==up) ? f=30 : f=-30));
+		rightLegAngle += f;
+		glRotatef(rightLegAngle, 0, 0, 1);
+		if (rightLegAngle>=30||rightLegAngle<=0) rabbit::rightLeg=false;
+		break;
+	}
+}
+void rabbit::moveRear() {
+	GLfloat f;
+	if (rearAngle>=35) rabbit::dirRear=down;
+	if (rearAngle<=0) rabbit::dirRear=up;
+	((rabbit::smoothAnimation) ?
+		((rabbit::dirRear==up) ? f=1 : f=-1):
+		((rabbit::dirRear==up) ? f=30: f=-30));
+	rearAngle += f;
+	glRotatef(rearAngle, 0, 0, 1);
+	if (rearAngle>=35||rearAngle<=0) rabbit::rear=false;
+}
+void rabbit::moveCurl() {
+	GLfloat f;
+	if (lowerCurlAngle>=30) rabbit::dirBodyCurl=down;
+	if (lowerCurlAngle<=0) rabbit::dirBodyCurl=up;
+	((rabbit::smoothAnimation) ?
+		((rabbit::dirBodyCurl==up) ? f=1 : f=-1):
+		((rabbit::dirBodyCurl==up) ? f=30: f=-30));
+	lowerCurlAngle += f;
+	glRotatef(lowerCurlAngle, 0, 0, 1);
+	if (lowerCurlAngle>=30||lowerCurlAngle<=0) rabbit::bodyCurl=false;
+}
+void rabbit::moveUpperCurl() {
+	GLfloat f;
+	((rabbit::smoothAnimation) ?
+		((rabbit::dirBodyCurl==up) ? f=-1 : f=1):
+		((rabbit::dirBodyCurl==up) ? f=-30: f=30));
+	upperCurlAngle += f;
+	glRotatef(upperCurlAngle, 0, 0, 1);
+}
+void rabbit::moveJump() {
+	GLfloat f;
+	if(altitude>=1) rabbit::dirJump=down;
+	if(altitude<=0) rabbit::dirJump=up;
+	((rabbit::smoothAnimation) ?
+		((rabbit::dirJump==up) ? f=0.1 : f=-0.1):
+		((rabbit::dirJump==up) ? f=1 : f=-1));
+	altitude += f;
+	glTranslatef(0,altitude,0);
+	if (altitude>=1||altitude<=0) rabbit::jump=false;
+}
+void rabbit::openUpperBody() {
+	GLfloat f;
+	((rabbit::smoothAnimation) ?
+		((rabbit::dirJump==up) ? f=3 : f=-3):
+		((rabbit::dirJump==up) ? f=30 :f=-30));
+	upperBody += f;
+	glRotatef(upperBody,0,0,1);
+}
+void rabbit::openLowerBody() {
+	GLfloat f;
+	((rabbit::smoothAnimation) ?
+		((rabbit::dirJump==up) ? f=-10 : f=10):
+		((rabbit::dirJump==up) ? f=-30: f=30));
+	lowerBody += f;
+	glRotatef(lowerBody,0,0,1);
+}
 void rabbit::draw() {
 	glPushMatrix();
-glColor3f(1,1,1);
-  ///////////////////////
-  // Body
-  ///////////////////////
+	glColor3f(1,1,1);
+	((rabbit::jump) ? rabbit::moveJump() : glTranslatef(0,altitude,0));
+	///////////////////////
+	// Body
+	///////////////////////
 	glPushMatrix();
-		////STARTING POINT -> LOWER BODY
-		glTranslatef(-0.8,0.8,0);
-		glPushMatrix();
-			glPushMatrix();
-				rabbit::drawLowerBody();
-			glPopMatrix();
-			glTranslatef(0.8,0.4,0);
-			glPushMatrix();
-				rabbit::drawTorso();
-			glPopMatrix();
-			glTranslatef(0.8,0.5,0);
-			glPushMatrix();
-				glPushMatrix();
-					rabbit::drawUpperBody();
-				glPopMatrix();
-				//// Left Arm
-				glPushMatrix();
-					((rabbit::leftArm) ? rabbit::moveArm(left) : glRotatef(leftArmAngle, 0, 0, 1));
-					rabbit::drawArm(left);
-				glPopMatrix();
-				//// Right Arm
-				glPushMatrix();
-					((rabbit::rightArm) ? rabbit::moveArm(right) : glRotatef(rightArmAngle, 0, 0, 1));
-					rabbit::drawArm(right);				
-				glPopMatrix();
-			glPopMatrix();
-		
-			//// Neck Animation
-			((rabbit::head)? rabbit::moveHead(): glRotatef(headAngle, 0, 0, 1));
-			glTranslatef(0,0.2,0);
-			glPushMatrix();
-				rabbit::drawNeck();
-			glPopMatrix();
+	////STARTING POINT -> LOWER BODY
 
-			/////HEAD
-			glTranslatef(0.3,0.3,0);
-			glPushMatrix();
-				rabbit::drawHead();
-			glPopMatrix();
+	glTranslatef(-0.8,0.8,0);
+	glPushMatrix();
 
-			///Ears
-			//Left
-			glPushMatrix();
-				rabbit::drawEar(left);
-			glPopMatrix();
-			//Right
-			glPushMatrix();
-				rabbit::drawEar(right);
-			glPopMatrix();
-		
-			//Eyes
-			//Left
-			glPushMatrix();
-				rabbit::drawEye(left);
-			glPopMatrix();
-			// Right
-			glPushMatrix();
-				rabbit::drawEye(right);
-			glPopMatrix();
-			///////////////////////////////////////COLOR RESET//////////////////////
-			glColor3f(1,1,1);
-		glPopMatrix();
-		// RETURN TO LOWER BODY
-		// BackLegs
-		//	Left leg
-		glPushMatrix();
-			rabbit::drawLeg(left);
-		glPopMatrix();
-		glPushMatrix();
-			rabbit::drawLeg(right);
-		glPopMatrix();
-		//tail
-		glPushMatrix();
-			rabbit::drawTail();
-		glPopMatrix();
+	((rabbit::rear) ? rabbit::moveRear() : glRotatef(rearAngle, 0, 0, 1));
+	glPushMatrix();
+	((rabbit::bodyCurl) ? rabbit::moveCurl() : glRotatef(lowerCurlAngle, 0, 0, 1));
+	((rabbit::jump) ? rabbit::openLowerBody() : glRotatef(lowerBody,0,0,1));
+	rabbit::drawLowerBody();
+	glPopMatrix();
+	glTranslatef(0.8,0.4,0);
+	glPushMatrix();
+	rabbit::drawTorso();
+	glPopMatrix();
+	glTranslatef(0.8,0.5,0);
+	((rabbit::bodyCurl) ? rabbit::moveUpperCurl() : glRotatef(upperCurlAngle, 0, 0, 1));
+	((rabbit::jump) ? rabbit::openUpperBody() : glRotatef(upperBody,0,0,1));
+	glPushMatrix();
+	
+	glPushMatrix();
+	rabbit::drawUpperBody();
+	glPopMatrix();
+	//// Left Arm
+	glPushMatrix();
+	((rabbit::leftArm) ? rabbit::moveArm(left) : glRotatef(leftArmAngle, 0, 0, 1));
+	rabbit::drawArm(left);
+	glPopMatrix();
+	//// Right Arm
+	glPushMatrix();
+	((rabbit::rightArm) ? rabbit::moveArm(right) : glRotatef(rightArmAngle, 0, 0, 1));
+	rabbit::drawArm(right);				
+	glPopMatrix();
+	glPopMatrix();
+
+	//// Neck Animation
+	((rabbit::head)? rabbit::moveHead(): glRotatef(headAngle, 0, 0, 1));
+
+	glTranslatef(0,0.2,0);
+	glPushMatrix();
+	rabbit::drawNeck();
+	glPopMatrix();
+
+	/////HEAD
+	glTranslatef(0.3,0.3,0);
+	glPushMatrix();
+	rabbit::drawHead();
+	glPopMatrix();
+
+	///Ears
+	//Left
+	glPushMatrix();
+	rabbit::drawEar(left);
+	glPopMatrix();
+	//Right
+	glPushMatrix();
+	rabbit::drawEar(right);
+	glPopMatrix();
+
+	//Eyes
+	//Left
+	glPushMatrix();
+	rabbit::drawEye(left);
+	glPopMatrix();
+	// Right
+	glPushMatrix();
+	rabbit::drawEye(right);
+	glPopMatrix();
+	///////////////////////////////////////COLOR RESET//////////////////////
+	glColor3f(1,1,1);
+	glPopMatrix();
+	// RETURN TO LOWER BODY
+	//	Left leg
+	((rabbit::bodyCurl) ? rabbit::moveCurl() : glRotatef(lowerCurlAngle, 0, 0, 1));
+	((rabbit::jump) ? rabbit::openLowerBody() : glRotatef(lowerBody,0,0,1));
+	glPushMatrix();
+	((rabbit::leftLeg) ? rabbit::moveLeg(left) : glRotated(leftLegAngle, 0, 0, 1));
+	rabbit::drawLeg(left);
+	glPopMatrix();
+	glPushMatrix();
+	((rabbit::rightLeg) ? rabbit::moveLeg(right) : glRotated(rightLegAngle, 0, 0, 1));
+	rabbit::drawLeg(right);
+	glPopMatrix();
+	//tail
+	glPushMatrix();
+	rabbit::drawTail();
+	glPopMatrix();
 
 
 	glPopMatrix();
-  //Middle
-glPopMatrix();
-//glutPostRedisplay();
-
+	//Middle
+	glPopMatrix();
 }
