@@ -1,26 +1,54 @@
 #include <stdio.h>
 #include <stdlib.h>
+
+#include "rabbit.h"
 #ifdef __APPLE__
 #  include <GLUT/glut.h>
 #else
 #  include <GL/glut.h>
 #endif
 
+
+
 int dumpPPM(int frameNum);
+
 void drawAxis();
 void drawFloor();
-void drawCube();
 void myScale(float x, float y, float z);
 
+rabbit r;
+
 unsigned char camera = 'r';
+
+
 
 int iCount = 0;       // used for numbering the PPM image files
 int Width = 400;      // window width (pixels)
 int Height = 400;     // window height (pixels)
 bool Dump=false;      // flag set to true when dumping animation frames
 
+void timer(int val) {
+	glutPostRedisplay();
+	glutTimerFunc(10, timer, 0);
+}
 void keyboardCallback(unsigned char c, int x, int y) {
   switch (c) {
+
+  case 'h':
+	  r.toggleHead();
+	  break;
+  case 'l':
+	  r.toggleLeftArm();
+	  break;
+  case 'm':
+	  r.toggleRightArm();
+	  break;
+  case 'x':
+	  r.toggleWire();
+	  break;
+  case 's':
+	  r.toggleSmoothAnimation();
+	  break;
   case 'q':
     exit (0);
     break;
@@ -52,7 +80,7 @@ void keyboardCallback(unsigned char c, int x, int y) {
     break;
   }
   
-  glutPostRedisplay();
+  //glutPostRedisplay();
 }
 
 void reshapeCallback(int w, int h)
@@ -105,154 +133,7 @@ void displayCallback()
   // Draw your rabbit here
   // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
-
-glPushMatrix();
-glColor3f(1,1,1);
-  ///////////////////////
-  // Body
-  ///////////////////////
-	glPushMatrix();
-		////STARTING POINT -> LOWER BODY
-		glTranslatef(-0.8,0.8,0);
-		glPushMatrix();
-			glPushMatrix();
-				glRotatef(20,0,0,1);
-				glScalef(0.8,0.9,1.35);
-				drawCube();
-			glPopMatrix();
-			glTranslatef(0.8,0.4,0);
-			glPushMatrix();
-				glRotatef(30,0,0,1);
-				glScalef(2,1,1.2);
-				drawCube();
-			glPopMatrix();
-			glTranslatef(0.8,0.5,0);
-			glPushMatrix();
-				glPushMatrix();
-					glTranslatef(-0.4,-0.4,0);
-					glRotatef(40,0,0,1);
-					glScalef(1.2,1,1);
-					drawCube();
-				glPopMatrix();
-				// Left Arm
-				glPushMatrix();
-					glTranslatef(0,-1,0.5);
-					glRotatef(-85,0,0,1);
-					glScalef(0.8,0.2,0.2);
-					drawCube();
-				glPopMatrix();
-				// Right Arm
-				glPushMatrix();
-					glTranslatef(0,-1,-0.5);
-					glRotatef(-85,0,0,1);
-					glScalef(0.8,0.2,0.2);
-					drawCube();					
-				glPopMatrix();
-			glPopMatrix();
-		
-			/////NECK
-			glTranslatef(0,0.2,0);
-			glPushMatrix();
-				glRotatef(-20,0,0,1);
-				glScalef(0.75,0.2,1);
-				drawCube();
-			glPopMatrix();
-
-			/////HEAD
-			glTranslatef(0.3,0.3,0);
-			glPushMatrix();
-				glScalef(0.9,0.9,1);
-				drawCube();
-			glPopMatrix();
-
-			///Ears
-			//Left
-			glPushMatrix();
-				glTranslatef(-0.3,0.7,0.3);
-				glPushMatrix();
-					glScalef(0.2,1,0.2);
-					drawCube();
-				glPopMatrix();
-			glPopMatrix();
-			//Right
-			glPushMatrix();
-				glTranslatef(-0.3,0.7,-0.3);
-				glPushMatrix();
-					glScalef(0.2,1,0.2);
-					drawCube();
-				glPopMatrix();
-			glPopMatrix();
-		
-			//Eyes
-			//Left
-			glPushMatrix();
-				glTranslatef(0.5,0.2,0.3);
-				glPushMatrix();
-					glScalef(0.1,0.1,0.1);
-					glColor4f(0,0.3,0.6,0.9);
-					drawCube();
-				glPopMatrix();
-			glPopMatrix();
-			// Right
-			glPushMatrix();
-				glTranslatef(0.5,0.2,-0.3);
-				glPushMatrix();
-					glScalef(0.1,0.1,0.1);
-					glColor4f(0,0.3,0.6,0.9);
-					drawCube();
-				glPopMatrix();
-			glPopMatrix();
-			///////////////////////////////////////COLOR RESET//////////////////////
-			glColor3f(1,1,1);
-		glPopMatrix();
-		// RETURN TO LOWER BODY
-		// BackLegs
-		//	Left leg
-		glPushMatrix();
-			glTranslatef(0.3,-0.3,0.4);
-			glPushMatrix();
-				glRotatef(15,0,0,1);
-				glScalef(0.8,0.5,0.6);
-				drawCube();
-			glPopMatrix();
-			glTranslatef(0.1,-0.2,0);
-			glPushMatrix();
-				glRotatef(60,0,0,1);
-				glScalef(0.65,0.2,0.2);
-				drawCube();
-			glPopMatrix();
-			glTranslatef(0,-0.25,0);
-			glScalef(0.3,0.2,0.2);
-			drawCube();
-		glPopMatrix();
-		glPushMatrix();
-			glTranslatef(0.3,-0.3,-0.4);
-			glPushMatrix();
-				glRotatef(15,0,0,1);
-				glScalef(0.8,0.5,0.6);
-				drawCube();
-			glPopMatrix();
-			glTranslatef(0.1,-0.2,0);
-			glPushMatrix();
-				glRotatef(60,0,0,1);
-				glScalef(0.65,0.2,0.2);
-				drawCube();
-			glPopMatrix();
-			glTranslatef(0,-0.25,0);
-			glScalef(0.3,0.2,0.2);
-			drawCube();
-		glPopMatrix();
-		//tail
-		glPushMatrix();
-			glTranslatef(-0.5,0,0);
-			glScalef(0.3,0.3,0.3);
-			drawCube();
-		glPopMatrix();
-
-
-	glPopMatrix();
-  //Middle
-glPopMatrix();
+	r.draw();
 
  
 
@@ -294,14 +175,6 @@ void drawAxis() {
   glColor3f(0, 1, 0);
   glutSolidCone(axisBase, axisHeight, 8, 2);
   glPopMatrix();
-}
-
-void drawCube() {
-	//glBegin(GL_LINE_STRIP);
-	//glColor3f(1,1,1);
-	glutSolidCube(1);
-	//glutWirecube(1);
-	//glEnd();
 }
 
 void drawFloor() {
@@ -414,10 +287,10 @@ int main(int argc, char **argv)
   glEnable( GL_LIGHT0 );
   glEnable( GL_LIGHT1 );
   glEnable( GL_COLOR_MATERIAL );
-
+  timer(0);
   // pass control over to GLUT
   glutMainLoop();
-  
+
   return 0;       // never reached
 }
 
