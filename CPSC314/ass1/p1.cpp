@@ -49,14 +49,23 @@ void keyboardCallback(unsigned char c, int x, int y) {
   case 'o':
 	  r.toggleRightLeg();
 	  break;
+  case 'e':
+	  r.toggleRightEar();
+	  break;
+  case 'w':
+	  r.toggleLeftEar();
+	  break;
   case 't':
 	  r.toggleRear();
 	  break;
   case 'c' :
 	  r.toggleBodyCurl();
+	  r.toggleUpperCurl();
 	  break;
   case 'j':
 	  r.toggleJump();
+	  r.toggleUpperBody();
+	  r.toggleLowerBody();
 	  break;
   case 'x':
 	  r.toggleWire();

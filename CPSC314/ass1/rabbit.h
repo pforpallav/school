@@ -14,6 +14,9 @@ private:
 	movement dirJump;
 	movement dirLeftLeg;
 	movement dirRightLeg;
+	movement dirUpperBody;
+	movement dirLowerBody;
+	movement dirUpperBodyCurl;
 
 	bool smoothAnimation;
 	bool frame;
@@ -27,6 +30,9 @@ private:
 	bool leftLeg;
 	bool rightLeg;
 	bool jump;
+	bool uBody;
+	bool lBody;
+	bool upperBodyCurl;
 
 	void drawCube();
 	void drawTail();
@@ -48,6 +54,7 @@ private:
 	void moveJump();
 	void openUpperBody();
 	void openLowerBody();
+	void moveEar(side);
 
 public:
 
@@ -67,6 +74,8 @@ public:
 	void toggleBodyCurl();
 	void toggleUpperCurl();
 	void toggleJump();
+	void toggleUpperBody();
+	void toggleLowerBody();
 
 	void draw();
 
