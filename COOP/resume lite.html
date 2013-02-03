@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Resume</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<style type="text/css">
+		body {
+			background: #f0f0f0;
+			margin: 0;
+			padding: 0;
+			
+			font-family: Georgia, 'Myriad Pro', 'Trebuchet MS', Helvetica, Arial;
+			line-height: 18px;
+			font-size: 12px;
+
+			color: #222;
+		}
+
+		h1, h2, h3, h4 {
+			margin: 0 0 15px 0;
+			padding: 0;
+			font-weight: normal;
+		}
+		h1 {
+			font-size: 450%;
+		}
+		h2 {
+			font-size: 210%;
+		}
+		h3 {
+			font-size: 130%;
+		}
+		
+		p {
+			margin: 0 0 10px 0;
+		}
+		
+		ul {
+			margin: 0;
+		}
+		
+		/* ________________________________________________________ */
+		
+		.clear {
+			clear: both;
+		}
+
+		#main {
+			background: #fff;
+			width: 900px;
+			padding: 35px;
+			margin: 0 auto 15px auto;
+			overflow: hidden;
+			
+			box-shadow: 0 0 6px #ccc;
+		}
+		
+		#title {
+			margin: 0px 0 20px 0;
+			line-height: 42px;
+			color: #111;
+			
+			border-bottom: 1px solid #111;
+			padding-bottom: 5px;
+		}
+		
+		#credit {
+			margin-bottom: 20px;
+			font-size: 11px;
+			color: #999;
+			text-align: center;
+		}
+			#credit a {
+				color: #999;
+			}
+		
+		p label {
+			font-weight: bold;
+			
+			font-size: 110%;
+			margin-right: 10px;
+		}
+			p label span.colon {
+				display: inline;
+			}
+
+		
+		.section {
+			margin-bottom: 40px;
+			padding-bttom: 20px;
+		}
+		
+		.item {
+			margin: 0 0 20px 0;
+		}
+
+		/*  _____________________________ */
+		
+		.basic-info .address {
+			width: 40%;
+			float: left;
+		}
+		.basic-info .r {
+			float: right;
+			width: 50%;
+			text-align: right;
+		}
+			.basic-info label, .basic-info span  {
+				display: inline !important;
+			}
+		.basic-info p {
+			margin: 0;
+		}
+		
+		.section .title {
+			float: left;
+			font-size: 100%;
+			text-transform: uppercase;
+			width: 16%;
+			margin-right: 20px;
+		}
+		.section .set {
+			float: left;
+			width: 78%;
+		}
+			.section .set h3 {
+				margin: 0;
+			}
+		.section span {
+			display: block;
+		}
+		.section h3 span.l, .section span.r {
+			width: 49%;
+			float: left;
+		}
+			.section span.r {
+				float: right;
+				text-align: right;
+			}
+			.section-education .school,
+			.section-work .job_title {
+				font-size: 115%;
+				display: block;
+				margin: 5px 0 5px 0;
+			}
+
+		@media screen and (max-width: 950px) {
+			body {
+				background: #fff;
+			}
+			#main {
+				box-shadow: none;
+				padding: 0;
+				padding: 5px;
+			}
+		}
+	</style>
+</head>
+<body>
+
+<div id="main">
+	<h1 id="title">Evan Louie</h1>
+	<div class="basic-info section">
+		<h2 class="title">Contact</h2>
+		<div class="set">
+		
+							<p class="address">
+					<span class="value">
+						271 Cook St.<br />Victoria B.C, Canada					</span>
+				</p>
+						<div class="r">
+									<p class="email"><label>E-mail<span class="colon">:</span></label> <span class="value">evan@evanlouie.com</span></p>
+				
+									<p class="website"><label>Website<span class="colon">:</span></label> <span class="value">http://www.evanlouie.com</span></p>
+				
+									<p class="phone"><label>Phone<span class="colon">:</span></label> <span class="value">7789878489</span></p>
+							</div>
+			<div class="clear"> </div>
+		</div><!-- set //-->
+		<div class="clear"> </div>
+	</div><!-- basic-info //-->
+	
+		
+			<div class="section section-work">
+			<h2 class="title">Work experience</h2>
+			<div class="set">
+							<div class="item">
+								<h3><span class="company l">Evantful Design</span>
+						<span class="date r">Sept 2012 &mdash; Present</span>
+							</h3>
+							<span class="clear"> </span>
+							<span class="job_title">Web Applications Developer</span><span class="info">Freelance web development specializing in quick deployment of complex systems with PHP (Wordpress/Drupal/Alfresco) and RubyOnRails.</span><span class="clear"> </span>
+							</div>
+						
+							<div class="item">
+								<h3><span class="company l">SAP</span>
+						<span class="date r">Sept 2011 &mdash; Sept 2012</span>
+							</h3>
+							<span class="clear"> </span>
+							<span class="job_title">Web Applications Developer</span><span class="info">Web and systems developer of in-house software used for internal security and verification of vulnerabilities in third-party software</span><span class="clear"> </span>
+							</div>
+						
+							<div class="item">
+								<h3><span class="company l">Oxford Foods LTD.</span>
+						<span class="date r">Jan 2006 &mdash; Sept 2011</span>
+							</h3>
+							<span class="clear"> </span>
+							<span class="job_title">Web Applicaions &amp; Database Administrator</span><span class="info">Developer and administrator of database systems and GUI to keep track of inventory stock, price and price fluctuations of carried items.</span><span class="clear"> </span>
+							</div>
+						</div>
+			<div class="clear"> </div>
+		</div>
+			<div class="section section-qualifications">
+			<h2 class="title">Qualifications</h2>
+			<div class="set">
+						<div class="item">
+							<span class="info"><strong>Web Applications Development:</strong><br /><ul><li>PHP</li><li>RoR</li><li>node.js</li><li>Python (django)</li><li>MySQL</li><li>J2EE</li><li>JavaScript</li><li>HTML5/CSS3</li><li>CodeIgniter</li><li>CakePHP</li><li>jQuery/UI/Mobile</li><li>Wordpress</li><li>Drupal</li><li>Struts</li><li>GWT</li></ul><br /><br /><strong>Mobile Applications Development:</strong><br /><br /><ul><li>Android</li><li>jQuery Mobile</li><li>HTML5/CSS3 Adaptive Layouts</li></ul><br /><br /><strong>Programming:</strong><br /><br /><ul><li>Java/J2EE</li><li>C/++/#</li><li>Lisp</li><li>PHP</li><li>Ruby</li><li>Python</li></ul><br /><br /><strong>Project Management:</strong><br /><br /><ul><li>Agile/Scrum</li><li>Waterfall</li><li>Requirements Gathering</li><li>Legal Compliance &lt;Black Duck Certified&gt;</li><li>3rd Party Software Integration</li></ul><br /><br /></span>
+						</div>
+					</div>
+			<div class="clear"> </div>
+		</div>
+			<div class="section section-education">
+			<h2 class="title">Education</h2>
+			<div class="set">
+						<div class="item">
+							<h3><span class="course l">B.Sc Major Computer Science</span>
+						<span class="date r">Sept 2009 &mdash; Present</span>
+							</h3>
+							<span class="clear"> </span>
+							<span class="school">University of British Columbia</span><span class="info"><br /></span><span class="clear"> </span>
+						</div>
+						
+						<div class="item">
+							<h3><span class="course l">H.S Diploma</span>
+						<span class="date r">Sept 2006 &mdash; June 2009</span>
+							</h3>
+							<span class="clear"> </span>
+							<span class="school">St. Michaels University School</span><span class="clear"> </span>
+						</div>
+						</div>
+			<div class="clear"> </div>
+		</div>
+			<div class="section section-interests">
+			<h2 class="title">Interests</h2>
+			<div class="set">
+						<div class="item">
+							<span class="info"><ul><li>Programming</li><li>Badminton</li><li>Movies</li><li>Music</li></ul></span>
+						</div>
+					</div>
+			<div class="clear"> </div>
+		</div>
+			<div class="section section-references">
+			<h2 class="title">References</h2>
+			<div class="set">
+						<div class="item">
+							<span class="info">References available upon request.</span>
+						</div>
+					</div>
+			<div class="clear"> </div>
+		</div>
+		
+</div>
+</body>
+</html>
