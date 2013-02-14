@@ -90,6 +90,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\main.cpp" />
+    <ClCompile Include="Ship.cpp" />
+    <ClCompile Include="Solar.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Ship.h" />
+    <ClInclude Include="Solar.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
