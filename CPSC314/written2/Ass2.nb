@@ -1,0 +1,1259 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     37637,       1250]
+NotebookOptionsPosition[     35239,       1167]
+NotebookOutlinePosition[     35581,       1182]
+CellTagsIndexPosition[     35538,       1179]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Assignment 2 - Written", "Title",
+ CellChangeTimes->{{3.569746300015053*^9, 3.5697463152219224`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["Evan Louie\n72210099\nm6d7", "Section"]], "Subsection",
+ CellChangeTimes->{{3.569746317390046*^9, 3.5697463343360157`*^9}}],
+
+Cell[BoxData[
+ FormBox["", TraditionalForm]], "Input",
+ CellChangeTimes->{{3.5697463385502567`*^9, 3.569746341914449*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Question 1", "Subtitle",
+ CellChangeTimes->{{3.5697453708329067`*^9, 3.5697453716229515`*^9}, {
+  3.569746296009824*^9, 3.5697462972408943`*^9}}],
+
+Cell[BoxData[{
+ FormBox[
+  RowBox[{"lookat", "=", 
+   RowBox[{"{", 
+    RowBox[{"4", ",", "5", ",", 
+     RowBox[{"-", "5"}]}], "}"}]}], TraditionalForm], "\n", 
+ FormBox[
+  RowBox[{"eye", "=", 
+   RowBox[{"{", 
+    RowBox[{"2", ",", "3", ",", "1"}], "}"}]}], TraditionalForm], "\n", 
+ FormBox[
+  RowBox[{"g", "=", 
+   RowBox[{
+    RowBox[{"lookat", "-", "eye"}], "=", 
+    RowBox[{"{", 
+     RowBox[{"2", ",", "2", ",", 
+      RowBox[{"-", "6"}]}], "}"}]}]}], TraditionalForm], "\n", 
+ FormBox[
+  RowBox[{"t", "=", 
+   RowBox[{"{", 
+    RowBox[{"0", ",", 
+     RowBox[{"-", "1"}], ",", "0"}], "}"}]}], TraditionalForm], "\n", 
+ FormBox[
+  RowBox[{"w", "=", 
+   RowBox[{
+    RowBox[{"-", 
+     FractionBox["g", 
+      TemplateBox[{"g"},
+       "Norm"]]}], "=", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"-", 
+       FractionBox["1", 
+        SqrtBox["11"]]}], ",", 
+      RowBox[{"-", 
+       FractionBox["1", 
+        SqrtBox["11"]]}], ",", 
+      FractionBox["3", 
+       SqrtBox["11"]]}], "}"}]}]}], TraditionalForm], "\n", 
+ FormBox[
+  RowBox[{"u", "=", 
+   RowBox[{
+    FractionBox[
+     RowBox[{"t", "\[Cross]", "w"}], 
+     TemplateBox[{RowBox[{"t", "\[Cross]", "w"}]},
+      "Norm"]], "=", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"-", 
+       FractionBox["3", 
+        SqrtBox["10"]]}], ",", "0", ",", 
+      RowBox[{"-", 
+       FractionBox["1", 
+        SqrtBox["10"]]}]}], "}"}]}]}], TraditionalForm], "\n", 
+ FormBox[
+  RowBox[{"v", "=", 
+   RowBox[{
+    RowBox[{"w", "\[Cross]", "u"}], "=", 
+    RowBox[{"{", 
+     RowBox[{
+      FractionBox["1", 
+       SqrtBox["110"]], ",", 
+      RowBox[{"-", 
+       SqrtBox[
+        FractionBox["10", "11"]]}], ",", 
+      RowBox[{"-", 
+       FractionBox["3", 
+        SqrtBox["110"]]}]}], "}"}]}]}], TraditionalForm]}], "Input",
+ CellChangeTimes->{{3.5697441911954355`*^9, 3.5697442162008657`*^9}, 
+   3.5697443041918983`*^9, {3.569744368200559*^9, 3.569744411034009*^9}, {
+   3.5697444423438*^9, 3.5697445034622955`*^9}, {3.5697445403284044`*^9, 
+   3.569744552032074*^9}, {3.569744606992217*^9, 3.569744686289753*^9}, 
+   3.5697448425816927`*^9, {3.5697448836550417`*^9, 3.569744899663957*^9}, {
+   3.5697753109560213`*^9, 3.5697753123201*^9}, {3.5697753527254105`*^9, 
+   3.569775373633607*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{"M", "\[LongEqual]", 
+    RowBox[{"R", " ", "T"}], "\[LongEqual]", 
+    RowBox[{
+     RowBox[{"(", "\[NoBreak]", GridBox[{
+        {"1", "0", "0", "2"},
+        {"0", "1", "0", "3"},
+        {"0", "0", "1", "1"},
+        {"0", "0", "0", "1"}
+       },
+       GridBoxAlignment->{
+        "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+         "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.7]}, 
+           Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}], ".", 
+     RowBox[{"(", "\[NoBreak]", GridBox[{
+        {
+         RowBox[{"-", 
+          FractionBox["3", 
+           SqrtBox["10"]]}], 
+         FractionBox["1", 
+          SqrtBox["110"]], 
+         RowBox[{"-", 
+          FractionBox["1", 
+           SqrtBox["11"]]}], "0"},
+        {"0", 
+         RowBox[{"-", 
+          SqrtBox[
+           FractionBox["10", "11"]]}], 
+         RowBox[{"-", 
+          FractionBox["1", 
+           SqrtBox["11"]]}], "0"},
+        {
+         RowBox[{"-", 
+          FractionBox["1", 
+           SqrtBox["10"]]}], 
+         RowBox[{"-", 
+          FractionBox["3", 
+           SqrtBox["110"]]}], 
+         FractionBox["3", 
+          SqrtBox["11"]], "0"},
+        {"0", "0", "0", "1"}
+       },
+       GridBoxAlignment->{
+        "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+         "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.7]}, 
+           Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}]}]}], "=", 
+   RowBox[{"(", "\[NoBreak]", GridBox[{
+      {
+       RowBox[{"-", 
+        FractionBox["3", 
+         SqrtBox["10"]]}], 
+       FractionBox["1", 
+        SqrtBox["110"]], 
+       RowBox[{"-", 
+        FractionBox["1", 
+         SqrtBox["11"]]}], "2"},
+      {"0", 
+       RowBox[{"-", 
+        SqrtBox[
+         FractionBox["10", "11"]]}], 
+       RowBox[{"-", 
+        FractionBox["1", 
+         SqrtBox["11"]]}], "3"},
+      {
+       RowBox[{"-", 
+        FractionBox["1", 
+         SqrtBox["10"]]}], 
+       RowBox[{"-", 
+        FractionBox["3", 
+         SqrtBox["110"]]}], 
+       FractionBox["3", 
+        SqrtBox["11"]], "1"},
+      {"0", "0", "0", "1"}
+     },
+     GridBoxAlignment->{
+      "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}},
+        "RowsIndexed" -> {}},
+     GridBoxSpacings->{"Columns" -> {
+         Offset[0.27999999999999997`], {
+          Offset[0.7]}, 
+         Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+         Offset[0.2], {
+          Offset[0.4]}, 
+         Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}]}], 
+  TraditionalForm]], "Input",
+ CellChangeTimes->{{3.5697450004287205`*^9, 3.5697450429991555`*^9}, {
+   3.569745266957965*^9, 3.569745267140976*^9}, 3.5697754927964225`*^9, 
+   3.5697760045426927`*^9}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   TemplateBox[{"M"},
+    "Inverse"], "=", 
+   RowBox[{
+    TemplateBox[{RowBox[{"(", "\[NoBreak]", 
+        GridBox[{{
+           RowBox[{"-", 
+             FractionBox["3", 
+              SqrtBox["10"]]}], 
+           FractionBox["1", 
+            SqrtBox["110"]], 
+           RowBox[{"-", 
+             FractionBox["1", 
+              SqrtBox["11"]]}], "2"}, {"0", 
+           RowBox[{"-", 
+             SqrtBox[
+              FractionBox["10", "11"]]}], 
+           RowBox[{"-", 
+             FractionBox["1", 
+              SqrtBox["11"]]}], "3"}, {
+           RowBox[{"-", 
+             FractionBox["1", 
+              SqrtBox["10"]]}], 
+           RowBox[{"-", 
+             FractionBox["3", 
+              SqrtBox["110"]]}], 
+           FractionBox["3", 
+            SqrtBox["11"]], "1"}, {"0", "0", "0", "1"}}, 
+         GridBoxAlignment -> {
+          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{Baseline}}, "RowsIndexed" -> {}}, 
+         GridBoxSpacings -> {"Columns" -> {
+             Offset[0.27999999999999997`], {
+              Offset[0.7]}, 
+             Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+             Offset[0.2], {
+              Offset[0.4]}, 
+             Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}]},
+     "Inverse"], "=", 
+    RowBox[{"(", "\[NoBreak]", GridBox[{
+       {
+        RowBox[{"-", 
+         FractionBox["3", 
+          SqrtBox["10"]]}], "0", 
+        RowBox[{"-", 
+         FractionBox["1", 
+          SqrtBox["10"]]}], 
+        FractionBox["7", 
+         SqrtBox["10"]]},
+       {
+        FractionBox["1", 
+         SqrtBox["110"]], 
+        RowBox[{"-", 
+         SqrtBox[
+          FractionBox["10", "11"]]}], 
+        RowBox[{"-", 
+         FractionBox["3", 
+          SqrtBox["110"]]}], 
+        FractionBox["31", 
+         SqrtBox["110"]]},
+       {
+        RowBox[{"-", 
+         FractionBox["1", 
+          SqrtBox["11"]]}], 
+        RowBox[{"-", 
+         FractionBox["1", 
+          SqrtBox["11"]]}], 
+        FractionBox["3", 
+         SqrtBox["11"]], 
+        FractionBox["2", 
+         SqrtBox["11"]]},
+       {"0", "0", "0", "1"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+        "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.4]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}]}]}], 
+  TraditionalForm]], "Input",
+ CellChangeTimes->{{3.569745200652173*^9, 3.569745258408476*^9}, {
+   3.569776046909116*^9, 3.569776054139529*^9}, 3.569776135081159*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Question 2", "Subtitle",
+ CellChangeTimes->{{3.5697453655826063`*^9, 3.5697453666706686`*^9}}],
+
+Cell[BoxData[{
+ FormBox[
+  RowBox[{"near", "=", "3"}], TraditionalForm], "\n", 
+ FormBox[
+  RowBox[{"far", "=", "15"}], TraditionalForm], "\n", 
+ FormBox[
+  RowBox[{"left", "=", "2"}], TraditionalForm], "\n", 
+ FormBox[
+  RowBox[{"right", "=", 
+   RowBox[{"-", "2"}]}], TraditionalForm], "\n", 
+ FormBox[
+  RowBox[{"top", "=", "3"}], TraditionalForm], "\n", 
+ FormBox[
+  RowBox[{"bottom", "=", 
+   RowBox[{"-", "3"}]}], TraditionalForm]}], "Input",
+ CellChangeTimes->{3.5697700714594707`*^9}],
+
+Cell[BoxData[
+ FormBox["", TraditionalForm]], "Input",
+ CellChangeTimes->{{3.5697454053578815`*^9, 3.5697454055408916`*^9}, {
+  3.569778273336664*^9, 3.5697782932508035`*^9}, {3.5697786208255396`*^9, 
+  3.5697786214165735`*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"P", "=", 
+   RowBox[{
+    RowBox[{"(", "\[NoBreak]", GridBox[{
+       {
+        FractionBox[
+         RowBox[{"2", " ", "near"}], 
+         RowBox[{"right", "-", "left"}]], "0", 
+        FractionBox[
+         RowBox[{"left", "+", "right"}], 
+         RowBox[{"right", "-", "left"}]], "0"},
+       {"0", 
+        FractionBox[
+         RowBox[{"2", "near"}], 
+         RowBox[{"top", "-", "bottom"}]], 
+        FractionBox[
+         RowBox[{"bottom", "+", "top"}], 
+         RowBox[{"top", "-", "bottom"}]], "0"},
+       {"0", "0", 
+        RowBox[{"-", 
+         FractionBox[
+          RowBox[{"far", "+", "near"}], 
+          RowBox[{"far", "-", "near"}]]}], 
+        RowBox[{"-", 
+         FractionBox[
+          RowBox[{"2", "far", "*", "near"}], 
+          RowBox[{"far", "-", "near"}]]}]},
+       {"0", "0", 
+        RowBox[{"-", "1"}], "0"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+        "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.4]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}], "=", 
+    RowBox[{"(", "\[NoBreak]", GridBox[{
+       {
+        RowBox[{"-", 
+         FractionBox["3", "2"]}], "0", "0", "0"},
+       {"0", "1", "0", "0"},
+       {"0", "0", 
+        RowBox[{"-", 
+         FractionBox["3", "2"]}], 
+        RowBox[{"-", 
+         FractionBox["15", "2"]}]},
+       {"0", "0", 
+        RowBox[{"-", "1"}], "0"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+        "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.4]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}]}]}], 
+  TraditionalForm]], "Input",
+ CellChangeTimes->{{3.5697467946163425`*^9, 3.56974700525439*^9}, {
+   3.5697470468537693`*^9, 3.5697471100863857`*^9}, {3.569778625171788*^9, 
+   3.5697786262778516`*^9}, 3.56977868902544*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Question 3", "Subtitle",
+ CellChangeTimes->{{3.5697454228418813`*^9, 3.5697454261270695`*^9}, 
+   3.569745676344381*^9}],
+
+Cell[BoxData[{
+ FormBox[
+  RowBox[{"width", "=", "900"}], TraditionalForm], "\n", 
+ FormBox[
+  RowBox[{"height", "=", "800"}], TraditionalForm], "\n", 
+ FormBox[
+  RowBox[{"x", "=", "0"}], TraditionalForm], "\n", 
+ FormBox[
+  RowBox[{"y", "=", "0"}], TraditionalForm], "\n", 
+ FormBox[
+  RowBox[{"depth", "=", "1"}], TraditionalForm]}], "Input",
+ CellChangeTimes->{{3.569745449988434*^9, 3.569745450251449*^9}, 
+   3.569770076476757*^9}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"(", "\[NoBreak]", GridBox[{
+       {"1", "0", "0", 
+        RowBox[{
+         FractionBox["width", "2"], "-", 
+         FractionBox["1", "2"]}]},
+       {"0", "1", "0", 
+        RowBox[{
+         FractionBox["height", "2"], "-", 
+         FractionBox["1", "2"]}]},
+       {"0", "0", "1", 
+        FractionBox["depth", "2"]},
+       {"0", "0", "0", "1"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+        "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.4]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}], ".", 
+    RowBox[{"(", "\[NoBreak]", GridBox[{
+       {
+        FractionBox["width", "2"], "0", "0", "0"},
+       {"0", 
+        FractionBox["height", "2"], "0", "0"},
+       {"0", "0", 
+        FractionBox["depth", "2"], "0"},
+       {"0", "0", "0", "1"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+        "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.4]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}], ".", 
+    RowBox[{"(", "\[NoBreak]", GridBox[{
+       {"1", "0", "0", "0"},
+       {"0", 
+        RowBox[{"-", "1"}], "0", "0"},
+       {"0", "0", "1", "0"},
+       {"0", "0", "0", "1"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+        "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.4]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}]}], "=", 
+   RowBox[{"(", "\[NoBreak]", GridBox[{
+      {"450", "0", "0", 
+       FractionBox["899", "2"]},
+      {"0", 
+       RowBox[{"-", "400"}], "0", 
+       FractionBox["799", "2"]},
+      {"0", "0", 
+       FractionBox["1", "2"], 
+       FractionBox["1", "2"]},
+      {"0", "0", "0", "1"}
+     },
+     GridBoxAlignment->{
+      "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}},
+        "RowsIndexed" -> {}},
+     GridBoxSpacings->{"Columns" -> {
+         Offset[0.27999999999999997`], {
+          Offset[0.7]}, 
+         Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+         Offset[0.2], {
+          Offset[0.4]}, 
+         Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}]}], 
+  TraditionalForm]], "Input",
+ CellChangeTimes->{{3.569745468417488*^9, 3.5697454867215347`*^9}, {
+  3.569747198107421*^9, 3.5697472079089813`*^9}, {3.5697472738797545`*^9, 
+  3.5697472786980305`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Question 4", "Subtitle",
+ CellChangeTimes->{{3.5697454914148035`*^9, 3.5697454927428794`*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"(", "\[NoBreak]", GridBox[{
+       {
+        RowBox[{"-", 
+         FractionBox["3", 
+          SqrtBox["10"]]}], "0", 
+        RowBox[{"-", 
+         FractionBox["1", 
+          SqrtBox["10"]]}], 
+        FractionBox["7", 
+         SqrtBox["10"]]},
+       {
+        FractionBox["1", 
+         SqrtBox["110"]], 
+        RowBox[{"-", 
+         SqrtBox[
+          FractionBox["10", "11"]]}], 
+        RowBox[{"-", 
+         FractionBox["3", 
+          SqrtBox["110"]]}], 
+        FractionBox["31", 
+         SqrtBox["110"]]},
+       {
+        RowBox[{"-", 
+         FractionBox["1", 
+          SqrtBox["11"]]}], 
+        RowBox[{"-", 
+         FractionBox["1", 
+          SqrtBox["11"]]}], 
+        FractionBox["3", 
+         SqrtBox["11"]], 
+        FractionBox["2", 
+         SqrtBox["11"]]},
+       {"0", "0", "0", "1"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+        "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.4]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}], ".", 
+    RowBox[{"{", 
+     RowBox[{"4", ",", "4", ",", 
+      RowBox[{"-", "6"}], ",", "1"}], "}"}]}], "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      FractionBox["7", 
+       SqrtBox["10"]], "-", 
+      RowBox[{"3", " ", 
+       SqrtBox[
+        FractionBox["2", "5"]]}]}], ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "4"}], " ", 
+       SqrtBox[
+        FractionBox["10", "11"]]}], "+", 
+      SqrtBox[
+       FractionBox["22", "5"]], "+", 
+      FractionBox["31", 
+       SqrtBox["110"]]}], ",", 
+     RowBox[{"-", 
+      FractionBox["24", 
+       SqrtBox["11"]]}], ",", "1"}], "}"}]}], TraditionalForm]], "Input",
+ CellChangeTimes->{{3.5697455338692317`*^9, 3.5697455431457624`*^9}, {
+   3.5697763651073155`*^9, 3.5697763908297873`*^9}, 3.5697793400556774`*^9}],
+
+Cell[BoxData[
+ FormBox["", TraditionalForm]], "Input",
+ CellChangeTimes->{{3.5697455328691745`*^9, 3.5697455329221773`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Question 5", "Subtitle",
+ CellChangeTimes->{{3.569745546030927*^9, 3.5697455470799875`*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       FractionBox["7", 
+        SqrtBox["10"]], "-", 
+       RowBox[{"3", " ", 
+        SqrtBox[
+         FractionBox["2", "5"]]}]}], ",", 
+      RowBox[{
+       SqrtBox[
+        FractionBox["22", "5"]], "-", 
+       RowBox[{"4", " ", 
+        SqrtBox[
+         FractionBox["10", "11"]]}], "+", 
+       FractionBox["31", 
+        SqrtBox["110"]]}], ",", 
+      RowBox[{"-", 
+       FractionBox["24", 
+        SqrtBox["11"]]}], ",", "1"}], "}"}], ".", 
+    RowBox[{"(", "\[NoBreak]", GridBox[{
+       {
+        RowBox[{"-", 
+         FractionBox["3", "2"]}], "0", "0", "0"},
+       {"0", "1", "0", "0"},
+       {"0", "0", 
+        RowBox[{"-", 
+         FractionBox["3", "2"]}], 
+        RowBox[{"-", 
+         FractionBox["15", "2"]}]},
+       {"0", "0", 
+        RowBox[{"-", "1"}], "0"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+        "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.4]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}]}], "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", 
+       FractionBox["3", "2"]}], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        FractionBox["7", 
+         SqrtBox["10"]], "-", 
+        RowBox[{"3", " ", 
+         SqrtBox[
+          FractionBox["2", "5"]]}]}], ")"}]}], ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "4"}], " ", 
+       SqrtBox[
+        FractionBox["10", "11"]]}], "+", 
+      SqrtBox[
+       FractionBox["22", "5"]], "+", 
+      FractionBox["31", 
+       SqrtBox["110"]]}], ",", 
+     RowBox[{
+      FractionBox["36", 
+       SqrtBox["11"]], "-", "1"}], ",", 
+     FractionBox["180", 
+      SqrtBox["11"]]}], "}"}]}], TraditionalForm]], "Input",
+ CellChangeTimes->{{3.5697455648630047`*^9, 3.569745565213024*^9}, 
+   3.5697766168987174`*^9, {3.569778435993968*^9, 3.569778447544628*^9}, 
+   3.5697787312088532`*^9, 3.569779359543792*^9}],
+
+Cell[BoxData[
+ FormBox["", TraditionalForm]], "Input",
+ CellChangeTimes->{{3.5697455633999205`*^9, 3.569745563454924*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Question 6", "Subtitle",
+ CellChangeTimes->{{3.569745572717454*^9, 3.569745579685852*^9}}],
+
+Cell[BoxData[{
+ FormBox[
+  RowBox[{"near", "=", "3"}], TraditionalForm], "\n", 
+ FormBox[
+  RowBox[{"far", "=", "15"}], TraditionalForm], "\n", 
+ FormBox[
+  RowBox[{"left", "=", "2"}], TraditionalForm], "\n", 
+ FormBox[
+  RowBox[{"right", "=", 
+   RowBox[{"-", "2"}]}], TraditionalForm], "\n", 
+ FormBox[
+  RowBox[{"top", "=", "3"}], TraditionalForm], "\n", 
+ FormBox[
+  RowBox[{"bottom", "=", 
+   RowBox[{"-", "3"}]}], TraditionalForm]}], "Input",
+ CellChangeTimes->{3.5697700841151943`*^9},
+ FontWeight->"Plain"],
+
+Cell[BoxData[
+ FormBox[
+  StyleBox[
+   RowBox[{
+    RowBox[{"(", "\[NoBreak]", GridBox[{
+       {
+        FractionBox["2", 
+         RowBox[{"right", "-", "left"}]], "0", "0", 
+        RowBox[{"-", 
+         FractionBox[
+          RowBox[{"right", "+", "left"}], 
+          RowBox[{"right", "-", "left"}]]}]},
+       {"0", 
+        FractionBox["2", 
+         RowBox[{"top", "-", "bottom"}]], "0", 
+        RowBox[{"-", 
+         FractionBox[
+          RowBox[{"top", "+", "bottom"}], 
+          RowBox[{"top", "-", "bottom"}]]}]},
+       {"0", "0", 
+        RowBox[{"-", 
+         FractionBox["2", 
+          RowBox[{"far", "-", "near"}]]}], 
+        RowBox[{"-", 
+         FractionBox[
+          RowBox[{"far", "+", "near"}], 
+          RowBox[{"far", "-", "near"}]]}]},
+       {"0", "0", "0", "1"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+        "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.4]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}], "=", 
+    RowBox[{"(", "\[NoBreak]", GridBox[{
+       {
+        RowBox[{"-", 
+         FractionBox["1", "2"]}], "0", "0", "0"},
+       {"0", 
+        FractionBox["1", "3"], "0", "0"},
+       {"0", "0", 
+        RowBox[{"-", 
+         FractionBox["1", "6"]}], 
+        RowBox[{"-", 
+         FractionBox["3", "2"]}]},
+       {"0", "0", "0", "1"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+        "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.4]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}]}],
+   FontWeight->"Bold"], TraditionalForm]], "Input",
+ CellChangeTimes->{{3.5697455977618856`*^9, 3.569745597961898*^9}, {
+   3.569778895983278*^9, 3.5697789872284966`*^9}, {3.569779029902938*^9, 
+   3.569779039628494*^9}, 3.5697791102255316`*^9},
+ FontWeight->"Plain"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"(", "\[NoBreak]", GridBox[{
+       {
+        RowBox[{"-", 
+         FractionBox["1", "2"]}], "0", "0", "0"},
+       {"0", 
+        FractionBox["1", "3"], "0", "0"},
+       {"0", "0", 
+        RowBox[{"-", 
+         FractionBox["1", "6"]}], 
+        RowBox[{"-", 
+         FractionBox["3", "2"]}]},
+       {"0", "0", "0", "1"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+        "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.4]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}], ".", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", 
+        FractionBox["3", "2"]}], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         FractionBox["7", 
+          SqrtBox["10"]], "-", 
+         RowBox[{"3", " ", 
+          SqrtBox[
+           FractionBox["2", "5"]]}]}], ")"}]}], ",", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"-", "4"}], " ", 
+        SqrtBox[
+         FractionBox["10", "11"]]}], "+", 
+       SqrtBox[
+        FractionBox["22", "5"]], "+", 
+       FractionBox["31", 
+        SqrtBox["110"]]}], ",", 
+      RowBox[{
+       FractionBox["36", 
+        SqrtBox["11"]], "-", "1"}], ",", 
+      FractionBox["180", 
+       SqrtBox["11"]]}], "}"}]}], "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      FractionBox["3", "4"], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        FractionBox["7", 
+         SqrtBox["10"]], "-", 
+        RowBox[{"3", " ", 
+         SqrtBox[
+          FractionBox["2", "5"]]}]}], ")"}]}], ",", 
+     RowBox[{
+      FractionBox["1", "3"], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"-", "4"}], " ", 
+         SqrtBox[
+          FractionBox["10", "11"]]}], "+", 
+        SqrtBox[
+         FractionBox["22", "5"]], "+", 
+        FractionBox["31", 
+         SqrtBox["110"]]}], ")"}]}], ",", 
+     RowBox[{
+      RowBox[{
+       FractionBox["1", "6"], " ", 
+       RowBox[{"(", 
+        RowBox[{"1", "-", 
+         FractionBox["36", 
+          SqrtBox["11"]]}], ")"}]}], "-", 
+      FractionBox["270", 
+       SqrtBox["11"]]}], ",", 
+     FractionBox["180", 
+      SqrtBox["11"]]}], "}"}]}], TraditionalForm]], "Input",
+ CellChangeTimes->{{3.569778489857049*^9, 3.5697785037518435`*^9}, {
+   3.569779119605068*^9, 3.569779128410572*^9}, {3.5697791585512958`*^9, 
+   3.5697791684928646`*^9}, 3.569779392924701*^9}],
+
+Cell[BoxData[
+ FormBox["\t", TraditionalForm]], "Input",
+ CellChangeTimes->{{3.5697455966468225`*^9, 3.5697455967008257`*^9}, 
+   3.5697475182697325`*^9},
+ FontWeight->"Plain"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Question 7", "Subtitle",
+ CellChangeTimes->{{3.569745604388265*^9, 3.569745605592334*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       FractionBox["3", "4"], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         FractionBox["7", 
+          SqrtBox["10"]], "-", 
+         RowBox[{"3", " ", 
+          SqrtBox[
+           FractionBox["2", "5"]]}]}], ")"}]}], ",", 
+      RowBox[{
+       FractionBox["1", "3"], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"-", "4"}], " ", 
+          SqrtBox[
+           FractionBox["10", "11"]]}], "+", 
+         SqrtBox[
+          FractionBox["22", "5"]], "+", 
+         FractionBox["31", 
+          SqrtBox["110"]]}], ")"}]}], ",", 
+      RowBox[{
+       RowBox[{
+        FractionBox["1", "6"], " ", 
+        RowBox[{"(", 
+         RowBox[{"1", "-", 
+          FractionBox["36", 
+           SqrtBox["11"]]}], ")"}]}], "-", 
+       FractionBox["270", 
+        SqrtBox["11"]]}], ",", 
+      FractionBox["180", 
+       SqrtBox["11"]]}], "}"}], ".", 
+    RowBox[{"(", "\[NoBreak]", GridBox[{
+       {"450", "0", "0", "0"},
+       {"0", 
+        RowBox[{"-", "400"}], "0", "0"},
+       {"0", "0", 
+        FractionBox["1", "2"], "0"},
+       {"0", "0", "0", "1"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+        "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.4]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}]}], "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      FractionBox["675", "2"], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        FractionBox["7", 
+         SqrtBox["10"]], "-", 
+        RowBox[{"3", " ", 
+         SqrtBox[
+          FractionBox["2", "5"]]}]}], ")"}]}], ",", 
+     RowBox[{
+      RowBox[{"-", 
+       FractionBox["400", "3"]}], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"-", "4"}], " ", 
+         SqrtBox[
+          FractionBox["10", "11"]]}], "+", 
+        SqrtBox[
+         FractionBox["22", "5"]], "+", 
+        FractionBox["31", 
+         SqrtBox["110"]]}], ")"}]}], ",", 
+     RowBox[{
+      FractionBox["1", "2"], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         FractionBox["1", "6"], " ", 
+         RowBox[{"(", 
+          RowBox[{"1", "-", 
+           FractionBox["36", 
+            SqrtBox["11"]]}], ")"}]}], "-", 
+        FractionBox["270", 
+         SqrtBox["11"]]}], ")"}]}], ",", 
+     FractionBox["180", 
+      SqrtBox["11"]]}], "}"}]}], TraditionalForm]], "Input",
+ CellChangeTimes->{{3.5697456176500235`*^9, 3.569745630934784*^9}, 
+   3.5697776541530447`*^9, {3.569778512640352*^9, 3.5697785325664916`*^9}, {
+   3.5697791781654177`*^9, 3.5697792097352233`*^9}, 3.569779464879817*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Question 8", "Subtitle",
+ CellChangeTimes->{{3.5697456402533164`*^9, 3.5697456415643916`*^9}, 
+   3.569745708814238*^9}],
+
+Cell["Proof of C and D", "Subsubtitle",
+ CellChangeTimes->{{3.569745798148348*^9, 3.5697458043087*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   SubscriptBox["Z", "n"], "=", 
+   RowBox[{
+    FractionBox[
+     SubscriptBox["Z", "c"], 
+     SubscriptBox["W", "c"]], "=", 
+    RowBox[{"-", 
+     FractionBox[
+      RowBox[{
+       SubscriptBox["C", 
+        SubscriptBox["z", "c"]], "+", 
+       SubscriptBox["D", 
+        SubscriptBox["w", "e"]]}], 
+      SubscriptBox["Z", "e"]]}]}]}], TraditionalForm]], "Input",
+ CellChangeTimes->{{3.5697458075948877`*^9, 3.569745880904081*^9}, {
+  3.569746051067814*^9, 3.5697460544230056`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Now we put in ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["Z", "e"], "=", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "n"}], ",", 
+       RowBox[{"-", "1"}]}], ")"}], " ", "and", " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "f"}], ",", "1"}], ")"}]}]}], TraditionalForm]]],
+ " into the equation:"
+}], "Subsubtitle",
+ CellChangeTimes->{{3.569745894148838*^9, 3.569745929293849*^9}}],
+
+Cell[BoxData[{
+ FormBox[
+  RowBox[{
+   RowBox[{"-", 
+    FractionBox[
+     RowBox[{"Cn", "+", "D"}], "n"]}], "=", 
+   RowBox[{"-", "1"}]}], TraditionalForm], "\n", 
+ FormBox[
+  RowBox[{
+   RowBox[{"-", 
+    FractionBox[
+     RowBox[{"Cf", "+", "D"}], "f"]}], "=", "1"}], TraditionalForm]}], "Input",
+ CellChangeTimes->{{3.569745932667042*^9, 3.5697459612606773`*^9}, {
+  3.569746043324371*^9, 3.5697460474626074`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Therefore:", "Subsubtitle",
+ CellChangeTimes->{{3.5697459685910964`*^9, 3.5697459695451508`*^9}}],
+
+Cell[BoxData[{
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", "1", ")"}], "           ", "D"}], "-", "Cn"}], "=", 
+   RowBox[{"-", "n"}]}], TraditionalForm], "\n", 
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", "2", ")"}], "           ", "D"}], "-", "Cf"}], "=", "f"}], 
+  TraditionalForm]}], "Input",
+ CellChangeTimes->{{3.569745972979347*^9, 3.569745989388286*^9}, {
+  3.569746037052012*^9, 3.5697460393841457`*^9}, {3.569746071761997*^9, 
+  3.569746085638791*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Now reogranize for D:", "Subsubtitle",
+ CellChangeTimes->{{3.5697459926854744`*^9, 3.5697459986268144`*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"(", "3", ")"}], "          ", "D"}], "=", 
+   RowBox[{"Cn", "-", "n"}]}], TraditionalForm]], "Input",
+ CellChangeTimes->{{3.5697460012399635`*^9, 3.569746004619157*^9}, {
+  3.5697460595963016`*^9, 3.569746090047043*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Substitute (3) into (2):", "Subsubtitle",
+ CellChangeTimes->{{3.5697460961863947`*^9, 3.56974610939815*^9}}],
+
+Cell[BoxData[{
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"-", "Cf"}], "+", 
+    RowBox[{"(", 
+     RowBox[{"Cn", "-", "n"}], ")"}]}], "=", "f"}], 
+  TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"-", 
+     RowBox[{"(", 
+      RowBox[{"f", "-", "n"}], ")"}]}], "C"}], "=", 
+   RowBox[{"f", "+", "n"}]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{"C", "=", 
+   RowBox[{
+    RowBox[{"-", 
+     RowBox[{"(", 
+      RowBox[{"f", "+", "n"}], ")"}]}], "/", 
+    RowBox[{"(", 
+     RowBox[{"f", "-", "n"}], ")"}]}]}], TraditionalForm]}], "Input",
+ CellChangeTimes->{{3.569746111824289*^9, 3.5697461422590294`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Substitute C into (1):", "Subsubtitle",
+ CellChangeTimes->{{3.569746147931354*^9, 3.5697461577909184`*^9}}],
+
+Cell[BoxData[{
+ FormBox[
+  RowBox[{
+   RowBox[{"D", "+", 
+    FractionBox[
+     RowBox[{"n", " ", 
+      RowBox[{"(", 
+       RowBox[{"f", "+", "n"}], ")"}]}], 
+     RowBox[{"f", "-", "n"}]]}], "=", 
+   RowBox[{"-", "n"}]}], TraditionalForm], "\n", 
+ FormBox[
+  RowBox[{"D", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"-", 
+      FractionBox[
+       RowBox[{"n", " ", 
+        RowBox[{"(", 
+         RowBox[{"f", "+", "n"}], ")"}]}], 
+       RowBox[{"f", "-", "n"}]]}], "-", "n"}], "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"n", " ", 
+       RowBox[{"(", 
+        RowBox[{"-", 
+         RowBox[{"(", 
+          RowBox[{
+           FractionBox[
+            RowBox[{"f", "+", "n"}], 
+            RowBox[{"f", "-", "n"}]], "+", "1"}], ")"}]}], ")"}]}], "-", 
+      FractionBox[
+       RowBox[{"n", " ", 
+        RowBox[{"(", 
+         RowBox[{"f", "+", "f", "+", "n", "-", "n"}], ")"}]}], 
+       RowBox[{"f", "-", "n"}]]}], "=", 
+     FractionBox[
+      RowBox[{"2", " ", 
+       RowBox[{"f", ".", "n"}]}], 
+      RowBox[{"f", "-", "n"}]]}]}]}], TraditionalForm]}], "Input",
+ CellChangeTimes->{{3.569746161950156*^9, 3.5697462601877747`*^9}}],
+
+Cell[BoxData[
+ FormBox["QED", TraditionalForm]], "Input",
+ CellChangeTimes->{{3.5697462880963707`*^9, 3.569746289197434*^9}}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{667, 700},
+WindowMargins->{{0, Automatic}, {0, Automatic}},
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (January 25, 2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 107, 1, 101, "Title"],
+Cell[CellGroupData[{
+Cell[711, 27, 147, 1, 141, "Subsection"],
+Cell[861, 30, 122, 2, 30, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1020, 37, 151, 2, 56, "Subtitle"],
+Cell[1174, 41, 2264, 74, 227, "Input"],
+Cell[3441, 117, 3248, 101, 131, "Input"],
+Cell[6692, 220, 2810, 87, 132, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9539, 312, 100, 1, 56, "Subtitle"],
+Cell[9642, 315, 492, 15, 126, "Input"],
+Cell[10137, 332, 228, 4, 30, "Input"],
+Cell[10368, 338, 2350, 67, 117, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12755, 410, 126, 2, 56, "Subtitle"],
+Cell[12884, 414, 437, 12, 107, "Input"],
+Cell[13324, 428, 3138, 87, 113, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16499, 520, 100, 1, 56, "Subtitle"],
+Cell[16602, 523, 2116, 72, 193, "Input"],
+Cell[18721, 597, 124, 2, 30, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[18882, 604, 98, 1, 56, "Subtitle"],
+Cell[18983, 607, 2221, 74, 161, "Input"],
+Cell[21207, 683, 122, 2, 30, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[21366, 690, 96, 1, 56, "Subtitle"],
+Cell[21465, 693, 514, 16, 126, "Input"],
+Cell[21982, 711, 2312, 66, 117, "Input"],
+Cell[24297, 779, 2650, 89, 174, "Input"],
+Cell[26950, 870, 176, 4, 30, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[27163, 879, 96, 1, 56, "Subtitle"],
+Cell[27262, 882, 2913, 96, 205, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[30212, 983, 126, 2, 56, "Subtitle"],
+Cell[30341, 987, 103, 1, 33, "Subsubtitle"],
+Cell[30447, 990, 524, 17, 54, "Input"],
+Cell[CellGroupData[{
+Cell[30996, 1011, 452, 16, 33, "Subsubtitle"],
+Cell[31451, 1029, 418, 13, 90, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[31906, 1047, 103, 1, 33, "Subsubtitle"],
+Cell[32012, 1050, 502, 15, 50, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[32551, 1070, 114, 1, 33, "Subsubtitle"],
+Cell[32668, 1073, 280, 7, 30, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[32985, 1085, 114, 1, 33, "Subsubtitle"],
+Cell[33102, 1088, 670, 23, 69, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[33809, 1116, 113, 1, 33, "Subsubtitle"],
+Cell[33925, 1119, 1146, 39, 94, "Input"],
+Cell[35074, 1160, 125, 2, 30, "Input"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

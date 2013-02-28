@@ -1,0 +1,297 @@
+Part A:
+	1)	SELECT
+			T.DBNAME,
+			TS.CREATOR,
+			T.TSNAME,
+			T.NAME,
+			T.NPAGESF
+		FROM
+			SYSIBM.SYSTABLES T,
+			SYSIBM.TABLESPACE TS
+		WHERE
+			T.CREATOR = "C3P0" AND
+			T.TSNAME = TS.NAME
+		ORDER BY
+			T.DBNAME, T.TSNAME, T.NAME
+
+	2)	SELECT
+			TBCREATOR,
+			TBNAME
+		FROM
+			SYSIBM.SYSCOLUMNS
+		WHERE
+			NAME = "BONUS"
+
+	3)	SELECT
+			TS.DBNAME,
+			TS.CREATOR,
+			TS.NAME,
+			T.CREATOR,
+			T.NAME,
+			T.STATSTIME
+		FROM
+			SYSIBM.SYSTABLES T,
+			SYSIBM.TABLESPACE TS
+		WHERE
+			TS.DBNAME = "OILSANDS" AND
+			TS.NAME = T.TSNAME 
+		ORDER BY
+			T.STATSTIME
+
+	4)	SELECT
+			I.CREATOR,
+			I.NAME,
+			I.TBCREATOR,
+			I.TBNAME,
+			I.DBNAME
+			IT.LEAFFAR,
+			IT.PCTFREE
+		FROM
+			SYSIBM.INDEXES I,
+			SYSIBM.INDEXPART IT
+		WHERE
+			IT.IXNAME = I.NAME
+		ORDER BY
+			IT.LEAFFAR DESC,
+			IT.PCTFREE ASC
+
+	5)	SELECT
+			I.CREATOR,
+			I.NAME,
+			I.TBCREATOR,
+			I.TBNAME,
+			I.DBNAME,
+			I.CLUSTERRATIO
+		FROM
+			SYSIBM.SYSINDEXES I
+		WHERE
+			I.UNIQUERULE = 'D' AND
+			I.CLUSTERING = 'Y' AND
+			I.STATSTIME != '0001-01-01.00.00.00.000000'
+		ORDER BY
+			I.CLUSTERRATIO DESC
+
+
+Part B:
+	
+	1) 
+	Insert 12,14,16,18
+		
+		-------------
+		|12|14|16|18|
+		-------------
+		
+	Insert 15,26
+		
+		
+				-------------
+				|15|  |  |  |
+				-------------
+					
+					
+		-------------	-------------
+		|12|14|  |  |	|15|16|18|26|
+		-------------	-------------
+		
+		
+	Insert 20, 50, 9, 13
+
+						-------------
+						|15|18|  |  |
+						-------------
+					
+					
+		-------------	-------------	-------------
+		|9 |12|13|14|	|15|16|  |  |	|18|20|26|50|
+		-------------	-------------	-------------
+		
+		
+		
+	Insert 51
+
+								-------------
+								|15|18|26|  |
+								-------------
+				
+					
+		-------------	-------------	-------------	-------------
+		|9 |12|13|14|	|15|16|  |  |	|18|20|  |  |	|26|50|51|  |
+		-------------	-------------	-------------	-------------
+		
+	
+	Insert 1, 56
+			
+										-------------
+										|12|15|18|26|
+										-------------
+
+					
+		-------------	-------------	-------------	-------------	-------------
+		| 1| 9|  |  |	|12|13|14|  |	|15|16|  |  |	|18|20|  |  |	|26|50|51|56|
+		-------------	-------------	-------------	-------------	-------------
+			
+			
+	Insert 60
+
+											-------------
+											|18|  |  |  |
+											-------------
+		
+			
+									-------------	-------------
+									|12|15|  |  |	|26|51|  |  |
+									-------------	-------------
+									
+											
+	-------------	-------------	-------------	-------------	-------------	-------------
+	| 1| 9|  |  |	|12|13|14|  |	|15|16|  |  |	|18|20|  |  |	|26|50|  |  |	|51|56|60|  |
+	-------------	-------------	-------------	-------------	-------------	-------------
+		
+		
+	2) 	13 Keys
+		One possbile sequence:
+			12,14,16,18,15,26,20,50,9,51,1,56,60
+		This is the same sequence as in part a except without the 13.
+		All nodes on the 2nd level need to be half filled, so thats 5*2=10
+		We then need to add 3 to one of the nodes to force it to split and push up to the already full node and cause it to split as well.
+
+	3)	Alt.2 Index = key+rid
+		key=24bytes
+		rid=10bytes
+		Total = 34 bytes
+
+		4096 Bytes/Page	
+		--------------- =	120.47 Index/Page 	=	120 Index/Page
+		34 Bytes/Index
+
+		THEREFORE: each node has a fanout of 121 
+
+		2,000,000 Records		
+		-----------------	=	16,666.666 Pages	= 16,667 Pages
+		120 Records/page
+		
+		Level 0 =	1 Page
+		Level 1 =	121 Pages
+		Level 2 =	14,641 Pages
+		Level 3 =	1,771,561 Pages
+
+	4)	4096 bytes/page
+		---------------	=	31.507 Records/Page = 31 Records/Page
+		130 bytes/record
+
+		2,000,000 Records
+		-----------------	=	64516.129 Pages = 64517 Pages 
+		31 Records/Page
+
+
+
+Part C:
+	
+	Insert 1,7,12,0,6,13,8
+	---
+	|1|		
+	------		---
+	|0|  |		|1|	12,0,6,8
+	------		---
+	|1|	 |		|1|	1,7,13
+	------		---
+		
+
+	Extend then Insert 4
+	---
+	|2|		
+	-------		---
+	|00|  |		|2|	12,0,8,4
+	-------		---
+	|01|  |		|1|	1,7,13
+	-------		---
+	|10|  |		|2|	6
+	-------		---
+	|11|  |
+	-------
+
+
+	Insert 9
+	---
+	|3|		
+	--------		---
+	|000|  	|		|3|	0,8
+	--------		---
+	|001|  	|		|1|	1,7,13,9
+	--------		---
+	|010|  	|		|2|	6
+	--------		---
+	|011|  	|		|3|	12,4
+	--------		---
+	|100|	|
+	--------
+	|101|	|
+	--------
+	|110|	|
+	--------
+	|111|	|
+	--------
+
+	Extend
+	---
+	|3|		
+	--------		---
+	|000|  	|		|3|	0,8
+	--------		---
+	|001|  	|		|2|	1,13,9
+	--------		---
+	|010|  	|		|2|	6
+	--------		---
+	|011|  	|		|3|	12,4
+	--------		---
+	|100|	|		|2|	7
+	--------		---
+	|101|	|
+	--------
+	|110|	|
+	--------
+	|111|	|
+	--------
+
+
+		
+Part D:
+
+	1)
+
+		Insert 0,4,15
+
+			|h(1)|h(0)|
+			|---------|		-----------------
+			|000 | 00 |		|32 | 8 |24 | 0 |
+			|001 | 01 |		|9  |25 |41 |17 |
+			|010 | 10 |		|14 |18 |10 |30 |
+			|011 | 11 |		|31 |35 | 7 |11 | -> 15
+			|100 | 00 |		|44 |36 | 4 |   |
+			-----------		-----------------
+
+		Extend and Insert 12
+
+			|h(1)|h(0)|
+			|---------|		-----------------
+			|000 | 00 |		|32 | 8 |24 | 0 |
+			|001 | 01 |		|9  |25 |41 |17 |
+			|010 | 10 |		|14 |18 |10 |30 |
+			|011 | 11 |		|31 |35 | 7 |11 | -> 15
+			|100 | 00 |		|44 |36 | 4 |12 |
+			|101 | 01 |		|	|	|	|	|
+			-----------		-----------------
+	
+	2)	Possible Sequence: 1,33,65,97,129,161,193,225,289
+		As each overflow page the same size of a bucket, we need a minimum of 9 insertions to fill up two overflow buckets and create the third.
+		In order to do this, we a series of 9 numbers which will be inserted into the same bucket even as the level increases.
+		All of the numbers chosen for this sequence have binary structure as: *00001
+		Where * can be any series of bits
+		This means that these numbers will only not be inserted into the same bucket until h(4) which will not happen for a faily high amount of insertions after the 9.
+		
+		
+		
+		
+		
+		
+		
