@@ -1,0 +1,88 @@
+FUNKY_A
+- Appears to be the same as REGULAR with some minor amount of lost frames
+
+- Missing packets
+
+- 9.2% packet loss (454/500 packets received)
+- No packets out of order
+- Frame rate: 25 FPS
+
+- Minimal packet loss resulted in barely noticeable skipping in frames. Statistics affirmed our hypothesis.
+
+FUNKY_B
+- Video is choppy, skipping frames
+
+- Missing packets
+
+- 38% packet loss (310/500 packets received)
+- No packets out of order
+- Frame rate: 15 FPS
+
+- Significant packet loss resulting in noticable amount of missing frames
+
+FUNKY_C
+- Video seems to be jumping around as if the frames were out of order.
+
+- Packets arriving out of order
+
+- No packet loss
+- 20% Packets out of order (97/484 packets out of order)
+- Frame rate: 25 FPS
+
+- Significant amount of packets are arriving out of order so the video appears to loop back on itself
+
+FUNKY_D
+- Video seems to be slow as well as looping on itself and missing frames
+
+- A combination of packet loss and out of order packets
+
+- 51.4% packet loss (243/500 packets received)
+- 21% Packets out of order (51/243 packets out of order)
+- Frame rate: 13 FPS
+
+- Comination of packet loss, low frame rate and packets arriving out of order resulting in poor quality playback
+
+FUNKY_E
+- Video appears to be going at twice the regular speed
+
+- Packets may be being transferred more quickly than expected
+
+- 16.8% packet loss (416/50 packets received)
+- No packets out of order
+- Frame rate: 54 FPS
+
+- High frame rate as well as some packet loss. The server may be sending the packets in just at a higher rate than 40ms per packet, with some minor packet loss.
+
+FUNKY_F
+- Video seems to be played in slow motion
+
+- Packets are being sent slower than expected
+
+- No packet loss
+- No packets out of order
+- Frame rate: 11 FPS
+
+- Packets are being sent slower than expected resulting in the video being played with a low frame rate
+
+
+FUNKY_G
+- Video is being played in slow motion and choppy
+
+- Packets being sent slower than expected with packet loss
+
+- 21.2% packet loss (394/500 packets received)
+- No packets out of order
+- Frame rate: 8 FPS
+
+- Packets being sent slower than the expected 40ms/packet as well as some packet loss resulting in a slow and choppy video
+
+FUNKY_H
+- Video is playing at normal speed but is choppy
+
+- Packet loss
+
+- 6.6% packet loss (467/500 packets received)
+- 1.1% packets out of order (5/467)
+- Frame rate: 25 FPS
+
+- Minor packet loss combined with some out of order packets resulting in noticeable choppiness as it jumps between frames.
